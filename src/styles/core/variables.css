@@ -1,0 +1,106 @@
+/* file: /src/styles/core/variables.css  */
+
+:root {
+    /* Backgrounds & Surfaces */
+    --bg-base: #0A0A0B;
+    --bg-surface-1: #161618;
+    --bg-surface-2: #222225;
+    --border-base: #27272A;
+
+    /* Text & Contrast */
+    --text-primary: #E4E4E7;
+    --text-secondary: #A1A1AA;
+    --text-muted: #71717A;
+
+    /* Semantic Accents */
+    --accent-primary: #E2A6FF;
+    --accent-secondary: #A6B2FF;
+    --accent-hover: #A855F7;
+    --color-warning: #FFA6A6;
+    --color-relationship: #A6D2FF;
+    --color-character: #A6FFD2;
+    --color-additional: #FFF0A6;
+    --color-pending: #FFCCA6;
+    --color-success: #D2FFA6;
+    --color-special: #A6FFFF;
+    --color-highlight: #FFA6D2;
+
+    /* Typography Scale */
+    --font-size-h1: 1.7rem;
+    --font-size-h2: 1.4rem;
+    --font-size-h3: 1.2rem;
+    --font-size-h4: 0.9rem;
+    --font-size-h5: 0.7rem;
+    --font-size-body: 1.125rem;
+    --font-size-meta: 0.875rem;
+    --line-height-body: 1.7;
+
+    /* Font Weights */
+
+    --font-weight-hg-bold: 700;
+    --font-weight-md-bold: 600;
+    --font-weight-lw-bold: 500;
+    --font-weight-body: 400;
+
+    /* Typography Scale & Families */
+    --font-stack-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+    /* Prioritize highly readable serifs, fallback to standard serifs */
+    --font-stack-reading: "Merriweather", "Georgia", "Palatino Linotype", "Book Antiqua", serif;
+
+    /* Spacing & Layout */
+    --container-max-width: 180ch;
+    --pad-container-desktop: 2rem;
+    --pad-container-mobile: 1rem;
+    --pad-component: 1.5rem;
+
+    /* Borders & Radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* Margin Scale */
+    --margin-xxs: 0.175rem;
+    --margin-xs: 0.25rem;
+    --margin-sm: 0.5rem;
+    --margin-md: 1rem;
+    --margin-lg: 1.5rem;
+    --margin-xl: 2rem;
+    --margin-xxl: 3rem;
+
+    /* Padding Scale */
+    --pad-xs: 0.25rem;
+    --pad-sm: 0.5rem;
+    --pad-md: 1rem;
+    --pad-lg: 1.5rem;
+    --pad-xl: 2rem;
+    --pad-xxl: 3rem;
+
+    /* Gaps */
+    --gap-xs: 0.25rem;
+    --gap-sm: 0.5rem;
+    --gap-md: 1rem;
+    --gap-lg: 1.5rem;
+    --gap-xl: 2rem;
+    --gap-xxl: 3rem;
+
+    /* Reading-Specific Margins */
+    --margin-paragraph: 1.5em;
+
+    /* Responsive Breakpoints */
+    --breakpoint-mobile-sm: 480px;
+    --breakpoint-mobile-lg: 768px;
+    --breakpoint-tablet: 1096px;
+
+    /* Motion & Transitions */
+    --transition-hover: 0.15s ease-in-out;
+    --transition-focus: 0.1s ease-out;
+    --transition-menu: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Z Indexes */
+    --z-1:99999;
+    --z-2:9999;
+    --z-3:999;
+    --z-4:99;
+
+}

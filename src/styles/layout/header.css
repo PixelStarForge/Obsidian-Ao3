@@ -1,0 +1,482 @@
+/* file: src/styles/layout/header.css */
+
+/* Hide skip-to-main link */
+#outer #skiplinks {
+    display: none;
+}
+
+/* Work Search Text left side of search input */
+#header nav[aria-label="Site"] .primary.navigation.actions .search .search fieldset p .landmark {
+    display: none;
+}
+
+#header nav[aria-label="Site"] .primary.navigation.actions .search .search fieldset p .submit {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Container wrapper */
+#outer {
+    margin: 0 auto;
+    padding: 0 var(--pad-md);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Main header flex container */
+#header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-lg);
+    width: 100%;
+    padding: var(--pad-sm) 0;
+    border-bottom: 2px solid var(--border-base);
+    box-sizing: border-box;
+}
+
+/* Logo and site title */
+#header .heading {
+    order: 1;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+#header .heading a {
+    display: flex;
+    align-items: center;
+    color: var(--accent-primary);
+    gap: var(--gap-sm);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-hg-bold);
+    text-decoration: none;
+}
+
+#header .heading a:hover {
+    color: var(--accent-primary);
+}
+
+#header .heading span {
+    display: inline;
+}
+
+/* Primary site navigation (Fandoms, Browse, Search, About) */
+#header nav[aria-label="Site"] {
+    order: 2;
+    flex-grow: 1;
+}
+
+#header nav[aria-label="Site"] .primary.navigation.actions {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    list-style: none;
+    gap: var(--gap-md);
+    padding: 0;
+    margin: 0;
+}
+
+#header nav[aria-label="Site"] .primary.navigation.actions li a {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+}
+
+/* User greeting and login area (pushed right) */
+#header #greeting {
+    display: flex;
+    align-items: center;
+    order: 3;
+    flex-shrink: 0;
+    margin-left: auto;
+    gap: var(--gap-md);
+}
+
+#greeting ul.user {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--gap-md);
+    align-items: center;
+}
+
+#greeting li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#greeting li::before {
+    content: none;
+    display: none;
+}
+
+#greeting li a {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+}
+
+/* User icon */
+#greeting p.icon {
+    margin: 0;
+}
+
+#greeting p.icon a img.icon {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border: 1px solid var(--border-base);
+    border-radius: 50%;
+}
+
+/* Search bar positioning */
+#header nav[aria-label="Site"] li.search {
+    margin-left: auto;
+}
+
+#header form.search fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#header form.search p {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+    margin: 0;
+}
+
+/* Search input field */
+#header input.text {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    width: 180px;
+    transition: all var(--transition-menu);
+    color: var(--accent-primary);
+}
+
+#header input.text:focus {
+    border-color: var(--accent-primary);
+    outline: none;
+    width: 200px;
+    background: var(--bg-surface-1);
+}
+
+/* Search button */
+#header input.button {
+    background: var(--accent-primary);
+    color: black;
+    border: none;
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-menu);
+}
+
+#header input.button:hover,
+#header input.button:focus {
+    background: var(--accent-hover);
+}
+
+/* Hide search tooltip */
+#header span.tip {
+    display: none;
+}
+
+/* Dropdown base styles */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown menu container */
+.dropdown .dropdown-menu,
+.dropdown #small_login {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-sm) 0;
+    z-index: 1000;
+    list-style: none;
+    transition: all var(--transition-menu);
+    width: max-content;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    font-size: var(--font-size-h4);
+}
+
+/* Show dropdown on hover/focus */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown:hover #small_login,
+.dropdown:focus-within #small_login {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Dropdown menu items */
+.dropdown .dropdown-menu li a {
+    display: block;
+    padding: var(--pad-sm) var(--pad-md);
+}
+
+.dropdown .dropdown-menu li a:hover {
+    background: var(--bg-surface-2);
+}
+
+/* Login Section */
+#header #login {
+    order: 3;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
+/* Login Text */
+#header #login .user.actions #login-dropdown {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-md-bold);
+
+}
+
+/* Login Popup */
+#header #login #small_login {
+    right: 0;
+    left: auto;
+    padding: var(--pad-md);
+    width: 250px;
+}
+
+#header #login #small_login dl {
+    margin: 0;
+    padding: 0;
+}
+
+#header #login #small_login dt {
+    font-size: var(--font-size-h3);
+    margin: var(--margin-xs) 0;
+}
+
+#header #login #small_login dd {
+    margin: 0;
+    font-size: var(--font-size-h4);
+}
+
+/* Username, Password Text */
+#header #login #small_login label {
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    display: block;
+}
+
+/* Username Password Input */
+#header #login #small_login #user_session_login_small,
+#header #login #small_login #user_session_password_small {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    color: var(--accent-primary);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h3);
+}
+
+/* Remember Me Checkbox and Submit Button */
+#header #login #small_login p.submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--margin-md);
+}
+
+/* Rememebr Me Checkbox Text */
+#header #login #small_login p.submit label {
+    font-size: var(--font-size-h4);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+#header #login #small_login #user_remember_me_small {
+    accent-color: var(--accent-hover);
+    border: 1px solid var(--border-base);
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#header #login #small_login p.submit input[type="submit"] {
+    background: var(--accent-primary);
+    color: #000000;
+    border: 1px solid var(--border-base);
+    padding: var(--pad-sm) var(--pad-md) ;
+    font-size: var(--font-size-h4);
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+}
+
+
+#header #login #small_login ul.footnote {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: var(--margin-md);
+    padding-top: var(--pad-md);
+    border-top: 1px solid var(--border-base);
+    display: flex;
+    justify-content: space-between;
+}
+
+#header #login #small_login li::before {
+    content: none;
+}
+
+/* Bottom Links */
+#small_login ul.footnote a {
+    font-size: var(--font-size-h4);
+}
+
+/* ========== MOBILE RESPONSIVE (max-width: 1096px) ========== */
+
+@media (max-width: 1096px) {
+    #header {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: var(--gap-sm);
+        padding: var(--pad-sm) 0;
+    }
+
+    #header .heading {
+        order: 1;
+        width: auto;
+    }
+
+    /* User area moves to row 2, full width */
+    #header #greeting {
+        order: 2;
+        width: 100%;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        gap: var(--gap-md);
+        border-top: 1px solid var(--border-base);
+        margin-left: 0;
+    }
+
+    #greeting ul.user {
+        display: contents;
+    }
+
+    #greeting li:nth-child(1) {
+        order: 1;
+    }
+
+    #greeting li:nth-child(2) {
+        order: 2;
+    }
+
+    #greeting p.icon {
+        order: 3;
+    }
+
+    /* Logout pushed to far right */
+    #greeting li:has(a[href*="logout"]) {
+        order: 4;
+        margin-left: auto;
+    }
+
+
+    /* Site navigation moves to row 3, full width */
+    #header nav[aria-label="Site"] {
+        order: 3;
+        width: 100%;
+        border-top: 1px solid var(--border-base);
+        padding: var(--pad-sm) 0;
+    }
+
+    #header nav[aria-label="Site"] .primary.navigation.actions {
+        flex-flow: row wrap;
+        gap: var(--gap-sm);
+    }
+
+    /* Dropdown positioning (prevent off-screen bleed) */
+    #header nav[aria-label="Site"] ul.primary li:nth-child(-n+2) ul.menu {
+        left: 0;
+        right: auto;
+    }
+
+    #header nav[aria-label="Site"] ul.primary li:nth-child(n+3) ul.menu {
+        left: auto;
+        right: 0;
+    }
+
+    /* Search bar on same row, far right */
+    #header nav[aria-label="Site"] li.search {
+        margin-left: auto;
+        margin-right: 0;
+        width: auto;
+    }
+
+    #header form.search p {
+        width: auto;
+        gap: var(--gap-sm);
+    }
+
+    #header input.text {
+        width: 150px;
+        padding: var(--pad-xs) var(--pad-sm);
+    }
+
+    #header input.text:focus {
+        width: 180px;
+    }
+
+    #header input.button {
+        font-size: 12px;
+        padding: var(--pad-xs) var(--pad-sm);
+    }
+
+}
+
+/* ========== VERY SMALL SCREENS (max-width: 480px) ========== */
+
+@media (max-width: 480px) {
+    #header nav[aria-label="Site"] ul.primary {
+        flex-wrap: wrap;
+    }
+
+    /* Search bar goes full width on own row */
+    #header nav[aria-label="Site"] li.search {
+        margin-left: 0;
+        width: 100%;
+        margin-top: var(--pad-sm);
+    }
+
+    #header form.search p {
+        width: 100%;
+    }
+
+    #header input.text {
+        width: auto;
+        flex-grow: 1;
+    }
+
+    #header input.text:focus {
+        width: auto;
+    }
+}

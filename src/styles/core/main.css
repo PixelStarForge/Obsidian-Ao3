@@ -1,0 +1,50 @@
+/* file: /src/styles/core/main.css */
+
+/* Global CSS for body */
+html,body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-stack-ui);
+    line-height: var(--line-height-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.clear,
+br.clear {
+    display: none;
+}
+
+
+/* Web link CSS*/
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-hover);
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-hover);
+}
+
+
+/* Reset Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Text selection styling */
+::selection {
+    background-color: var(--accent-primary);
+    color: var(--bg-base);
+}

@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Obsidian Ao3",
+    "version": "1.0",
+    "description": "A custom, modern theme for Archive of Our Own Website",
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "src/styles/**/*.css",
+                "src/styles/assets/*.png"
+            ],
+            "matches": [
+                "*://*.archiveofourown.org/*"
+            ]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.archiveofourown.org/*"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
