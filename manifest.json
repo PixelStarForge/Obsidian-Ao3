@@ -29,7 +29,8 @@
                 "src/styles/layout/footer.css",
                 "src/styles/components/modal.css",
                 "src/styles/components/flash.css",
-                "src/styles/components/pagination.css"
+                "src/styles/components/pagination.css",
+                "src/styles/components/fic_card.css"
             ],
             "run_at": "document_start"
         },
@@ -55,6 +56,7 @@
                 "src/styles/components/home/intro_module.css",
                 "src/styles/components/home/browse_module.css",
                 "src/styles/components/home/message_module.css",
+                "src/styles/components/fic_card.css",
                 "src/styles/pages/home.css"
             ],
             "run_at": "document_start"

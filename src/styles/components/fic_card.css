@@ -1,0 +1,442 @@
+/* file: src/styles/components/home/fic_card.css */
+
+/* ---------- List container (parent of all blurbs) ---------- */
+ol.work.index,
+ul.index:has(.blurb),
+ol.index:has(.blurb) {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    /* 1.5rem spacing between cards */
+}
+
+ol.work.index li::before,
+ul.index:has(.blurb) li::before {
+    content: none;
+    display: none;
+}
+
+/* ---------- Individual work card ---------- */
+.blurb {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: border-color var(--transition-hover);
+    overflow: visible;
+    position: relative;
+}
+
+.blurb:hover {
+    border-color: var(--accent-primary);
+}
+
+/* ---------- Header (title, author, fandom) ---------- */
+.blurb .header.module {
+    padding: var(--pad-md);
+    border-bottom: 1px solid var(--border-base);
+    margin: 0;
+}
+
+.blurb h4.heading {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    margin: 0 0 var(--margin-sm) 0;
+}
+
+.blurb h4.heading a:first-child {
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition-hover);
+}
+
+.blurb h4.heading a:first-child:hover {
+    border-color: var(--accent-primary);
+}
+
+.blurb h4.heading a[rel="author"] {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.blurb h4.heading a[rel="author"]:hover {
+    color: var(--accent-primary);
+}
+
+/* ---------- Fandom tags ---------- */
+.blurb h5.fandoms.heading {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: var(--margin-sm) 0 var(--margin-sm) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    align-items: center;
+}
+
+.blurb h5.fandoms.heading .landmark {
+    display: none;
+}
+
+.blurb h5.fandoms.heading a.tag {
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    text-decoration: none;
+    border: 1px solid var(--border-base);
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: normal;
+    transition: all var(--transition-hover);
+}
+
+.blurb h5.fandoms.heading a.tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* ---------- Required tags (rating, warnings, category, status) ---------- */
+.blurb ul.required-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    margin: var(--margin-xs) 0 0 0;
+}
+
+.blurb ul.required-tags li {
+    list-style: none;
+    margin: 0;
+}
+
+/* Hide the warnings symbol (it's duplicated in the tag cloud below) */
+.blurb ul.required-tags li:has(.warnings) {
+    display: none;
+}
+
+/* Shared badge styling */
+.blurb ul.required-tags span.rating,
+.blurb ul.required-tags span.category,
+.blurb ul.required-tags span.iswip,
+.blurb ul.required-tags span.complete-yes {
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+/* ---------- Rating variants (using only variables) ---------- */
+.blurb span.rating-explicit {
+    background: var(--bg-surface-2);
+    color: var(--color-warning);
+    border-color: var(--color-warning);
+}
+
+.blurb span.rating-mature {
+    background: var(--bg-surface-2);
+    color: var(--color-pending);
+    border-color: var(--color-pending);
+}
+
+.blurb span.rating-teen {
+    background: var(--bg-surface-2);
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.blurb span.rating-general-audience {
+    background: var(--bg-surface-2);
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.blurb span.rating-notrated {
+    background: var(--bg-surface-2);
+    color: var(--text-muted);
+    border-color: var(--border-base);
+}
+
+/* Category and status */
+.blurb span.category-none,
+.blurb span.category {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border-color: var(--border-base);
+}
+
+.blurb span.complete-yes {
+    background: var(--bg-surface-2);
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.blurb span.complete-no,
+.blurb span.iswip {
+    background: var(--bg-surface-2);
+    color: var(--color-pending);
+    border-color: var(--color-pending);
+}
+
+/* Date */
+.blurb p.datetime {
+    color: var(--text-muted);
+    font-size: var(--font-size-h4);
+    margin: var(--margin-sm) 0 0 0;
+}
+
+/* ---------- Tags cloud (warnings, characters, freeforms) ---------- */
+/* Hide the "Tags" landmark heading */
+.blurb h6.landmark:nth-of-type(1) {
+    display: none;
+}
+
+.blurb ul.tags.commas {
+    list-style: none;
+    padding: var(--pad-md);
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap-sm);
+    border-bottom: 1px solid var(--border-base);
+}
+
+.blurb ul.tags.commas li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.blurb ul.tags.commas li::before {
+    content: none;
+}
+
+.blurb ul.tags.commas a.tag {
+    display: inline-block;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+}
+
+.blurb ul.tags.commas a.tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Special accent for warning tags (stronger visual) */
+.blurb ul.tags.commas li.warnings a.tag {
+    background-color: var(--bg-surface-2);
+    color: var(--color-warning);
+}
+
+.blurb ul.tags.commas li.warnings a.tag:hover {
+    border-color: var(--color-warning);
+}
+
+/* Relationship tags – slightly different */
+.blurb ul.tags.commas li.relationships a.tag {
+    background-color: var(--bg-surface-2);
+    color: var(--color-relationship);
+}
+
+.blurb ul.tags.commas li.relationships a.tag:hover {
+    border-color: var(--color-relationship);
+}
+
+/* Characters Tag */
+
+.blurb ul.tags.commas li.characters a.tag {
+    background-color: var(--bg-surface-2);
+    color: var(--color-character);
+}
+
+.blurb ul.tags.commas li.characters a.tag:hover {
+    border-color: var(--color-character);
+}
+
+
+
+/* ---------- Summary ---------- */
+.blurb blockquote.userstuff.summary {
+    padding: var(--pad-md);
+    margin: 0;
+    border-bottom: 1px solid var(--border-base);
+}
+
+.blurb blockquote.userstuff.summary::before {
+    content: "Summary";
+    display: block;
+    font-size: var(--font-size-h5);
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: var(--margin-sm);
+    font-weight: var(--font-weight-md-bold);
+    letter-spacing: 0.5px;
+}
+
+.blurb blockquote.userstuff.summary p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--margin-sm) 0;
+}
+
+.blurb blockquote.userstuff.summary p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Series information ---------- */
+.blurb ul.series {
+    list-style: none;
+    padding: var(--pad-sm) var(--pad-md);
+    margin: 0;
+    border-bottom: 1px solid var(--border-base);
+    background: var(--bg-base);
+}
+
+.blurb ul.series li {
+    font-size: var(--font-size-h4);
+    color: var(--text-muted);
+}
+
+.blurb ul.series a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.blurb ul.series a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Stats bar ---------- */
+.blurb dl.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+    padding: var(--pad-sm) var(--pad-md);
+    margin: 0;
+    background: var(--bg-base);
+    border-top: none;
+    align-items: center;
+}
+
+.blurb dl.stats .stats-pair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blurb dl.stats dt {
+    font-size: var(--font-size-h5);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-md-bold);
+    margin: 0;
+}
+
+.blurb dl.stats dd {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.blurb dl.stats dd a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.blurb dl.stats dd a:hover {
+    color: var(--accent-primary);
+}
+
+/* ---------- Actions footer (if present, e.g. "Edit", "Bookmark") ---------- */
+.blurb ul.actions,
+.blurb p.actions {
+    background: var(--bg-surface-2);
+    border-top: 1px solid var(--border-base);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: var(--pad-sm) var(--pad-md);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    list-style: none;
+    list-style-type: none;
+    height: auto;
+}
+
+.blurb ul.actions li,
+.blurb p.actions li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+.blurb ul.actions li::before,
+.blurb p.actions li::before {
+    content: none;
+}
+
+.blurb ul.actions li a,
+.blurb p.actions a {
+    background: var(--bg-surface-1);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    padding: 0 var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 28px;
+    transition: all var(--transition-hover);
+    font-weight: var(--font-weight-lw-bold);
+}
+
+.blurb ul.actions li a:hover,
+.blurb p.actions a:hover {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+
+.blurb .user.module {
+    background: var(--bg-surface-2);
+    border-top: 1px solid var(--border-base);
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.blurb .user.module h4.heading {
+    font-size: var(--font-size-h4);
+    color: var(--text-muted);
+    margin: 0;
+}

@@ -33,3 +33,119 @@
 
 
 
+/* ============================================================
+   HISTORY / MARKED FOR LATER MODULE
+   ============================================================ */
+
+/* ---------- Outer container ---------- */
+.random.readings.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+/* ---------- Heading ---------- */
+.random.readings.module h3.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-h3);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin-bottom: var(--margin-sm);
+}
+
+.random.readings.module h3.heading .title {
+    color: var(--text-primary);
+}
+
+.random.readings.module h3.heading .link a {
+    font-size: var(--font-size-h3);
+}
+
+
+/* ---------- Note text ---------- */
+.random.readings.module p.note {
+    color: var(--text-muted);
+    font-size: var(--font-size-h4);
+    margin: var(--margin-sm) 0 var(--margin-md) 0;
+}
+
+/* ---------- Flash message inside (if any) ---------- */
+.random.readings.module .flash {
+    background: var(--bg-surface-2);
+    border-left: 4px solid var(--accent-primary);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    padding: var(--pad-sm) var(--pad-md);
+    margin: var(--margin-sm) 0;
+    font-size: var(--font-size-h4);
+}
+
+.random.readings.module .flash:empty {
+    display: none;
+}
+
+/* ---------- The work list container ---------- */
+/* Already styled by work_blurb.css, but ensure spacing */
+.random.readings.module ol.reading.work.index.group {
+    gap: var(--gap-md);
+}
+
+/* ---------- User module (footer inside each blurb) ---------- */
+.blurb .user.module {
+    background: var(--bg-surface-2);
+    border-top: 1px solid var(--border-base);
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-sm);
+}
+
+.blurb .user.module h4.heading {
+    font-size: var(--font-size-h4);
+    color: var(--text-muted);
+    margin: 0;
+    font-weight: var(--font-weight-lw-bold);
+}
+
+.blurb .user.module h4.heading span {
+    color: var(--text-secondary);
+}
+
+/* Actions inside user module – already partly styled via .blurb ul.actions,
+   but we may need to override for the "Delete from History" button */
+.blurb .user.module ul.actions {
+    border-top: none;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.blurb .user.module ul.actions li {
+    margin: 0;
+}
+
+.blurb .user.module ul.actions input[type="submit"] {
+    background: var(--bg-surface-1);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    padding: 0 var(--pad-md);
+    border-radius: var(--radius-md);
+    height: 30px;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-lw-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+.blurb .user.module ul.actions input[type="submit"]:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-2);
+}

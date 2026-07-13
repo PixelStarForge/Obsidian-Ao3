@@ -23,9 +23,8 @@
     color: var(--text-primary);
 }
 
-.latest.messages.module h3.heading .link a {
-    color: var(--accent-primary);
-    font-size: var(--font-size-h4);
+.latest.messages.module h3.heading .link  {
+    font-size: var(--font-size-h3);
 }
 
 .latest.messages.module p.note {
