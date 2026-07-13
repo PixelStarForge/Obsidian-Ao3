@@ -75,6 +75,43 @@ function replaceLogoColor() {
     }
 }
 
+// Add Obsidian Ao3 Github Link to Footer
+// Add Obsidian Ao3 Github Link to Footer
+function addFooterBadge() {
+    const menu = document.querySelector('#footer .module.group:has(form.button_to) ul.menu');
+
+    if (!menu) {
+        console.log("Menu not found");
+        return;
+    }
+
+    console.log("Found menu");
+
+    const newUl = document.createElement('ul');
+    newUl.className = 'menu obsidian-ao3';
+
+    const li = document.createElement('li');
+
+    li.innerHTML = `
+        <a href="https://github.com/PixelStarForge/Obsidian-Ao3" target="_blank" 
+        >GitHub</a>
+    `;
+
+    newUl.appendChild(li);
+    menu.appendChild(newUl);
+}
+
+// Call on DOMContentLoaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        replaceLogoColor();
+        addFooterBadge();
+    });
+} else {
+    replaceLogoColor();
+    addFooterBadge();
+}
+
 // Mutation Observer for future stylesheets
 const headObserver = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
@@ -112,4 +149,5 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', replaceLogoColor);
 } else {
     replaceLogoColor();
+    addFooterBadge();
 }

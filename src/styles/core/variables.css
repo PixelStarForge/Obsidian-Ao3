@@ -69,6 +69,7 @@
     --margin-xxl: 3rem;
 
     /* Padding Scale */
+    --pad-xxs: 0.175rem;
     --pad-xs: 0.25rem;
     --pad-sm: 0.5rem;
     --pad-md: 1rem;

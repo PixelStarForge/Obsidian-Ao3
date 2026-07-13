@@ -1,0 +1,134 @@
+/* file: src/styles/layout/footer.css */
+
+/* Hide the Footer LandMark Text */
+#footer .landmark {
+    display: none;
+}
+
+/* Hide the Modal Close Text */
+#modal-bg,
+#modal-wrap {
+    display: none;
+}
+
+/* Main Footer */
+#footer {
+    background: var(--bg-surface-1);
+    border-top: 1px solid var(--border-base);
+    padding: var(--pad-lg) 0;
+    margin-top: var(--margin-lg);
+
+    /* Break out of parent wrapper to span 100% screen width */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+}
+
+
+/* Footer Section */
+#footer .navigation.actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--gap-xl);
+    list-style: none;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 600px;
+    max-width: 90%;
+}
+
+
+/* Footer Individual Section */
+#footer .module.group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Section heading */
+#footer .module.group .heading {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs);
+}
+
+/* Menu of each Section */
+#footer .module.group .menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    position: static;
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+
+    list-style: none;
+    padding: 0;
+    padding-left: var(--pad-sm);
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+
+/* List Item of Each Menu */
+#footer .module.group .menu li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size-h4);
+    line-height: 1.5;
+}
+
+#footer .module.group .menu li::before {
+    content: none;
+}
+
+/* Links of the Menu */
+#footer .module.group .menu li a {
+    color: var(--text-secondary);
+    display: inline-block;
+    padding: var(--pad-sm) var(--pad-xs);
+}
+
+#footer .module.group .menu li a:hover {
+    transform: translateX(2px);
+    color: var(--accent-hover);
+}
+
+/* Hide the native customise color selection */
+#footer .module.group:has(form.button_to) ul.menu li:has(form) {
+    display: none;
+}
+
+/* Change "Customize" heading to "Obsidian Ao3" */
+#footer .navigation.actions>li.module.group:first-child h4.heading {
+    font-size: 0;
+    /* Hide original text */
+}
+
+#footer .navigation.actions>li.module.group:first-child h4.heading::before {
+    content: "Obsidian Ao3";
+    font-size: var(--font-size-h4);
+    /* Restore font size for the new text */
+}
+
+/* Display the Github Link */
+#footer .module.group ul.menu #obsidian-ao3-github-link {
+    display: block;
+}
+
+@media (max-width: 600px) {
+
+    #footer .navigation.actions {
+        padding: 0
+    }
+
+}
