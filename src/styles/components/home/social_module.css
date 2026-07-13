@@ -1,0 +1,75 @@
+/* file: src/styles/components/home/social_module.css */
+
+.social.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+.social.module h3.heading {
+    font-size: var(--font-size-h3);
+    /* optional: add a bottom border to match news module? 
+       I'll keep it simple like favorite.module */
+    margin-bottom: var(--margin-sm);
+}
+
+.social.module p.note {
+    font-size: var(--font-size-h4);
+    color: var(--text-muted);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--margin-md);
+}
+
+.social.module p.note a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.social.module p.note a:hover {
+    color: var(--accent-hover);
+}
+
+.social.module ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+/* The social button link wrapper */
+.social.module ul li a.resp-sharing-button__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Each button – styled like the tag links in favorite.module */
+.social.module .resp-sharing-button {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    color: var(--text-secondary);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-h4);
+    line-height: 1.5;
+    transition: all var(--transition-menu);
+}
+
+.social.module .resp-sharing-button:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateX(2px);
+}
+
+.social.module .resp-sharing-button__icon svg {
+    width: 16px;   
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}

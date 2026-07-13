@@ -17,6 +17,24 @@
     "content_scripts": [
         {
             "matches": [
+                "*://*.archiveofourown.org/tags/*/works*"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/*"
             ],
             "js": [
@@ -29,7 +47,15 @@
                 "src/styles/layout/footer.css",
                 "src/styles/components/modal.css",
                 "src/styles/components/inbox_comment.css",
-                "src/styles/components/reply_comment.css"
+                "src/styles/components/reply_comment.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/home/favorite_module.css",
+                "src/styles/components/home/news_module.css",
+                "src/styles/components/home/social_module.css",
+                "src/styles/components/home/intro_module.css",
+                "src/styles/components/home/browse_module.css",
+                "src/styles/components/home/message_module.css",
+                "src/styles/pages/home.css"
             ],
             "run_at": "document_start"
         }

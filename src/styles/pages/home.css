@@ -1,0 +1,35 @@
+/* file: src/styles/pages/home.css */
+
+.splash {
+    margin-top: 1.5rem;
+}
+
+/* Two‑column layout for large screens */
+@media (min-width: 1096px) {
+    .splash {
+        column-count: 2;
+        column-gap: 1.5rem;
+        width: 100%;
+    }
+
+    .splash>div,
+    .splash>.module {
+        display: block;
+        break-inside: avoid-column;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* All module headings – compact & uppercase */
+.splash .heading {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    padding: 0.2rem;
+}
+
+
+

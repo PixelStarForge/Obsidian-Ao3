@@ -1,0 +1,51 @@
+/* file: src/styles/components/home/message_module.css */
+
+/* ---------- Messages module container ---------- */
+.latest.messages.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin: var(--margin-md) 0;
+}
+
+.latest.messages.module h3.heading {
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin-bottom: var(--margin-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-h3);
+}
+
+.latest.messages.module h3.heading .title {
+    color: var(--text-primary);
+}
+
+.latest.messages.module h3.heading .link a {
+    color: var(--accent-primary);
+    font-size: var(--font-size-h4);
+}
+
+.latest.messages.module p.note {
+    color: var(--text-muted);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--margin-md);
+}
+
+.latest.messages.module .abbreviated.comment.group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ---------- Reply form inside messages module ---------- */
+.latest.messages.module #reply-to-comment {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+

@@ -1,0 +1,106 @@
+/* file: src/styles/components/home/news_module.css */
+
+.latest.news.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+.latest.news.module h3.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    font-size: var(--font-size-h3);
+}
+
+.latest.news.module h3.heading .link a {
+    font-size:var(--font-size-h3);
+}
+
+.latest.news.module ul.news {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Each news post card */
+.latest.news.module li.post.group {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--margin-md);
+    transition: border-color var(--transition-menu);
+}
+
+.latest.news.module li.post.group:hover {
+    border-color: var(--accent-primary);
+}
+
+.latest.news.module .post .header.module {
+    padding: var(--pad-md);
+    border-bottom: 1px solid var(--border-base);
+}
+
+.latest.news.module .post h4.heading {
+    margin: 0 0 var(--pad-sm) 0;
+    border: none;
+    text-transform: none;
+    letter-spacing: normal;
+    padding: 0;
+}
+
+.latest.news.module .post h4.heading a {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.latest.news.module .post h4.heading a:hover {
+    color: var(--accent-primary);
+}
+
+.latest.news.module .post p.meta {
+    font-size: var(--font-size-h4);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.latest.news.module .post p.meta a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.latest.news.module .post blockquote.userstuff {
+    padding: var(--pad-md);
+    margin: 0;
+}
+
+.latest.news.module .post blockquote.userstuff p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-h4);
+    line-height: 1.5;
+    margin: 0 0 var(--margin-md) 0;
+}
+
+.latest.news.module .post blockquote.userstuff p:last-child {
+    margin-bottom: 0;
+}
+
+.latest.news.module .post p.jump {
+    padding: var(--pad-md);
+    padding-top: 0;
+    margin: 0;
+}
+
+.latest.news.module .post p.jump a {
+    font-size: var(--font-size-h4);
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-lw-bold);
+}

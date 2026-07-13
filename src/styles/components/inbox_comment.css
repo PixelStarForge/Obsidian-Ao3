@@ -72,8 +72,8 @@ li.comment.group .icon img {
 
 /* Comment content */
 li.comment.group blockquote.userstuff {
+    color: var(--text-primary);
     background: var(--bg-base);
-    border-left: 3px solid var(--accent-secondary);
     padding: var(--pad-sm);
     margin: 0;
     border-radius: var(--radius-md);

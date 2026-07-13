@@ -1,0 +1,45 @@
+/* file: src/styles/components/home/favorite_module.css */
+
+.favorite.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+.favorite.module h3.heading {
+    font-size: var(--font-size-h3);
+}
+
+/* Remove list bullets */
+.favorite.module ul,
+.favorite.module ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.favorite.module ul li::before {
+    content: none;
+}
+
+/* Tag links – card‑like buttons */
+.favorite.module ul li a.tag {
+    display: block;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-h4);
+    border: 1px solid var(--border-base);
+    margin-bottom: var(--margin-sm);
+    line-height: 1.5;
+    transition: all var(--transition-menu);
+}
+
+.favorite.module ul li a.tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateX(2px);
+}

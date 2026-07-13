@@ -1,0 +1,50 @@
+/* file: src/styles/components/home/browse_module.css */
+
+div[role="navigation"].browse.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+/* Heading (same as favorite.module) */
+div[role="navigation"].browse.module h3.heading {
+    font-size: var(--font-size-h3);
+    margin-bottom: var(--margin-sm);
+}
+
+/* Remove bullets and spacing */
+div[role="navigation"].browse.module ul,
+div[role="navigation"].browse.module ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+div[role="navigation"].browse.module ul li::before {
+    content: none;
+    display: none;
+}
+
+/* Fandom links – identical to favorite tag links */
+div[role="navigation"].browse.module ul li a {
+    display: block;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-h4);
+    text-decoration: none;
+    border: 1px solid var(--border-base);
+    margin-bottom: var(--margin-sm);
+    line-height: var(--line-height-body);
+    box-sizing: border-box;
+    transition: all var(--transition-menu);
+}
+
+div[role="navigation"].browse.module ul li a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateX(2px);
+}

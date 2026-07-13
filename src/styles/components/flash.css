@@ -1,0 +1,71 @@
+/* file: src/styles/components/flash.css */
+
+/* Flash message container */
+.flash {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-left: 4px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    padding: var(--pad-md);
+    margin: var(--margin-md) 0;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Empty flash (hidden) */
+.flash:empty {
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Success/Notice state */
+.flash.notice,
+.flash.success {
+    border-left-color: var(--accent-primary);
+}
+
+/* Error/Alert state */
+.flash.error,
+.flash.alert {
+    border-left-color: var(--color-warning);
+}
+
+/* Flash links */
+.flash a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.flash a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== MUTED NOTICE ===== */
+.muted.notice {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-left: 3px solid var(--text-muted);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    padding: var(--pad-sm) var(--pad-md);
+    margin: var(--margin-sm) 0;
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-body);
+    box-shadow: none;
+    /* no emphasis */
+}
+
+.muted.notice a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.muted.notice a:hover {
+    text-decoration: underline;
+}

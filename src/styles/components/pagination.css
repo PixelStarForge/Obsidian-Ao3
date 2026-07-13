@@ -1,0 +1,63 @@
+/* file: src/styles/components/pagination.css */
+ol.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: var(--margin-lg) 0;
+    gap: var(--gap-sm);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ol.pagination li {
+    list-style: none;
+}
+
+ol.pagination li a,
+ol.pagination li span.disabled,
+ol.pagination li span.current,
+ol.pagination li span.gap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2.2rem;
+    padding: 0 var(--pad-sm);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-h4);
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all var(--transition-menu);
+}
+
+ol.pagination li span.current,
+ol.pagination li a.current {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+    font-weight: var(--font-weight-hg-bold);
+}
+
+ol.pagination li span.disabled {
+    background: var(--bg-surface-1);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+ol.pagination li span.gap {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: default;
+}
+
+ol.pagination li a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-1px);
+}
