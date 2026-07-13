@@ -1,7 +1,8 @@
 /* file: /src/styles/core/main.css */
 
 /* Global CSS for body */
-html,body {
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: var(--bg-base);
@@ -14,7 +15,8 @@ html,body {
 }
 
 .clear,
-br.clear {
+br.clear,
+.landmark {
     display: none;
 }
 

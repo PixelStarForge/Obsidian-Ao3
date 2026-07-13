@@ -27,7 +27,9 @@
                 "src/styles/core/main.css",
                 "src/styles/layout/header.css",
                 "src/styles/layout/footer.css",
-                "src/styles/components/modal.css"
+                "src/styles/components/modal.css",
+                "src/styles/components/inbox_comment.css",
+                "src/styles/components/reply_comment.css"
             ],
             "run_at": "document_start"
         }

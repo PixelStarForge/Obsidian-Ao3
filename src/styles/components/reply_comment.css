@@ -1,0 +1,300 @@
+/* file: src/styles/components/inbox_comment.css */
+
+/* Comment form wrapper */
+.post.comment {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    
+}
+
+/* Draggable reply modal */
+#reply-to-comment {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    margin: var(--margin-md) 0;
+    max-width: 700px;
+}
+
+#reply-to-comment.hidden {
+    display: none;
+}
+
+/* Form */
+form.new_comment {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fieldset */
+.post.comment fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post.comment fieldset legend {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-hg-bold);
+    color: var(--text-primary);
+    padding: 0;
+}
+
+/* Metadata heading */
+.post.comment fieldset h4.heading {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-secondary);
+    margin: var(--margin-sm) 0;
+    line-height: 1.5;
+}
+
+.post.comment fieldset h4.heading span.byline {
+    color: var(--accent-primary);
+    font-weight: var(--font-weight-hg-bold);
+}
+
+.post.comment fieldset h4.heading a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.post.comment fieldset h4.heading a:hover {
+    color: var(--accent-hover);
+}
+
+/* Footnote & help link */
+.post.comment p.footnote {
+    font-size: var(--font-size-h5);
+    color: var(--text-muted);
+    margin: var(--margin-xs) 0;
+    display: inline;
+}
+
+.post.comment a.help.symbol.question.modal {
+    display: inline-flex;
+    margin-left: var(--margin-xxs);
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: 50%;
+    color: var(--accent-primary);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+.post.comment a.help.symbol.question.modal span.symbol {
+    display: inline;
+}
+
+.post.comment a.help.symbol.question.modal span.symbol span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.post.comment a.help.symbol.question.modal:hover {
+    background: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+/* Textarea wrapper & field */
+.post.comment fieldset>p {
+    margin: var(--margin-md) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.post.comment fieldset>p label {
+    display: none;
+}
+
+.post.comment textarea.comment_form {
+    background: var(--bg-base);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    padding: var(--pad-md);
+    font-family: var(--font-stack-ui);
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-body);
+    resize: vertical;
+    min-height: 120px;
+    box-sizing: border-box;
+    transition: all var(--transition-hover);
+}
+
+.post.comment textarea.comment_form:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+.post.comment textarea.comment_form::placeholder {
+    color: var(--text-muted);
+}
+
+/* Validation message */
+.post.comment span.LV_validation_message {
+    font-size: var(--font-size-h5);
+    color: var(--color-warning);
+    min-height: 18px;
+    display: block;
+}
+
+.post.comment span.LV_validation_message.LV_valid {
+    color: var(--color-success);
+}
+
+/* Character counter */
+.post.comment p.character_counter {
+    font-size: var(--font-size-h5);
+    color: var(--text-muted);
+    display: block;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--gap-sm);
+    text-align: right;
+    margin: 0;
+}
+
+.post.comment p.character_counter span.value {
+    color: var(--accent-primary);
+    font-weight: var(--font-weight-md-bold);
+    font-size: var(--font-size-h4);
+}
+
+.post.comment p.character_counter.warn span.value {
+    color: var(--color-warning);
+}
+
+/* Submit & Cancel buttons */
+.post.comment p.submit.actions {
+    display: flex;
+    gap: var(--gap-md);
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.post.comment p.submit.actions input[type="submit"],
+.post.comment p.submit.actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--accent-primary);
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--bg-base);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+.post.comment p.submit.actions input[type="submit"]:hover,
+.post.comment p.submit.actions button:hover {
+    background: var(--accent-hover);
+}
+
+.post.comment p.submit.actions input[type="submit"]:focus,
+.post.comment p.submit.actions button:focus {
+    outline: none;
+}
+
+.post.comment p.submit.actions input[type="submit"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Cancel link styling */
+.post.comment p.submit.actions a[name="comment_cancel"] {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-h4);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: transparent;
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-md-bold);
+}
+
+.post.comment p.submit.actions a[name="comment_cancel"]:hover {
+    color: var(--accent-primary);
+    background: var(--bg-surface-2);
+    border-color: var(--accent-primary);
+}
+
+/* Reset paragraph defaults */
+.post.comment p {
+    margin: 0;
+    display: block;
+}
+
+/* ===== RESPONSIVE (mobile) ===== */
+
+@media (max-width: 600px) {
+    fieldset legend {
+        font-size: var(--font-size-h4);
+        margin-bottom: var(--margin-sm);
+    }
+
+    .post.comment fieldset h4.heading {
+        font-size: var(--font-size-h5);
+        margin: var(--margin-xs) 0 var(--margin-sm) 0;
+    }
+
+    .post.comment textarea.comment_form {
+        min-height: 100px;
+        padding: var(--pad-sm);
+        font-size: var(--font-size-h5);
+    }
+
+    .post.comment p.submit.actions {
+        flex-wrap: wrap;
+        gap: var(--gap-sm);
+    }
+
+    .post.comment p.submit.actions input[type="submit"],
+    .post.comment p.submit.actions button {
+        height: 28px;
+        padding: 0 var(--pad-sm);
+        font-size: var(--font-size-h5);
+    }
+
+    .post.comment p.submit.actions a[name="comment_cancel"] {
+        font-size: var(--font-size-h5);
+    }
+}
+
+@media (max-width: 600px) {
+    .post.comment p.submit.actions {
+        flex-wrap: nowrap;
+        gap: var(--gap-sm);
+    }
+
+    .post.comment p.submit.actions input[type="submit"],
+    .post.comment p.submit.actions a[name="comment_cancel"] {
+        height: 28px;
+        padding: 0 var(--pad-sm);
+        font-size: var(--font-size-h5);
+        white-space: nowrap;
+    }
+}
