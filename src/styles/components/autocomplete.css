@@ -1,0 +1,163 @@
+/* file: src/styles/components/autocomplete.css */
+
+
+/* ---- Parent container (must be position: relative) ---- */
+#main dd.autocomplete {
+    position: relative;
+}
+
+/* ---- The tag list container (input bar) ---- */
+#main ul.autocomplete,
+#main dd.autocomplete ul.autocomplete,
+#main .autocomplete ul.autocomplete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-sm);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-xs) var(--pad-sm);
+    list-style: none;
+    min-height: 36px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ---- Each list item ---- */
+#main ul.autocomplete li,
+#main dd.autocomplete ul.autocomplete li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- Input wrapper (flex‑grow) ---- */
+#main ul.autocomplete li.input,
+#main dd.autocomplete ul.autocomplete li.input {
+    flex: 1 1 auto;
+    display: inline-flex;
+    min-width: 80px;
+    position: relative;
+}
+
+/* ---- Input field (transparent, no border) ---- */
+#main ul.autocomplete li.input input.text,
+#main ul.autocomplete li.input input[type="text"],
+#main dd.autocomplete ul.autocomplete li.input input.text,
+#main dd.autocomplete ul.autocomplete li.input input[type="text"] {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: var(--pad-xs) 0;
+    margin: 0;
+    color: var(--text-primary);
+    width: 100%;
+    font-size: var(--font-size-h4);
+}
+
+/* ---- Tag pill ---- */
+#main ul.autocomplete li.added.tag,
+#main dd.autocomplete ul.autocomplete li.added.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    color: var(--text-secondary);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    line-height: 1.4;
+    box-sizing: border-box;
+    height: 36px;
+}
+
+/* ---- Delete link inside tag ---- */
+#main ul.autocomplete li.added.tag span.delete a,
+#main dd.autocomplete ul.autocomplete li.added.tag span.delete a {
+    color: var(--color-warning);
+    text-decoration: none;
+    font-weight: var(--font-weight-hg-bold);
+    font-size: var(--font-size-h4);
+    cursor: pointer;
+    transition: color var(--transition-hover);
+}
+
+#main ul.autocomplete li.added.tag span.delete a:hover,
+#main dd.autocomplete ul.autocomplete li.added.tag span.delete a:hover {
+    color: #ff4d4d; /* intentionally hard‑coded for safety, you can define a variable */
+}
+
+/* ---- Suggestion dropdown container ---- */
+#main .autocomplete.dropdown,
+#main div.autocomplete.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    max-height: 250px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+}
+
+/* ---- Notice inside dropdown ---- */
+#main .autocomplete.dropdown p.notice,
+#main div.autocomplete.dropdown p.notice {
+    background: var(--bg-surface-2);
+    border-left: 4px solid var(--accent-primary);
+    color: var(--text-secondary);
+    padding: var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    margin: 0;
+    height: auto;
+}
+
+/* ---- Dropdown list and items ---- */
+#main .autocomplete.dropdown ul,
+#main div.autocomplete.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#main .autocomplete.dropdown li,
+#main div.autocomplete.dropdown li {
+    padding: var(--pad-sm) var(--pad-md);
+    margin: var(--margin-xs);
+    font-size: var(--font-size-h4);
+    color: var(--text-primary);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all var(--transition-hover);
+    text-align: left;
+}
+
+#main .autocomplete.dropdown li:hover,
+#main .autocomplete.dropdown li.ui-state-focus,
+#main .autocomplete.dropdown li[aria-selected="true"],
+#main div.autocomplete.dropdown li:hover,
+#main div.autocomplete.dropdown li.ui-state-focus,
+#main div.autocomplete.dropdown li[aria-selected="true"] {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+}
+
+#main .autocomplete.dropdown li b,
+#main div.autocomplete.dropdown li b {
+    color: inherit;
+}

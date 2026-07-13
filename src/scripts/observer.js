@@ -1,13 +1,8 @@
-/* ========================================================================
-   OBSIDIAN AO3 – COMPLETE CONTENT SCRIPT
-   - FOUC prevention (hider + external CSS stripping)
-   - Waits for custom CSS and DOM readiness
-   - All enhancement functions integrated
-   ======================================================================== */
+// file: src/scripts/observer.js
 
 const HIDING_STYLE_ID = 'ao3-obsidian-hider';
 const CSS_CHECK_INTERVAL = 50;      // ms
-const CSS_CHECK_TIMEOUT = 15000;    // ms max wait
+const CSS_CHECK_TIMEOUT = 5000;    // ms max wait
 
 // ----- 1. Hider Injection & Reveal -----
 function injectHider() {
@@ -37,8 +32,6 @@ function stripAO3Stylesheets() {
 
 // ----- 3. Check if Custom CSS is Loaded -----
 function hasExtensionCSS() {
-    // Count stylesheets – extension CSS adds to document.styleSheets
-    // Adjust this number if you inject more/ fewer CSS files.
     return document.styleSheets.length >= 2;
 }
 
@@ -85,7 +78,6 @@ function startStripObserver() {
                         console.log('[Obsidian] Removed dynamic:', href);
                     }
                 }
-                // Scan inside added nodes for nested link tags
                 if (node.querySelectorAll) {
                     node.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
                         const href = link.getAttribute('href') || '';
@@ -107,7 +99,7 @@ function startStripObserver() {
 }
 
 // ==========================================================================
-//   ENHANCEMENT FUNCTIONS (your existing code)
+//   ENHANCEMENT FUNCTIONS
 // ==========================================================================
 
 // ----- Logo Recolor -----
@@ -151,7 +143,7 @@ function addCategoryHeaders() {
 
             const header = document.createElement('li');
             header.dataset.categoryHeader = className;
-            header.style.cssText = 'width: 100% !important; margin-top: var(--margin-xs) !important;'
+            header.style.cssText = 'width: 100% !important; margin-top: var(--margin-xs) !important;';
             header.innerHTML = `<span style="font-size: var(--font-size-h4); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; color: var(--text-muted);">${label}</span>`;
             firstOfCategory.parentNode.insertBefore(header, firstOfCategory);
         });
@@ -254,7 +246,94 @@ function startStatsObserver() {
     statsObserver.observe(document.body, { childList: true, subtree: true });
 }
 
-// ----- Main initialisation function -----
+// ==========================================================================
+//   FILTER MOBILE TOGGLE & COLLAPSIBLE LISTS
+// ==========================================================================
+
+function initFilterToggles() {
+    const toggles = document.querySelectorAll('form.filters dt.filter-toggle');
+
+    toggles.forEach(toggle => {
+        if (toggle.dataset.initialized) return;
+
+        const nextDd = toggle.nextElementSibling;
+        if (nextDd && nextDd.tagName === 'DD') {
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('expanded');
+                nextDd.classList.toggle('expanded');
+            });
+        }
+
+        toggle.dataset.initialized = 'true';
+    });
+}
+
+function initFilters() {
+    const filtersForm = document.querySelector('form.filters');
+    const toggleBtn = document.getElementById('go_to_filters') || document.querySelector('a[href*="-filters"]');
+
+    if (!filtersForm) return;
+
+    // Create dark backdrop
+    let backdrop = document.querySelector('#filters-backdrop');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.id = 'filters-backdrop';
+        document.body.insertBefore(backdrop, document.body.firstChild);
+    }
+
+    // Add Close Icon if missing
+    if (!filtersForm.querySelector('.filter-close-btn')) {
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'filter-close-btn';
+        closeBtn.innerHTML = '✕';
+        closeBtn.type = 'button';
+        closeBtn.setAttribute('aria-label', 'Close filters');
+        filtersForm.insertBefore(closeBtn, filtersForm.firstChild);
+    }
+
+    // Mobile Toggle button listener
+    if (toggleBtn && !toggleBtn.dataset.listenerAdded) {
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            filtersForm.classList.toggle('mobile-active');
+            backdrop.classList.toggle('mobile-active');
+        });
+        toggleBtn.dataset.listenerAdded = 'true';
+    }
+
+    // Click outside to dismiss modal
+    if (!backdrop.dataset.listenerAdded) {
+        backdrop.addEventListener('click', () => {
+            filtersForm.classList.remove('mobile-active');
+            backdrop.classList.remove('mobile-active');
+        });
+        backdrop.dataset.listenerAdded = 'true';
+    }
+
+    // Close button dismiss trigger
+    const closeBtn = filtersForm.querySelector('.filter-close-btn');
+    if (closeBtn && !closeBtn.dataset.listenerAdded) {
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            filtersForm.classList.remove('mobile-active');
+            backdrop.classList.remove('mobile-active');
+        });
+        closeBtn.dataset.listenerAdded = 'true';
+    }
+
+    // Initialize collapsible lists
+    initFilterToggles();
+
+    // Ensure closed by default
+    filtersForm.classList.remove('mobile-active');
+    if (backdrop) backdrop.classList.remove('mobile-active');
+}
+
+// ==========================================================================
+//   MAIN INITIALISATION
+// ==========================================================================
+
 function initEnhancements() {
     // Run all enhancements once
     replaceLogoColor();
@@ -267,6 +346,9 @@ function initEnhancements() {
     startHeaderObserver();
     startCommaObserver();
     startStatsObserver();
+
+    // Initialise filter toggles (mobile & collapsible)
+    initFilters();
 
     console.log('[Obsidian] All enhancements applied');
 }

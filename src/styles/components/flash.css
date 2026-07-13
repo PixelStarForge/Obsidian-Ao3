@@ -49,7 +49,7 @@
 /* ===== MUTED NOTICE ===== */
 .muted.notice {
     background: var(--bg-surface-2);
-    border: 1px solid var(--border-base);
+    border: 4px solid var(--border-base);
     border-left: 3px solid var(--text-muted);
     border-radius: var(--radius-md);
     color: var(--text-secondary);

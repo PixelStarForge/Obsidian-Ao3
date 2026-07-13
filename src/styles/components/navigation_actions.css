@@ -1,0 +1,92 @@
+/* ============================================================
+   ACTION NAVIGATION – for content pages only (inside #main)
+   ============================================================ */
+
+#main ul.actions,
+#main ul.navigation.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: var(--margin-md) 0;
+    align-items: center;
+}
+
+#main ul.actions li,
+#main ul.navigation.actions li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main ul.actions li::before,
+#main ul.navigation.actions li::before {
+    content: none;
+}
+
+/* Links, current spans, and form submit buttons */
+#main ul.actions li a,
+#main ul.actions li span.current,
+#main ul.actions li input[type="submit"],
+#main ul.navigation.actions li a,
+#main ul.navigation.actions li span.current,
+#main ul.navigation.actions li input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-lw-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+/* Hover for clickable items */
+#main ul.actions li a:hover,
+#main ul.actions li input[type="submit"]:hover,
+#main ul.navigation.actions li a:hover,
+#main ul.navigation.actions li input[type="submit"]:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
+
+/* Current / active item */
+#main ul.actions li span.current,
+#main ul.navigation.actions li span.current {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+    font-weight: var(--font-weight-md-bold);
+    cursor: default;
+}
+
+/* Forms inside – remove default styling */
+#main ul.actions li form,
+#main ul.navigation.actions li form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+/* Danger link (e.g., Delete Account) */
+#main ul.actions li a[data-method="delete"],
+#main ul.navigation.actions li a[data-method="delete"] {
+    color: var(--color-warning);
+    border-color: var(--color-warning);
+}
+
+#main ul.actions li a[data-method="delete"]:hover,
+#main ul.navigation.actions li a[data-method="delete"]:hover {
+    background: var(--color-warning);
+    color: var(--bg-base);
+}

@@ -37,6 +37,7 @@ ul.index:has(.blurb) li::before {
 
 .blurb:hover {
     border-color: var(--accent-primary);
+    border-radius: var(--radius-md);
 }
 
 /* ---------- Header (title, author, fandom) ---------- */
@@ -281,6 +282,7 @@ ul.index:has(.blurb) li::before {
 
 /* ---------- Summary ---------- */
 .blurb blockquote.userstuff.summary {
+
     padding: var(--pad-md);
     margin: 0;
     border-bottom: 1px solid var(--border-base);
@@ -289,7 +291,7 @@ ul.index:has(.blurb) li::before {
 .blurb blockquote.userstuff.summary::before {
     content: "Summary";
     display: block;
-    font-size: var(--font-size-h5);
+    font-size: var(--font-size-h4);
     text-transform: uppercase;
     color: var(--text-muted);
     margin-bottom: var(--margin-sm);
@@ -298,7 +300,7 @@ ul.index:has(.blurb) li::before {
 }
 
 .blurb blockquote.userstuff.summary p {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
     margin: 0 0 var(--margin-sm) 0;
