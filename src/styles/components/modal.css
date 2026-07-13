@@ -1,0 +1,182 @@
+/* file: src/styles/components/modal.css */
+
+/* Modal Background: Covers Full Screen */
+#modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-surface-1);
+    z-index: var(--z-2);
+}
+
+/* Popup Model: Contains Content */
+#modal-wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: var(--z-1);
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+/* Force Flex So Modal become Center */
+#modal-bg[style*="display: block"]~#modal-wrap {
+    display: flex !important;
+    top: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: none;
+}
+
+/* Main Container */
+#modal {
+    pointer-events: auto;
+    background: var(--bg-base);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-lg);
+    max-width: 1200px;
+    width: 90%;
+    padding: var(--pad-sm);
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 !important;
+    overflow: visible;
+}
+
+/* Modal Content */
+#modal .content.userstuff {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: var(--pad-sm);
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-hover) var(--border-base);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-lg);
+}
+
+#modal,
+#modal h2,
+#modal h4,
+#modal p,
+#modal li,
+#modal span,
+#modal samp,
+#modal dd,
+#modal dt {
+    color: var(--text-primary);
+}
+
+#modal .content.userstuff h2 {
+    font-size: var(--font-size-h2);
+    margin-top: 0;
+    margin-bottom: var(--margin-md);
+}
+
+#modal .content.userstuff h3 {
+    font-size: var(--font-size-h3);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #252525;
+    padding-bottom: 0.25rem;
+}
+
+#modal .content.userstuff code {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    color: var(--accent-secondary);
+    margin: var(--margin-xs) var(--margin-sm);
+    padding: var(--pad-xs) var(--pad-sm);
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    font-size: var(--font-size-h4);
+}
+
+#modal .content.userstuff p {
+    font-size: var(--font-size-h4);
+    line-height: 1.5;
+    padding: var(--pad-xxs) var(--pad-xs);
+    margin: var(--margin-sm);
+}
+
+#modal .content.userstuff p.note {
+    border-left: 3px solid var(--accent-secondary);
+    font-style: italic;
+    background: var(--bg-surface-1);
+    border-radius: var(--radius-lg);
+    padding: var(--pad-sm);
+}
+
+#modal .content.userstuff ul {
+    list-style: square;
+    margin: var(--margin-sm);
+    padding: var(--pad-sm);
+}
+
+#modal .content.userstuff li {
+    font-size: var(--font-size-h4);
+    line-height: 1.5;
+}
+
+#modal .content.userstuff dl#help dt {
+    color: var(--text-primary);
+    font-size: var(--font-size-h3);
+}
+
+/* Modal Footer Section */
+#modal .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-base);
+    padding-top: var(--pad-sm);
+    margin-top: var(--margin-md);
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Modal Footer Title */
+#modal .footer .title {
+    font-size: var(--font-size-h3);
+    color: white;
+    padding: var(--pad-xs);
+    font-weight: var(--font-weight-hg-bold);
+    letter-spacing: 1px;
+}
+
+
+/* Modal Close Button */
+#modal .footer a.modal-closer,
+#modal .footer a.action.modal-closer {
+    background: var(--accent-primary);
+    color: #000000;
+    padding: var(--pad-xs) var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-hg-bold);
+    font-size: var(--font-size-h3);
+}
+
+/* Modal hide on page load
+#modal-bg:not([style*="display: block"])~#modal-wrap {
+    display: none !important;
+} */
+
+#modal .content.userstuff::-webkit-scrollbar {
+    width: 8px;
+}
+
+#modal .content.userstuff::-webkit-scrollbar-track {
+    background: var(--border-base);
+}
+
+#modal .content.userstuff::-webkit-scrollbar-thumb {
+    background: var(--accent-hover);
+    border-radius: 4px;
+}

@@ -26,7 +26,8 @@
                 "src/styles/core/variables.css",
                 "src/styles/core/main.css",
                 "src/styles/layout/header.css",
-                "src/styles/layout/footer.css"
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css"
             ],
             "run_at": "document_start"
         }

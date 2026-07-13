@@ -5,12 +5,6 @@
     display: none;
 }
 
-/* Hide the Modal Close Text */
-#modal-bg,
-#modal-wrap {
-    display: none;
-}
-
 /* Main Footer */
 #footer {
     background: var(--bg-surface-1);

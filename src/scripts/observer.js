@@ -117,6 +117,9 @@ const headObserver = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
         for (const node of mutation.addedNodes) {
             if (node.nodeType !== 1) { continue; }
+
+            if (node.closest('#modal, #modal-wrap, #modal-bg')) continue;
+
             handleStyleSheets(node);
         }
     }
