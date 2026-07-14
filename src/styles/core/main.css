@@ -11,7 +11,10 @@ body {
     line-height: var(--line-height-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+}
+
+html{
+    overflow-x: clip;
 }
 
 .clear,

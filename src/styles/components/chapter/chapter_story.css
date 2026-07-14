@@ -1,0 +1,252 @@
+/* file: src/styles/components/chapter/chapter_story */
+
+#work-skin {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ----- Workskin Container Wrapper ----- */
+#workskin .userstuff.module {
+    background: transparent;
+    padding: 0;
+    margin: var(--margin-lg) 0 var(--margin-md) 0;
+}
+
+/* ----- Story Body Text ----- */
+#workskin .userstuff {
+    color: var(--text-secondary);
+    line-height: var(--line-height-body, 1.75);
+    font-family: var(--font-stack-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif);
+}
+
+#workskin .userstuff p {
+    margin-bottom: var(--margin-md, 1.6rem);
+    text-align: left;
+}
+
+#workskin .userstuff img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: var(--margin-md) auto;
+    border-radius: var(--radius-sm, 4px);
+    border: 1px solid var(--border-base);
+}
+
+#workskin .userstuff hr {
+    border: none;
+    border-top: 1px solid var(--border-base);
+    margin: var(--margin-lg) 0;
+    width: 100%;
+}
+
+#workskin .userstuff a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+#workskin .userstuff a:hover {
+    color: var(--accent-hover);
+}
+
+/* Hidden landmark/accessibility headings */
+#workskin .userstuff h3.landmark.heading {
+    font-size: var(--font-size-h5, 0.8rem);
+    color: var(--text-primary);
+    margin: 0 0 var(--margin-md) 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   PREFACE MODULE (Title, Author, Summary)
+   ============================================================ */
+
+#workskin .preface {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: var(--margin-md) 0;
+}
+
+#workskin .preface h2.title {
+    font-weight: 700;
+    font-size: var(--font-size-h1, 1.8rem);
+    color: var(--text-primary);
+    margin: 0 0 var(--margin-xs) 0;
+    text-align: center;
+    background: none;
+    border: none;
+}
+
+#workskin .preface h3.byline {
+    font-weight: 500;
+    font-size: var(--font-size-h3, 1rem);
+    color: var(--accent-primary);
+    margin: 0 0 var(--margin-md) 0;
+    text-align: center;
+    background: none;
+}
+
+#workskin .preface h3.byline a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#workskin .preface h3.byline a:hover {
+    color: var(--accent-hover);
+}
+
+#workskin .preface .module {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: var(--margin-md) 0 0 0;
+}
+
+/* Summary and Author's Notes Headings */
+#workskin .preface .summary.module h3.heading,
+#workskin .preface .notes.module h3.heading {
+    font-size: var(--font-size-h5, 0.8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    margin: 0 0 var(--margin-xs) 0;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs);
+}
+
+#workskin .preface .summary.module blockquote.userstuff {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+#workskin .preface .summary.module blockquote.userstuff p {
+    margin: 0 0 var(--margin-xs) 0;
+}
+
+#workskin .preface .notes.module p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-body, 13px);
+    margin: 0 0 var(--margin-xs) 0;
+}
+
+#workskin .preface .notes.module p.jump {
+    font-size: var(--font-size-h5, 0.8rem);
+    color: var(--text-muted);
+}
+
+#workskin .preface .notes.module p.jump a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+#workskin .preface .notes.module p.jump a:hover {
+    color: var(--accent-hover);
+}
+
+
+/* ============================================================
+   CHAPTER TITLE & NOTES CONTAINER
+   ============================================================ */
+
+#chapters {
+    margin: var(--margin-md) 0;
+    padding: var(--pad-md) 0;
+}
+
+#chapters .chapter .preface {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+#chapters .chapter h3.title {
+    font-weight: 600;
+    font-size: var(--font-size-h2, 1.3rem);
+    color: var(--text-primary);
+    margin: 0 0 var(--margin-sm) 0;
+    text-align: center;
+}
+
+#chapters .chapter h3.title a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+#chapters .chapter h3.title a:hover {
+    color: var(--accent-hover);
+}
+
+#chapters .chapter .preface .notes.module {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: var(--margin-xs) 0 0 0;
+}
+
+#chapters .chapter .preface .notes.module h3.heading,
+#chapters .chapter .preface .end.notes.module h3.heading {
+    font-size: var(--font-size-h5, 0.75rem);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin: 0 0 var(--margin-xs) 0;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs);
+}
+
+#chapters .chapter .preface .notes.module p {
+    color: var(--text-muted);
+    font-size: var(--font-size-h4, 0.8rem);
+    margin: 0;
+    line-height: 1.4;
+}
+
+#chapters .chapter .preface .notes.module p a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+#chapters .chapter .preface .notes.module p a:hover {
+    color:var(--accent-hover);
+}
+
+#chapters .chapter .preface .end.notes.module {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: var(--margin-lg) 0 0 0;
+}
+
+#chapters .chapter .preface .end.notes.module blockquote.userstuff {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-body, 0.85rem);
+    line-height: 1.5;
+}
+
+#chapters .chapter .preface .end.notes.module blockquote.userstuff p {
+    margin: 0 0 var(--margin-xs) 0;
+}
+
+#chapters .chapter .preface .end.notes.module blockquote.userstuff p:last-child {
+    margin-bottom: 0;
+}
+
+#chapters .chapter .preface .end.notes.module blockquote.userstuff a {
+    color: var(--accent-primary);
+}

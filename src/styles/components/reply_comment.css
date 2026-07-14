@@ -1,4 +1,4 @@
-/* file: src/styles/components/inbox_comment.css */
+/* file: src/styles/components/reply_comment.css */
 
 /* Comment form wrapper */
 .post.comment {
@@ -219,27 +219,22 @@ form.new_comment {
 }
 
 /* Cancel link styling */
-.post.comment p.submit.actions a[name="comment_cancel"] {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: var(--font-size-h4);
-    cursor: pointer;
-    transition: all var(--transition-hover);
+.post.comment p.submit.actions a[href*="cancel_comment"] {
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border: none;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 32px;
+    height: 28px;
     padding: 0 var(--pad-md);
-    background: transparent;
-    border: 1px solid var(--border-base);
     border-radius: var(--radius-md);
-    font-weight: var(--font-weight-md-bold);
-}
-
-.post.comment p.submit.actions a[name="comment_cancel"]:hover {
-    color: var(--accent-primary);
-    background: var(--bg-surface-2);
-    border-color: var(--accent-primary);
+    color: var(--bg-base);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
 }
 
 /* Reset paragraph defaults */

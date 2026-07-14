@@ -1,0 +1,314 @@
+/* file: src/styles/components/chapter/chapter_navigation_actions.css */
+
+/* ----- Main container ----- */
+#main ul.work.navigation.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: var(--margin-md) 0;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-md);
+    align-items: center;
+}
+
+#main ul.work.navigation.actions li {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main ul.work.navigation.actions li::before {
+    content: none;
+}
+
+/* ----- Buttons (links, buttons, submit) ----- */
+#main ul.work.navigation.actions li a,
+#main ul.work.navigation.actions li button,
+#main ul.work.navigation.actions li input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 36px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    color: var(--text-secondary);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--transition-hover);
+    line-height: normal;
+}
+
+#main ul.work.navigation.actions li a:hover,
+#main ul.work.navigation.actions li button:hover,
+#main ul.work.navigation.actions li input[type="submit"]:hover {
+    background: var(--bg-surface-1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Hide the "hidden" class elements (used by JS) */
+#main ul.work.navigation.actions li.hidden {
+    display: none !important;
+}
+
+/* ----- Dropdown parents (Chapter Index, Download) ----- */
+#main ul.work.navigation.actions li.chapter,
+#main ul.work.navigation.actions li.download {
+    position: relative;
+}
+
+/* ----- Dropdown menus (secondary) ----- */
+#main ul.work.navigation.actions ul.secondary {
+    position: absolute;
+    top: calc(100% + 0px);
+    left: 0;
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-sm) 0;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    list-style: none;
+    min-width: unset;
+}
+
+/* Hidden by default – shown on hover/focus */
+#main ul.work.navigation.actions ul.secondary.hidden {
+    display: none !important;
+}
+
+/* Show dropdown on hover or focus-within */
+#main ul.work.navigation.actions li.chapter:hover ul.secondary,
+#main ul.work.navigation.actions li.chapter:focus-within ul.secondary,
+#main ul.work.navigation.actions li.download:hover ul.secondary,
+#main ul.work.navigation.actions li.download:focus-within ul.secondary {
+    display: flex !important;
+}
+
+/* ----- Dropdown items ----- */
+#main ul.work.navigation.actions ul.secondary li {
+    display: block !important;
+    width: 100% !important;
+}
+
+#main ul.work.navigation.actions ul.secondary li a {
+    display: block !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    color: var(--text-secondary) !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: var(--font-size-h4);
+    justify-content: flex-start;
+
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+#main ul.work.navigation.actions ul.secondary li a:hover {
+    background: var(--bg-surface-2) !important;
+    color: var(--accent-primary) !important;
+}
+
+/* ----- Chapter Index form inside dropdown ----- */
+#main ul.work.navigation.actions ul.secondary form {
+    padding: var(--pad-sm) var(--pad-md);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#main ul.work.navigation.actions ul.secondary form p {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    margin: 0;
+    width: 100%;
+}
+
+#main ul.work.navigation.actions ul.secondary form select {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-xs) var(--pad-sm);
+    outline: none;
+    font-size: var(--font-size-h4);
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#main ul.work.navigation.actions ul.secondary form select {
+    accent-color: var(--accent-hover);
+}
+
+#main ul.work.navigation.actions ul.secondary form select:focus {
+    border-color: var(--accent-primary);
+}
+
+#main ul.work.navigation.actions ul.secondary form span.submit.actions {
+    display: block !important;
+    width: 100% !important;
+}
+
+#main ul.work.navigation.actions ul.secondary form input[type="submit"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: var(--pad-xs) var(--pad-sm);
+    height: auto;
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    cursor: pointer;
+    transition: background var(--transition-hover);
+}
+
+#main ul.work.navigation.actions ul.secondary form input[type="submit"]:hover {
+    background: var(--accent-hover);
+}
+
+/* ----- Mobile responsiveness ----- */
+@media (max-width: 640px) {
+    #main ul.work.navigation.actions {
+        gap: var(--gap-xs);
+    }
+
+    #main ul.work.navigation.actions li a,
+    #main ul.work.navigation.actions li button,
+    #main ul.work.navigation.actions li input[type="submit"] {
+        height: 32px;
+        padding: 0 var(--pad-sm);
+        font-size: var(--font-size-h5);
+    }
+
+    #main ul.work.navigation.actions ul.secondary {
+        min-width: 140px;
+        right: 0;
+        left: auto;
+    }
+
+    #main ul.work.navigation.actions ul.secondary li a {
+        font-size: var(--font-size-h5);
+        padding: var(--pad-xs) var(--pad-sm);
+    }
+
+    #main ul.work.navigation.actions ul.secondary form {
+        padding: var(--pad-xs) var(--pad-sm);
+    }
+
+    #main ul.work.navigation.actions ul.secondary form select {
+        font-size: var(--font-size-h5);
+    }
+
+    #main ul.work.navigation.actions ul.secondary form input[type="submit"] {
+        font-size: var(--font-size-h5);
+        padding: var(--pad-xs);
+    }
+}
+
+/* ============================================================
+   KUDOS – red/pink accent
+   ============================================================ */
+
+
+/* Kudos message toast */
+#kudos_message {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-left: 4px solid #ff8b8b;
+    /* red/pink */
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    padding: var(--pad-sm) var(--pad-md);
+    margin: var(--margin-md) 0;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#kudos_message:empty {
+    display: none;
+}
+
+/* Kudos button (red outline) */
+#main ul.actions li form#new_kudo input#kudo_submit {
+    color: #ff8b8b;
+    border-color: rgba(255, 139, 139, 0.3);
+}
+
+#main ul.actions li form#new_kudo input#kudo_submit:hover {
+    background: rgba(255, 139, 139, 0.1);
+    border-color: #ff8b8b;
+}
+
+/* ============================================================
+   KUDOS CONTAINER & USERNAMES
+   ============================================================ */
+
+#kudos {
+    display: block;
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-left: 4px solid #ff8b8b;
+    /* Kudos signature left border */
+    border-radius: var(--radius-md, 6px);
+    padding: var(--pad-sm, 0.8rem) var(--pad-md, 1.2rem);
+    margin: var(--margin-md, 1.5rem) 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#kudos p.kudos {
+    /* Dims the commas and standard connective text so names pop out */
+    color: var(--text-muted, #888888);
+    line-height: 1.8;
+    /* Increased spacing between text rows */
+    font-size: var(--font-size-h4, 13px);
+    margin: 0;
+}
+
+/* Highly readable username layout */
+#kudos p.kudos a {
+    color: var(--text-primary, #ffffff);
+    /* High-contrast white for crisp readability */
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    /* Prevents individual usernames from breaking across two lines */
+    transition: color var(--transition-hover, 0.15s ease);
+}
+
+#kudos p.kudos a:hover {
+    color: var(--accent-primary);
+}
+
+/* Styled specifically to highlight "X more users" as a distinct action */
+#kudos p.kudos a#kudos_more_link {
+    color: #ff8b8b;
+    font-weight: 600;
+}
+
+#kudos p.kudos a#kudos_more_link:hover {
+    color: #ff5c5c;
+}

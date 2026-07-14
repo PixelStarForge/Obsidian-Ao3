@@ -155,12 +155,12 @@
 /* Modal Close Button */
 #modal .footer a.modal-closer,
 #modal .footer a.action.modal-closer {
-    background: var(--accent-primary);
+    background: var(--color-warning);
     color: #000000;
-    padding: var(--pad-xs) var(--pad-md);
+    padding: 0 var(--pad-sm);
     border-radius: var(--radius-sm);
     font-weight: var(--font-weight-hg-bold);
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h4);
 }
 
 /* Modal hide on page load
@@ -179,4 +179,106 @@
 #modal .content.userstuff::-webkit-scrollbar-thumb {
     background: var(--accent-hover);
     border-radius: 4px;
+}
+
+#modal #share {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md, 1rem);
+}
+
+/* Styled tactile keyboard key caps for shortcuts */
+#modal #share kbd {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 11px;
+    font-family: var(--font-stack-ui, inherit);
+    color: var(--text-primary);
+    box-shadow: 0 1.5px 0 var(--border-base);
+    display: inline-block;
+}
+
+/* Embed Code Textarea */
+#modal #share textarea {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm, 4px);
+    padding: var(--pad-sm, 0.6rem);
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    font-size: var(--font-size-h5, 12px);
+    line-height: 1.5;
+    resize: vertical;
+    outline: none;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+    transition: border-color var(--transition-hover, 0.2s);
+}
+
+#modal #share textarea:focus {
+    border-color: var(--accent-primary);
+}
+
+/* Social Sharing Buttons List */
+#modal #share ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--margin-xs, 0.5rem) 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm, 0.8rem);
+}
+
+#modal #share ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+#modal #share ul li::before {
+    content: none;
+    display: none;
+}
+
+/* Sharing Button Links */
+#modal #share .resp-sharing-button__link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+}
+
+/* Shared Button Design */
+#modal #share .resp-sharing-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-sm, 0.6rem);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: var(--font-size-h5, 12px);
+    font-weight: 600;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    box-sizing: border-box;
+    height: 32px;
+}
+
+#modal #share .resp-sharing-button:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-1px);
+}
+
+#modal #share .resp-sharing-button__icon svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    vertical-align: middle;
 }

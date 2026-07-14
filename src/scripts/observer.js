@@ -218,7 +218,7 @@ function groupStatsInPairs() {
             if (i + 1 >= items.length) break;
             const pair = document.createElement('div');
             pair.className = 'stats-pair';
-            pair.style.cssText = 'display: flex; gap: 0.4rem; white-space: nowrap;';
+            pair.style.cssText = 'display: flex; gap: 0.4rem;align-items:center;justify-content:center;';
             pair.appendChild(items[i].cloneNode(true));
             pair.appendChild(items[i + 1].cloneNode(true));
             pairs.push(pair);
@@ -331,6 +331,74 @@ function initFilters() {
 }
 
 // ==========================================================================
+//   VANILLA SMOOTH SCROLL & COMMENTS OBSERVER
+// ==========================================================================
+
+function smoothScrollTo(element, duration = 400) {
+    if (!element) return;
+    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Quadratic easing out
+    function ease(t, b, c, d) {
+        t /= d;
+        return -c * t * (t - 2) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+function initCommentsScrollFix() {
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('#show_comments_link_top a, #show_comments_link a');
+        if (!link) return;
+
+        console.log('[Obsidian] Comments link clicked, setting up observer...');
+        const placeholder = document.getElementById('comments_placeholder');
+        if (!placeholder) return;
+
+        // Monitor elements inside isolated context without jQuery
+        const observer = new MutationObserver((mutations, obs) => {
+            if (placeholder.style.display !== 'none' && placeholder.children.length > 0) {
+                obs.disconnect();
+                const target = document.getElementById('feedback');
+                if (target) {
+                    setTimeout(() => smoothScrollTo(target, 400), 100);
+                }
+            }
+        });
+
+        observer.observe(placeholder, {
+            childList: true,
+            attributes: true,
+            attributeFilter: ['style']
+        });
+
+        // Fail-safe timeout
+        setTimeout(() => observer.disconnect(), 10000);
+    });
+}
+
+function checkInitialCommentsScroll() {
+    if (window.location.hash === '#comments' || window.location.search.includes('show_comments=true')) {
+        setTimeout(() => {
+            const target = document.getElementById('feedback');
+            if (target) smoothScrollTo(target, 400);
+        }, 600);
+    }
+}
+
+// ==========================================================================
 //   MAIN INITIALISATION
 // ==========================================================================
 
@@ -349,6 +417,10 @@ function initEnhancements() {
 
     // Initialise filter toggles (mobile & collapsible)
     initFilters();
+
+    // Initialise isolated scroll behavior
+    initCommentsScrollFix();
+    checkInitialCommentsScroll();
 
     console.log('[Obsidian] All enhancements applied');
 }
@@ -399,7 +471,6 @@ function startup() {
                 } else {
                     doCleanupAndReveal();
                 }
-                setupSPA();
             }
         });
         headObserver.observe(document.documentElement, { childList: true, subtree: true });
@@ -415,44 +486,6 @@ function startup() {
     } else {
         doCleanupAndReveal();
     }
-    setupSPA();
-}
-
-// ==========================================================================
-//   SPA HANDLING (Turbolinks, History API)
-// ==========================================================================
-
-function setupSPA() {
-    // Turbolinks
-    document.addEventListener('turbolinks:before-render', () => {
-        if (!document.getElementById(HIDING_STYLE_ID)) injectHider();
-        cleanupDone = false;
-    });
-    document.addEventListener('turbolinks:load', () => {
-        if (!cleanupDone) doCleanupAndReveal();
-    });
-
-    // History API
-    const origPushState = history.pushState;
-    history.pushState = function (...args) {
-        if (!document.getElementById(HIDING_STYLE_ID)) injectHider();
-        cleanupDone = false;
-        setTimeout(() => { if (!cleanupDone) doCleanupAndReveal(); }, 100);
-        return origPushState.apply(this, args);
-    };
-    const origReplaceState = history.replaceState;
-    history.replaceState = function (...args) {
-        if (!document.getElementById(HIDING_STYLE_ID)) injectHider();
-        cleanupDone = false;
-        setTimeout(() => { if (!cleanupDone) doCleanupAndReveal(); }, 100);
-        return origReplaceState.apply(this, args);
-    };
-
-    window.addEventListener('popstate', () => {
-        if (!document.getElementById(HIDING_STYLE_ID)) injectHider();
-        cleanupDone = false;
-        setTimeout(() => { if (!cleanupDone) doCleanupAndReveal(); }, 100);
-    });
 }
 
 // Start everything

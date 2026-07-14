@@ -17,7 +17,43 @@
     "content_scripts": [
         {
             "matches": [
+                "*://*.archiveofourown.org/works/*",
+                "*://*.archiveofourown.org/chapters/*"
+            ],
+            "exclude_matches": [
                 "*://*.archiveofourown.org/tags/*/works*"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/chapter/chapter_navigation_actions.css",
+                "src/styles/components/chapter/chapter_metadata.css",
+                "src/styles/components/chapter/chapter_story.css",
+                "src/styles/components/chapter/bookmark_form.css",
+                "src/styles/components/chapter/chapter_afterwork.css",
+                "src/styles/components/inbox_comment.css",
+                "src/styles/components/reply_comment.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/pages/chapter_show.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/tags/*/works*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/works/*",
+                "*://*.archiveofourown.org/chapters/*"
             ],
             "js": [
                 "src/scripts/observer.js"
@@ -41,6 +77,10 @@
         {
             "matches": [
                 "*://*.archiveofourown.org/*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/works/*",
+                "*://*.archiveofourown.org/chapters/*"
             ],
             "js": [
                 "src/scripts/observer.js"

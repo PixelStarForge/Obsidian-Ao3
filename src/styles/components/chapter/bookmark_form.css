@@ -1,0 +1,279 @@
+/* file: src/styles/components/chapter/bookmark_form.css */
+
+/* Main Container Card */
+.post.bookmark {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md, 6px);
+    padding: var(--pad-md, 1.2rem);
+    margin: var(--margin-md, 1.2rem) 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Form & Fieldsets Reset */
+.post.bookmark fieldset {
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0 0 var(--margin-xs) 0;
+}
+
+/* Landmark Headings (Accessibility Reset) */
+.post.bookmark h3.landmark.heading {
+    display: none;
+}
+
+/* Outer Main Form Header */
+.post.bookmark h4.heading {
+    font-size: var(--font-size-h2, 1.25rem);
+    color: var(--text-primary);
+    margin: 0 0 var(--margin-md) 0;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    display: block;
+}
+
+.post.bookmark h4.heading span.byline {
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+/* Inner Sections Legend (e.g., "Write Comments", "Choose Type") */
+.post.bookmark fieldset legend {
+    display: block;
+    float: none;
+    position: static;
+    font-size: var(--font-size-h3, 1.1rem);
+    font-weight: bold;
+    color: var(--accent-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs);
+    margin-bottom: var(--margin-md);
+    width: 100%;
+}
+
+/* Definition Lists (Standard spacing wrapper) */
+.post.bookmark dl {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.post.bookmark dd {
+    margin: 0;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Textareas */
+.post.bookmark textarea {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm, 4px);
+    padding: var(--pad-sm, 0.6rem);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+    font-size: var(--font-size-body, 0.9rem);
+    transition: border-color var(--transition-hover, 0.2s);
+    min-height: 120px;
+    resize: vertical;
+    margin-top: var(--margin-xs);
+    margin-bottom: var(--margin-xs);
+}
+
+.post.bookmark textarea:focus {
+    border-color: var(--accent-primary);
+}
+
+/* Footnotes & Metadata Counters */
+.post.bookmark p.footnote {
+    font-size: var(--font-size-h5, 0.8rem);
+    color: var(--text-muted);
+    margin: var(--margin-xxs) 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.post.bookmark p.character_counter {
+    font-size: var(--font-size-h5, 0.8rem);
+    color: var(--text-muted);
+    margin-top: var(--margin-xs);
+    margin-bottom: var(--margin-sm);
+    text-align: left;
+}
+
+.post.bookmark p.character_counter .value {
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+/* Checkbox Blocks */
+.post.bookmark fieldset p:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: var(--margin-sm) 0;
+}
+
+.post.bookmark input[type="checkbox"] {
+    accent-color: var(--accent-primary);
+    width: 16px;
+    height: 16px;
+    margin: 0 var(--margin-xs) 0 0;
+    cursor: pointer;
+}
+
+.post.bookmark label[for="bookmark_private"],
+.post.bookmark label[for="bookmark_rec"] {
+    color: var(--text-secondary);
+    font-size: var(--font-size-h4, 0.95rem);
+    cursor: pointer;
+    margin-right: var(--margin-md, 2rem);
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Submit Area */
+.post.bookmark p.submit.actions {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: var(--margin-md, 1rem) 0 0 0;
+    display: block;
+}
+
+.post.bookmark p.submit.actions input[type="submit"] {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border: none;
+    border-radius: var(--radius-sm, 4px);
+    padding: var(--pad-sm, 0.75rem) var(--pad-lg, 2rem);
+    font-size: var(--font-size-h4, 0.9rem);
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity var(--transition-hover, 0.2s);
+    margin: 0;
+}
+
+.post.bookmark p.submit.actions input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* ----- Reusable Close Button ----- */
+.post.bookmark p.close.actions {
+    position: absolute;
+    top: -3.2rem;
+    right: var(--pad-md, 1.2rem);
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    width: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.post.bookmark p.close.actions a.bookmark_form_placement_close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-warning, #ff8b8b);
+    font-size: var(--font-size-h2, 1.3rem);
+    font-weight: bold;
+    text-decoration: none;
+    background: rgba(255, 139, 139, 0.1);
+    border: 1px solid rgba(255, 139, 139, 0.2);
+    border-radius: var(--radius-sm, 4px);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.post.bookmark p.close.actions a.bookmark_form_placement_close:hover {
+    background: var(--color-warning, #ff8b8b);
+    color: var(--bg-base);
+    border-color: var(--color-warning, #ff8b8b);
+}
+
+/* Autocomplete and Help Tooltips Inheritances */
+.post.bookmark a.help,
+.post.bookmark span.symbol.question {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--accent-primary);
+    text-decoration: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ============================================================
+   RESPONSIVE LAYOUTS (Desktop / Tablet vs Mobile)
+   ============================================================ */
+
+/* Desktop Grid View (Wide screens) */
+@media (min-width: 768px) {
+    .post.bookmark dl {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: var(--gap-md, 1.5rem) var(--gap-lg, 2rem);
+        align-items: start;
+    }
+
+    .post.bookmark dt {
+        grid-column: 1;
+        color: var(--text-primary);
+        font-weight: bold;
+        padding-top: var(--pad-xs, 0.5rem);
+        margin: 0;
+        font-size: var(--font-size-h4, 0.95rem);
+        text-align: right;
+    }
+
+    .post.bookmark dd {
+        grid-column: 2;
+    }
+}
+
+/* Mobile Stacked View (Narrow screens) */
+@media (max-width: 767px) {
+    .post.bookmark dl dt {
+        display: block;
+        color: var(--text-primary);
+        font-weight: bold;
+        margin: var(--margin-md, 1.2rem) 0 var(--margin-xs, 0.4rem) 0;
+        font-size: var(--font-size-h4, 0.95rem);
+        width: 100%;
+        text-align: left;
+    }
+
+    .post.bookmark dl dd {
+        margin: 0 0 var(--margin-md, 1.2rem) 0;
+        display: block;
+        width: 100%;
+    }
+}

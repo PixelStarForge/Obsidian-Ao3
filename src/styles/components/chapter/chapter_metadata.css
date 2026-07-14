@@ -1,0 +1,234 @@
+/* file: src/styles/components/chapter/chapter_metadata */
+
+
+/* ----- Work metadata container ----- */
+.chapters-show dl.work.meta.group,
+.works-show dl.work.meta.group {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: var(--gap-xs) var(--gap-md);
+    margin: var(--margin-md) 0;
+    box-sizing: border-box;
+}
+
+/* ----- DT (labels) ----- */
+.chapters-show dl.work.meta.group dt,
+.works-show dl.work.meta.group dt {
+    font-size: var(--font-size-h5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-md-bold);
+    margin: 0;
+    padding-top: 3px;
+    text-align: right;
+    align-self: center;
+    justify-self: end;
+}
+
+/* Warning label – red */
+.chapters-show dl.work.meta.group dt.warning,
+.works-show dl.work.meta.group dt.warning,
+.chapters-show dl.work.meta.group dt.warning a,
+.works-show dl.work.meta.group dt.warning a {
+    color: var(--color-warning);
+}
+
+/* ----- DD (values) ----- */
+.chapters-show dl.work.meta.group dd,
+.works-show dl.work.meta.group dd {
+    grid-column: 2;
+    margin: 0;
+    color: var(--text-secondary);
+    display: block;
+    padding-top: 3px;
+    font-size: var(--font-size-h4);
+}
+
+/* ----- Tag lists inside dd ----- */
+.chapters-show dl.work.meta.group dd ul.commas,
+.works-show dl.work.meta.group dd ul.commas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs);
+}
+
+.chapters-show dl.work.meta.group dd ul.commas li,
+.works-show dl.work.meta.group dd ul.commas li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chapters-show dl.work.meta.group dd ul.commas li::before,
+.works-show dl.work.meta.group dd ul.commas li::before {
+    content: none;
+}
+
+/* Tag pills – same as fic_card.css */
+.chapters-show dl.work.meta.group dd ul.commas a,
+.works-show dl.work.meta.group dd ul.commas a {
+    display: inline-block;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+}
+
+.chapters-show dl.work.meta.group dd ul.commas a:hover,
+.works-show dl.work.meta.group dd ul.commas a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* ----- Special category accents (like in fic_card.css) ----- */
+/* Warning tags – red */
+.chapters-show dl.work.meta.group dd.warning ul.commas a,
+.works-show dl.work.meta.group dd.warning ul.commas a {
+    background-color: var(--bg-surface-2);
+    color: var(--color-warning);
+}
+
+.chapters-show dl.work.meta.group dd.warning ul.commas a:hover,
+.works-show dl.work.meta.group dd.warning ul.commas a:hover {
+    border-color: var(--color-warning);
+}
+
+/* Relationship tags – pink/blue */
+.chapters-show dl.work.meta.group dd.relationship ul.commas a,
+.works-show dl.work.meta.group dd.relationship ul.commas a {
+    background-color: var(--bg-surface-2);
+    color: var(--color-relationship);
+}
+
+.chapters-show dl.work.meta.group dd.relationship ul.commas a:hover,
+.works-show dl.work.meta.group dd.relationship ul.commas a:hover {
+    border-color: var(--color-relationship);
+}
+
+/* Character tags – green/teal */
+.chapters-show dl.work.meta.group dd.character ul.commas a,
+.works-show dl.work.meta.group dd.character ul.commas a {
+    background-color: var(--bg-surface-2);
+    color: var(--color-character);
+}
+
+.chapters-show dl.work.meta.group dd.character ul.commas a:hover,
+.works-show dl.work.meta.group dd.character ul.commas a:hover {
+    border-color: var(--color-character);
+}
+
+/* Freeform tags – yellow/gold (if you have a variable) */
+.chapters-show dl.work.meta.group dd.freeform ul.commas a,
+.works-show dl.work.meta.group dd.freeform ul.commas a {
+    background-color: var(--bg-surface-2);
+    color: var(--color-additional);
+}
+
+.chapters-show dl.work.meta.group dd.freeform ul.commas a:hover,
+.works-show dl.work.meta.group dd.freeform ul.commas a:hover {
+    border-color: var(--color-additional);
+}
+
+/* ----- Stats bar inside dd.stats ----- */
+.chapters-show dl.work.meta.group dl.stats,
+.works-show dl.work.meta.group dl.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs) var(--gap-md);
+    background: var(--bg-base);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-xs) var(--pad-sm);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chapters-show dl.work.meta.group dl.stats dt,
+.works-show dl.work.meta.group dl.stats dt {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-md-bold);
+    margin: 0;
+    text-transform: uppercase;
+    font-size: var(--font-size-h5);
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-top: 0;
+    justify-self: start;
+}
+
+.chapters-show dl.work.meta.group dl.stats dd,
+.works-show dl.work.meta.group dl.stats dd {
+    color: var(--text-primary);
+    margin: 0;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+}
+
+/* ----- Mobile responsive ----- */
+@media (max-width: 1095px) {
+
+    .chapters-show dl.work.meta.group,
+    .works-show dl.work.meta.group {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: var(--pad-md) !important;
+        gap: var(--gap-sm) !important;
+    }
+
+    .chapters-show dl.work.meta.group dt,
+    .works-show dl.work.meta.group dt {
+        text-align: left !important;
+        align-self: flex-start !important;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        padding-top: 0 !important;
+        font-weight: var(--font-weight-md-bold) !important;
+        display: block !important;
+    }
+
+    .chapters-show dl.work.meta.group dd,
+    .works-show dl.work.meta.group dd {
+        margin: 0 0 var(--margin-sm) 0 !important;
+        display: block !important;
+        padding-top: 0 !important;
+    }
+
+    .chapters-show dl.work.meta.group dl.stats,
+    .works-show dl.work.meta.group dl.stats {
+        padding: var(--pad-sm) !important;
+    }
+}
+
+.chapters-show dl.work.meta.group dl.stats dt,
+.works-show dl.work.meta.group dl.stats dt {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-md-bold);
+    margin: 0;
+    text-transform: uppercase;
+    font-size: var(--font-size-h4);
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-top: 0;
+}
+
+.chapters-show dl.work.meta.group dl.stats dd,
+.works-show dl.work.meta.group dl.stats dd {
+    color: var(--text-primary);
+    margin: 0;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+
+}

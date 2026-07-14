@@ -1,0 +1,148 @@
+/* file: src/styles/components/chapter/chapter_afterwork.css */
+
+.afterword {
+    margin: var(--margin-lg, 2rem) 0 !important;
+    padding-top: var(--pad-md, 1rem) !important;
+    border-top: 1px solid var(--border-base) !important;
+}
+
+/* Base Card Style for Afterword Modules */
+.afterword .module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md, 6px);
+    padding: var(--pad-md, 1.2rem);
+    margin-bottom: var(--margin-md, 1rem);
+    box-sizing: border-box;
+}
+
+/* Module Section Header */
+.afterword .module h3.heading {
+    font-size: var(--font-size-h3, 1.1rem);
+    font-weight: bold;
+    color: var(--accent-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs);
+    margin-bottom: var(--margin-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* ----- Series Module (#series) ----- */
+#series ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#series li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#series .series {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-sm, 0.8rem);
+    font-size: var(--font-size-h4, 0.9rem);
+    color: var(--text-secondary);
+}
+
+#series .series .position {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+#series .series a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-hover, 0.2s);
+}
+
+#series .series a:hover {
+    color: var(--accent-hover);
+    text-decoration: none !important;
+    /* No hover text underlines */
+}
+
+/* Next / Previous Work Navigation Buttons */
+#series .series a.next,
+#series .series a.previous {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: var(--font-size-h5);
+    color: var(--text-primary);
+}
+
+#series .series a.next:hover,
+#series .series a.previous:hover {
+    color: var(--accent-hover);
+}
+
+/* Hide native template dividers */
+#series .series .divider {
+    display: none;
+}
+
+
+/* ----- Inspired Works Module (#children) ----- */
+#children ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* Automatically wraps columns into grid cards depending on screen space */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--gap-sm, 0.6rem) var(--gap-md, 1rem);
+}
+
+#children li {
+    list-style: none;
+    margin: 0;
+    padding: var(--pad-sm) var(--pad-md);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm, 4px);
+    font-size: var(--font-size-h4, 13px);
+    color: var(--text-muted);
+    line-height: 1.5;
+    transition: border-color var(--transition-hover, 0.2s);
+    box-sizing: border-box;
+}
+
+#children li:hover {
+    border-color: var(--accent-primary);
+}
+
+/* Styled inspired-work titles */
+#children li a:first-of-type {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition-hover, 0.2s);
+}
+
+#children li a:first-of-type:hover {
+    color: var(--accent-primary);
+    text-decoration: none !important;
+}
+
+/* Inspired Author links */
+#children li a[rel="author"] {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color var(--transition-hover, 0.2s);
+    word-break: break-all;
+}
+
+#children li a[rel="author"]:hover {
+    color: var(--accent-hover);
+    text-decoration: none !important;
+}
