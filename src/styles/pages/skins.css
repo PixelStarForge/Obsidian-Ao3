@@ -1,0 +1,291 @@
+/* ============================================================
+   SKINS SHOW PAGE (Individual Skin View)
+   ============================================================ */
+
+/* ----- Header Module Override (Title, Icon, Stats, Summary) ----- */
+#main.skins-show .primary.header.module {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: var(--gap-md) var(--gap-lg);
+    align-items: start;
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+/* Icon */
+#main.skins-show .primary.header.module .icon {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    margin: 0;
+}
+
+#main.skins-show .primary.header.module .icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+}
+
+/* Fallback if no image */
+#main.skins-show .primary.header.module:not(:has(img)) {
+    grid-template-columns: 1fr;
+}
+
+#main.skins-show .primary.header.module:not(:has(img)) .icon {
+    display: none;
+}
+
+#main.skins-show .primary.header.module:not(:has(img))>* {
+    grid-column: 1 !important;
+}
+
+/* Title */
+#main.skins-show .primary.header.module h2.heading {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: var(--font-size-h2);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+}
+
+/* Top Navigation Actions */
+#main.skins-show .primary.header.module ul.navigation.actions {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    padding: var(--pad-xs) 0 0 0;
+    justify-content: flex-start;
+}
+
+/* Description Blockquote */
+#main.skins-show .primary.header.module blockquote.userstuff {
+    grid-column: 2;
+    grid-row: 3;
+    margin: var(--margin-sm) 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: var(--font-size-body);
+}
+
+#main.skins-show .primary.header.module blockquote.userstuff pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Stats Group */
+#main.skins-show .primary.header.module dl.stats {
+    grid-column: 2;
+    grid-row: 4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-sm) var(--gap-md);
+    margin: 0;
+    padding: var(--pad-sm) var(--pad-md);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    align-items: center;
+}
+
+#main.skins-show .primary.header.module dl.stats dt {
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: var(--font-size-h5);
+    margin: 0;
+}
+
+#main.skins-show .primary.header.module dl.stats dd {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: var(--font-size-h4);
+}
+
+/* ----- CSS Code Viewer Block ----- */
+#main.skins-show .css.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+#main.skins-show .css.module h3.heading {
+    font-size: var(--font-size-h3);
+    color: var(--accent-primary);
+    padding-bottom: var(--pad-sm);
+}
+
+#main.skins-show .css.module blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+#main.skins-show .css.module pre {
+    background: var(--bg-base);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-md);
+    margin: 0;
+    color: var(--text-secondary);
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    font-size: var(--font-size-h5);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+}
+
+/* ----- Bottom Primary Actions ----- */
+#main.skins-show .skins.home>ul.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main.skins-show .skins.home>ul.actions li {
+    margin: 0;
+    display: flex;
+}
+
+#main.skins-show .skins.home>ul.actions form {
+    margin: 0;
+    display: flex;
+}
+
+#main.skins-show .skins.home>ul.actions input[type="submit"],
+#main.skins-show .skins.home>ul.actions button,
+#main.skins-show .skins.home>ul.actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    font-family: inherit;
+}
+
+#main.skins-show .skins.home>ul.actions input[type="submit"]:hover,
+#main.skins-show .skins.home>ul.actions button:hover,
+#main.skins-show .skins.home>ul.actions a:hover {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+/* Special Highlighting for "Use" Button */
+#main.skins-show .skins.home>ul.actions input[value="Use"] {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+#main.skins-show .skins.home>ul.actions input[value="Use"]:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+
+/* ----- Mobile Responsive Adjustments ----- */
+@media (max-width: 600px) {
+    #main.skins-show .primary.header.module {
+        grid-template-columns: 1fr;
+    }
+
+    #main.skins-show .primary.header.module .icon {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: center;
+        margin-bottom: var(--margin-sm);
+    }
+
+    #main.skins-show .primary.header.module h2.heading,
+    #main.skins-show .primary.header.module ul.navigation.actions,
+    #main.skins-show .primary.header.module blockquote.userstuff,
+    #main.skins-show .primary.header.module dl.stats {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+
+/* ----- Parent Skins Module ----- */
+#main.skins-show .parents.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+#main.skins-show .parents.module h3.heading {
+    font-size: var(--font-size-h3);
+    color: var(--accent-primary);
+    margin: 0 0 var(--margin-md) 0;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+}
+
+#main.skins-show .parents.module ul.index {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+}
+
+#main.skins-show .parents.module ul.index li {
+    margin: 0;
+    padding: 0;
+}
+
+#main.skins-show .parents.module ul.index li::before {
+    content: none;
+    display: none;
+}
+
+#main.skins-show .parents.module ul.index li a {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+}
+
+#main.skins-show .parents.module ul.index li a:hover {
+    background: var(--bg-surface-1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}

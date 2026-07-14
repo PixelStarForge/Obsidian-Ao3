@@ -1,0 +1,599 @@
+/* file: src/styles/components/dashboard.css */
+
+
+#inner.wrapper {
+    margin-top: var(--margin-md, 1.5rem);
+}
+
+a,
+p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout grid definition */
+@media (min-width: 1096px) {
+    #inner.wrapper {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: var(--gap-lg, 2rem);
+        align-items: start;
+    }
+}
+
+@media (max-width: 1095px) {
+    #inner.wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-md, 1.5rem);
+    }
+}
+
+/* Sidebar Dashboard Card Container (Desktop) */
+#dashboard {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md, 8px);
+    padding: var(--pad-md, 1.2rem);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#dashboard h4.heading {
+    font-size: var(--font-size-h5, 0.8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin: var(--margin-md, 1.5rem) 0 0 0;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs, 0.25rem);
+}
+
+#dashboard h4.heading:first-of-type {
+    margin-top: 0;
+}
+
+#dashboard ul.navigation.actions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs, 0.4rem);
+}
+
+#dashboard ul.navigation.actions li {
+    width: 100%;
+}
+
+#dashboard ul.navigation.actions li a,
+#dashboard ul.navigation.actions li span.current {
+    display: block;
+    padding: var(--pad-sm, 0.6rem) var(--pad-md, 0.8rem);
+    border-radius: var(--radius-sm, 4px);
+    font-size: var(--font-size-h4, 0.9rem);
+    text-decoration: none;
+    transition: all var(--transition-hover, 0.2s) ease-in-out;
+}
+
+#dashboard ul.navigation.actions li a {
+    color: var(--text-secondary);
+    background: transparent;
+}
+
+#dashboard ul.navigation.actions li a:hover {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border-left: 3px solid var(--accent-primary);
+    padding-left: calc(var(--pad-md, 0.8rem) - 3px);
+}
+
+#dashboard ul.navigation.actions li span.current {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    font-weight: 600;
+    border-left: 3px solid var(--accent-primary);
+    padding-left: calc(var(--pad-md, 0.8rem) - 3px);
+}
+
+/* Mobile Dashboard Navigation (Wrapping Buttons) */
+@media (max-width: 1095px) {
+    #dashboard {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gap-xs, 0.4rem);
+        margin-bottom: var(--margin-md, 1.5rem);
+    }
+
+    #dashboard h4.heading {
+        display: none;
+    }
+
+    #dashboard ul.navigation.actions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gap-xs, 0.4rem);
+        width: auto;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    #dashboard ul.navigation.actions li {
+        display: inline-flex;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    #dashboard ul.navigation.actions li a,
+    #dashboard ul.navigation.actions li span.current {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-surface-1);
+        border: 1px solid var(--border-base);
+        border-radius: var(--radius-sm, 4px);
+        padding: var(--pad-xs, 0.4rem) var(--pad-sm, 0.6rem);
+        font-size: var(--font-size-h5, 0.8rem);
+        font-weight: 500;
+        color: var(--text-secondary);
+        transition: all var(--transition-hover, 0.2s) ease;
+        white-space: normal;
+        min-height: 30px;
+        height: auto;
+        line-height: 1.4;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #dashboard ul.navigation.actions li a:hover {
+        background: var(--bg-surface-2);
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+        padding-left: var(--pad-sm, 0.6rem);
+        border-left: 1px solid var(--accent-primary);
+    }
+
+    #dashboard ul.navigation.actions li span.current {
+        background: var(--bg-surface-2);
+        border-color: var(--accent-primary);
+        color: var(--text-primary);
+        font-weight: bold;
+        padding-left: var(--pad-sm, 0.6rem);
+        border-left: 1px solid var(--accent-primary);
+    }
+}
+
+.blurb ul.actions {
+    background: var(--bg-surface-1);
+    border-top: 1px solid var(--border-base);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    /* Contained cleanly inside card corners */
+    padding: var(--pad-sm, 0.8rem) var(--pad-md, 1rem) !important;
+    margin: 0 !important;
+    /* Placed flush on card borders */
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs, 0.6rem);
+    list-style: none;
+}
+
+.blurb ul.actions li {
+    margin: 0;
+}
+
+.blurb ul.actions li a {
+    background: var(--bg-surface-1);
+    /* Clean contrast relative to footer bar */
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-xs, 0.4rem) var(--pad-sm, 0.8rem);
+    border-radius: var(--radius-sm, 4px);
+    font-size: var(--font-size-h5, 12px);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 28px;
+    transition: all var(--transition-hover, 0.2s) ease;
+}
+
+.blurb ul.actions li a:hover {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+.series.listbox ol.index.group li.series.blurb p.actions {
+    background-color: var(--bg-surface-1);
+}
+
+.series.listbox ol.index.group li.series.blurb p.actions a {
+    background-color: var(--bg-surface-2);
+    color: var(--text-secondary);
+}
+
+.series.listbox ol.index.group li.series.blurb p.actions a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-base);
+}
+
+
+/* ==========================================================================
+   COMPONENT 8: BOOKMARK BADGES (Rec, Private, Public, Count)
+   ========================================================================== */
+
+/* Positioning on Desktop - absolute top right within card container */
+.bookmark.blurb {
+    position: relative;
+}
+
+.bookmark.blurb p.status {
+    position: absolute;
+    top: var(--pad-sm, 1rem);
+    right: var(--pad-sm, 1rem);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs, 0.5rem);
+    margin: 0;
+    z-index: 2;
+}
+
+.bookmark.blurb p.status a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Rec Badge (Warm Gold / Orange) */
+.bookmark.blurb p.status span.rec {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(255, 179, 128, 0.15);
+    color: #ffb380;
+    border: 1px solid rgba(255, 179, 128, 0.3);
+    line-height: normal;
+}
+
+/* Private Badge (Soft Red) */
+.bookmark.blurb p.status span.private {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(255, 139, 139, 0.15);
+    color: var(--color-warning, #ff8b8b);
+    border: 1px solid rgba(255, 139, 139, 0.3);
+    line-height: normal;
+}
+
+/* Public Badge (Soft Green) */
+.bookmark.blurb p.status span.public {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(139, 255, 139, 0.15);
+    color: var(--color-success, #8bff8b);
+    border: 1px solid rgba(139, 255, 139, 0.3);
+    line-height: normal;
+}
+
+/* Bookmark Count text */
+.bookmark.blurb p.status span.count {
+    font-size: var(--font-size-h5, 0.8rem);
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+.bookmark.blurb p.status span.count a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-hover, 0.2s) ease;
+}
+
+.bookmark.blurb p.status span.count a:hover {
+    color: var(--accent-primary);
+}
+
+/* Mobile: Reposition absolute elements to static block flow to avoid clipping */
+@media (max-width: 767px) {
+    .bookmark.blurb p.status {
+        position: static;
+        float: none;
+        display: flex;
+        align-items: center;
+        margin: 0 0 var(--margin-xs, 0.8rem) 0;
+        justify-content: flex-start;
+        gap: var(--gap-sm, 0.6rem);
+    }
+}
+
+
+/* ==========================================================================
+   COMPONENT 9: BOOKMARK BLURB – OWN USER MODULE (Bookmarker Details Card)
+   ========================================================================== */
+
+/* Inner Personal Bookmark Block */
+.bookmark.blurb div.own.user.module.group {
+    background: var(--bg-surface-2);
+    border-top: 1px solid var(--border-base);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: var(--pad-md, 1rem);
+    margin: 0;
+    /* Placed flush on card borders */
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs, 0.8rem);
+}
+
+/* Bookmarker name and Date metadata */
+.bookmark.blurb div.own.user.module.group h5.byline.heading {
+    font-size: var(--font-size-h4, 13px);
+    color: var(--text-primary);
+    margin: 0;
+    font-weight: 600;
+}
+
+.bookmark.blurb div.own.user.module.group h5.byline.heading a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color var(--transition-hover, 0.2s) ease;
+}
+
+.bookmark.blurb div.own.user.module.group h5.byline.heading a:hover {
+    color: var(--accent-hover);
+}
+
+.bookmark.blurb div.own.user.module.group p.datetime {
+    font-size: var(--font-size-h5, 0.8rem);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Metadata subheadings (Bookmarker's Tags, Collections) */
+.bookmark.blurb div.own.user.module.group h6.meta.heading {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin: var(--margin-xs, 0.2rem) 0 0 0;
+    font-weight: bold;
+}
+
+/* Tags and Collections lists */
+.bookmark.blurb div.own.user.module.group ul.meta.commas,
+.bookmark.blurb div.own.user.module.group ul.meta.tags.commas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs, 0.5rem);
+}
+
+.bookmark.blurb div.own.user.module.group ul.meta.commas li,
+.bookmark.blurb div.own.user.module.group ul.meta.tags.commas li {
+    margin: 0;
+    padding: 0;
+}
+
+.bookmark.blurb div.own.user.module.group ul.meta.commas li::before,
+.bookmark.blurb div.own.user.module.group ul.meta.tags.commas li::before {
+    content: none;
+}
+
+/* Custom personal tags tags */
+.bookmark.blurb div.own.user.module.group ul.meta.tags.commas a.tag {
+    display: inline-block;
+    background: var(--bg-surface-1);
+    /* Visual separation from background wrapper */
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    padding: 3px 8px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: var(--font-size-h5, 12px);
+    text-decoration: none;
+    transition: all var(--transition-hover, 0.2s) ease;
+}
+
+.bookmark.blurb div.own.user.module.group ul.meta.tags.commas a.tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Personal collection links */
+.bookmark.blurb div.own.user.module.group ul.meta.commas a {
+    color: var(--accent-primary);
+    font-size: 12px;
+    text-decoration: none;
+    transition: color var(--transition-hover, 0.2s) ease;
+}
+
+.bookmark.blurb div.own.user.module.group ul.meta.commas a:hover {
+    color: var(--accent-hover);
+}
+
+/* Bookmarker's personal notes block */
+.bookmark.blurb div.own.user.module.group blockquote.userstuff.notes {
+    background: var(--bg-base);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm, 4px);
+    padding: var(--pad-xs, 0.6rem) var(--pad-sm, 0.8rem);
+    margin: var(--margin-xs, 0.2rem) 0 0 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.bookmark.blurb div.own.user.module.group blockquote.userstuff.notes p {
+    margin: 0 0 var(--margin-xs, 0.4rem) 0;
+}
+
+.bookmark.blurb div.own.user.module.group blockquote.userstuff.notes p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bookmark Action Buttons inside user module (Edit, Delete, Add to Collection) */
+.bookmark.blurb div.own.user.module.group ul.actions {
+    background: transparent;
+    border: none;
+    padding: var(--pad-xs, 0.4rem) 0 0 0;
+    margin: var(--margin-xs, 0.4rem) 0 0 0;
+    border-top: 1px solid var(--border-base);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-xs, 0.5rem);
+    list-style: none;
+}
+
+.bookmark.blurb div.own.user.module.group ul.actions li {
+    display: inline-flex;
+    margin: 0;
+}
+
+.bookmark.blurb div.own.user.module.group ul.actions li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 var(--pad-sm, 0.8rem);
+    background: var(--bg-surface-1);
+    /* Contrast relative to dark user module */
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm, 4px);
+    font-size: var(--font-size-h5, 12px);
+    text-decoration: none;
+    transition: all var(--transition-hover, 0.2s) ease;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.bookmark.blurb div.own.user.module.group ul.actions li a:hover {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+/* Bookmark Card Group List Variations */
+.bookmark.listbox ol.index.group li.bookmark.blurb .user.module.group {
+    background-color: var(--bg-surface-1);
+}
+
+.bookmark.listbox ol.index.group li.bookmark.blurb .user.module.group ul.meta.tags.commas {
+    margin-bottom: var(--margin-sm);
+    border: none !important;
+}
+
+.bookmark.listbox ol.index.group li.bookmark.blurb .user.module.group ul.meta.tags.commas li {
+    background-color: var(--bg-surface-2);
+}
+
+#main h2.heading {
+    font-size: var(--font-size-h2, 1.6rem);
+    color: var(--text-primary);
+    margin-bottom: var(--margin-sm, 1.2rem);
+    font-weight: 600;
+}
+
+/* Home List Cards (Fandoms / Recent Works list box wrappers) */
+.listbox,
+.fandom.listbox.group {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md, 8px);
+    padding: var(--pad-md, 1.2rem);
+    margin-bottom: var(--margin-md, 1.5rem);
+}
+
+.listbox h3.heading,
+.fandom.listbox.group h3.heading {
+    font-size: var(--font-size-h3, 1.1rem);
+    color: var(--accent-primary);
+    margin-top: 0;
+    margin-bottom: var(--margin-sm, 1rem);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs, 0.5rem);
+}
+
+ol.index,
+ul.index {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ol.index li:not(.blurb),
+ul.index li:not(.blurb) {
+    color: var(--text-secondary);
+}
+
+/* Spacing layout for lists of cards (rather than simple text lists) */
+ul.index:has(.blurb),
+ol.index:has(.blurb) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md, 1.5rem);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigational action buttons below the Recent Works lists */
+.work.listbox.group>ul.actions[role="navigation"] {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--margin-xs, 1rem);
+    margin-bottom: var(--margin-xs, 1rem);
+}
+
+.work.listbox.group>ul.actions[role="navigation"] li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 36px;
+    padding: 0 var(--pad-md, 1rem);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm, 4px);
+    font-size: var(--font-size-h5, 0.85rem);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-family: inherit;
+    transition: all var(--transition-hover, 0.2s) ease;
+}
+
+.work.listbox.group>ul.actions[role="navigation"] li a:hover {
+    background: var(--bg-surface-1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.hidden {
+    display: none;
+}

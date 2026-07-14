@@ -110,7 +110,7 @@ li.comment.group ul.actions input[type="submit"] {
     height: 32px;
     padding: 0 var(--pad-md);
     background: var(--bg-surface-1);
-    border: 1px solid var(--border-base);
+    border: 1px solid var(--bg-base) !important;
     border-radius: var(--radius-md);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-md-bold);
@@ -128,7 +128,7 @@ li.comment.group ul.actions a:hover,
 li.comment.group ul.actions button:hover,
 li.comment.group ul.actions input[type="submit"]:hover {
     background: var(--bg-surface-2);
-    border-color: var(--accent-primary);
+    border-color: var(--accent-primary) !important;
     color: var(--accent-primary);
 }
 

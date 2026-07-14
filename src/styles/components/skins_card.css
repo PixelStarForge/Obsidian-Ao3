@@ -1,0 +1,180 @@
+/* file: src/styles/pages/skins.css */
+
+/* ----- Skins Index Grid Layout ----- */
+#main.skins-index ul.skin.index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--gap-md);
+    padding: 0;
+    margin: var(--margin-md) 0;
+    list-style: none;
+}
+
+#main.skins-index ul.skin.index li::before {
+    content: none;
+}
+
+/* ----- Individual Skin Card Override ----- */
+#main.skins-index li.skins.blurb {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    /* Overrides default fic_card margin */
+    height: 100%;
+}
+
+/* ----- Header Module (Icon + Title) ----- */
+#main.skins-index li.skins.blurb .header.module {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    /* Increased from 48px to 80px */
+    grid-template-rows: auto auto;
+    gap: 0 var(--gap-md);
+    /* Increased gap slightly for breathing room */
+    padding: var(--pad-sm) var(--pad-md);
+    align-items: center;
+}
+
+/* Fallback for empty icons (e.g. <div class="icon"></div>) */
+#main.skins-index li.skins.blurb .header.module:not(:has(img)) {
+    grid-template-columns: 1fr;
+}
+
+#main.skins-index li.skins.blurb .header.module:not(:has(img)) h4.heading,
+#main.skins-index li.skins.blurb .header.module:not(:has(img)) p.datetime {
+    grid-column: 1;
+}
+
+/* ----- Icon Styling ----- */
+#main.skins-index li.skins.blurb div.icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+#main.skins-index li.skins.blurb div.icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#main.skins-index li.skins.blurb div.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+/* ----- Description / Summary ----- */
+#main.skins-index li.skins.blurb blockquote.summary {
+    flex-grow: 1;
+    padding: var(--pad-sm) var(--pad-md);
+    margin: 0;
+    border-bottom: 1px solid var(--border-base);
+    font-size: var(--font-size-h5) !important;
+}
+
+#main.skins-index li.skins.blurb blockquote.summary p {
+    font-size: var(--font-size-h5) !important;
+}
+/* Override AO3's native <pre> which often breaks card layouts */
+#main.skins-index li.skins.blurb blockquote.summary pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: inherit;
+    color: var(--text-secondary);
+    margin: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* ----- Actions Footer ----- */
+#main.skins-index li.skins.blurb ul.actions {
+    margin: 0;
+    padding: var(--pad-sm) var(--pad-md);
+    gap: var(--gap-xs);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: none;
+    height: auto;
+}
+
+#main.skins-index li.skins.blurb ul.actions li {
+    display: flex;
+    margin: 0;
+}
+
+#main.skins-index li.skins.blurb ul.actions form {
+    display: flex;
+    margin: 0;
+}
+
+
+/* Compress Buttons for compactness */
+#main.skins-index li.skins.blurb ul.actions input[type="submit"],
+#main.skins-index li.skins.blurb ul.actions button,
+#main.skins-index li.skins.blurb ul.actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 var(--pad-sm);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    background: var(--bg-surface-1);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+#main.skins-index li.skins.blurb ul.actions input[type="submit"]:hover,
+#main.skins-index li.skins.blurb ul.actions button:hover,
+#main.skins-index li.skins.blurb ul.actions a:hover {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+/* Subtle highlight for the "Use" button */
+#main.skins-index li.skins.blurb ul.actions input[value="Use"] {
+    background: var(--bg-surface-1);
+    color: var(--accent-primary);
+}
+
+#main.skins-index li.skins.blurb ul.actions input[value="Use"]:hover {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+}
+
+/* ----- Fallback for empty icons ----- */
+#main.skins-index li.skins.blurb .header.module:not(:has(img)) {
+    grid-template-columns: 1fr;
+}
+
+
+#main.skins-index li.skins.blurb .header.module:not(:has(img)) .icon {
+    display: none;
+}
+
+#main.skins-index li.skins.blurb .header.module:not(:has(img)) h4.heading,
+#main.skins-index li.skins.blurb .header.module:not(:has(img)) p.datetime {
+    grid-column: 1;
+}

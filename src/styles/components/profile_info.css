@@ -1,0 +1,77 @@
+/* file: src/styles/components/profile_info.css */
+
+/* ----- Profile Meta Information Container ----- */
+#main.profile-show .user.profile .wrapper {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin: var(--margin-md) 0;
+    box-sizing: border-box;
+}
+
+#main.profile-show .user.profile dl.meta {
+    display: grid;
+    grid-template-columns: minmax(120px, max-content) 1fr;
+    gap: var(--gap-sm) var(--gap-md);
+    margin: 0;
+    padding: 0;
+    align-items: baseline;
+}
+
+/* ----- Labels (dt) ----- */
+#main.profile-show .user.profile dl.meta dt {
+    font-size: var(--font-size-h5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-md-bold);
+    margin: 0;
+    text-align: right;
+}
+
+/* ----- Values (dd) ----- */
+#main.profile-show .user.profile dl.meta dd {
+    font-size: var(--font-size-h4);
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: var(--line-height-body);
+}
+
+/* ----- Links within values ----- */
+#main.profile-show .user.profile dl.meta dd a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-lw-bold);
+    transition: color var(--transition-hover);
+}
+
+#main.profile-show .user.profile dl.meta dd a:hover {
+    color: var(--accent-hover);
+}
+
+/* ----- Mobile Responsive ----- */
+@media (max-width: 600px) {
+    #main.profile-show .user.profile .wrapper {
+        padding: var(--pad-sm);
+    }
+
+    #main.profile-show .user.profile dl.meta {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xs);
+    }
+
+    #main.profile-show .user.profile dl.meta dt {
+        text-align: left;
+        margin-top: var(--margin-sm);
+    }
+
+    #main.profile-show .user.profile dl.meta dt:first-child {
+        margin-top: 0;
+    }
+
+    #main.profile-show .user.profile dl.meta dd {
+        margin-bottom: var(--margin-xs);
+    }
+}

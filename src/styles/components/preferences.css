@@ -1,0 +1,254 @@
+/* file: src/styles/components/preferences.css */
+
+/* ----- Preferences Form Layout ----- */
+form.edit_preference {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    margin: var(--margin-md) 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ----- Fieldsets (Cards) ----- */
+form.edit_preference fieldset {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Hide default accessibility legend since heading is present */
+form.edit_preference fieldset legend {
+    display: none;
+}
+
+/* ----- Headings ----- */
+form.edit_preference h4.heading {
+    font-size: var(--font-size-h3);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin: 0 0 var(--margin-md) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    font-weight: var(--font-weight-md-bold);
+}
+
+/* ----- Help / Tooltip Icons ----- */
+form.edit_preference a.help.symbol.question {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: 50%;
+    color: var(--accent-primary);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-hg-bold);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+    line-height: 1;
+}
+
+form.edit_preference a.help.symbol.question:hover {
+    background: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+form.edit_preference a.help.symbol.question span.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- Checkbox Lists ----- */
+form.edit_preference ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+form.edit_preference ul li {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    /* Align top if label wraps */
+    gap: var(--gap-sm);
+    margin: 0;
+    padding: 0;
+}
+
+form.edit_preference ul li::before {
+    content: none;
+}
+
+form.edit_preference input[type="checkbox"] {
+    accent-color: var(--accent-primary);
+    width: 16px;
+    height: 16px;
+    margin: 3px 0 0 0;
+    /* optical vertical alignment with label text */
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+form.edit_preference label {
+    font-size: var(--font-size-h4);
+    color: var(--text-secondary);
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+/* Form hover effect for readability */
+form.edit_preference ul li:hover label {
+    color: var(--text-primary);
+}
+
+/* ----- Display Settings Grid (dl) ----- */
+form.edit_preference dl {
+    display: grid;
+    grid-template-columns: minmax(180px, max-content) 1fr;
+    gap: var(--gap-md);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+form.edit_preference dt {
+    font-size: var(--font-size-h4);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-md-bold);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+
+form.edit_preference dd {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    flex-wrap: wrap;
+}
+
+/* Inline actions (e.g. "Public Site Skins") */
+form.edit_preference dd span.actions a {
+    display: inline-flex;
+    align-items: center;
+    height: 28px;
+    font-size: var(--font-size-h5);
+    color: var(--text-secondary);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    padding: 0 var(--pad-sm);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+}
+
+form.edit_preference dd span.actions a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
+
+/* ----- Select & Text Inputs ----- */
+form.edit_preference select,
+form.edit_preference input[type="text"] {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-xs) var(--pad-sm);
+    font-size: var(--font-size-h4);
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color var(--transition-hover);
+    min-height: 32px;
+}
+
+form.edit_preference select:focus,
+form.edit_preference input[type="text"]:focus {
+    border-color: var(--accent-primary);
+}
+
+form.edit_preference select {
+    cursor: pointer;
+    max-width: 100%;
+}
+
+form.edit_preference input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ----- Submit Action Area ----- */
+form.edit_preference fieldset:last-of-type {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: var(--margin-sm);
+}
+
+form.edit_preference p.submit {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    /* Align right */
+}
+
+form.edit_preference p.submit input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-xl);
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: background var(--transition-hover);
+}
+
+form.edit_preference p.submit input[type="submit"]:hover {
+    background: var(--accent-hover);
+}
+
+/* ----- Mobile Responsive ----- */
+@media (max-width: 768px) {
+    form.edit_preference dl {
+        grid-template-columns: 1fr;
+        gap: var(--gap-sm);
+    }
+
+    form.edit_preference dt {
+        margin-top: var(--margin-sm);
+    }
+
+    form.edit_preference select,
+    form.edit_preference input[type="text"] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    form.edit_preference p.submit {
+        justify-content: stretch;
+    }
+
+    form.edit_preference p.submit input[type="submit"] {
+        width: 100%;
+    }
+}
