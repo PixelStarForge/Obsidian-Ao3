@@ -149,3 +149,7 @@
     color: var(--accent-primary);
     background: var(--bg-surface-2);
 }
+
+#main.system.docs .splash .random.readings.module ol.reading.work li .user.module ul.actions li input {
+    background: var(--bg-surface-1) !important;
+}

@@ -1,0 +1,405 @@
+/* file: src/styles/pages/tags.css */
+
+/* ==========================================================================
+   TAGS INDEX (Tag Cloud Page)
+   ========================================================================== */
+
+/* --- Page Heading --- */
+#main.tags-index h2.heading {
+    font-size: var(--font-size-h2);
+    color: var(--text-primary);
+    margin: 0 0 var(--margin-md) 0;
+    font-weight: var(--font-weight-md-bold);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+}
+
+/* --- Description Paragraph --- */
+#main.tags-index>p {
+    color: var(--text-muted);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--margin-lg);
+}
+
+#main.tags-index>p a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color var(--transition-hover);
+}
+
+#main.tags-index>p a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* --- Navigation Actions (Tag Sets / Most Popular / Random) --- */
+#main.tags-index ul.navigation.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--margin-lg) 0;
+}
+
+#main.tags-index ul.navigation.actions li {
+    margin: 0;
+}
+
+#main.tags-index ul.navigation.actions li::before {
+    content: none;
+    display: none;
+}
+
+#main.tags-index ul.navigation.actions a,
+#main.tags-index ul.navigation.actions span.current {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+}
+
+#main.tags-index ul.navigation.actions a:hover {
+    background: var(--bg-surface-1);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+#main.tags-index ul.navigation.actions span.current {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+    font-weight: var(--font-weight-md-bold);
+    cursor: default;
+}
+
+/* --- Tag Cloud Container --- */
+#main.tags-index h3.landmark.heading {
+    display: none;
+}
+
+ul.tags.cloud.index.group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Tag Cloud Items (Pills) --- */
+ul.tags.cloud.index.group li {
+    margin: 0;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-lg);
+    /* Making them pill-shaped */
+    padding: var(--pad-xs) var(--pad-sm);
+    transition: all var(--transition-hover);
+}
+
+ul.tags.cloud.index.group li::before {
+    content: none;
+    display: none;
+}
+
+ul.tags.cloud.index.group li:hover {
+    border-color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
+
+ul.tags.cloud.index.group li a {
+    text-decoration: none;
+    display: inline;
+    color: var(--text-secondary);
+    transition: color var(--transition-hover);
+    line-height: 1.2;
+}
+
+ul.tags.cloud.index.group li:hover a {
+    color: var(--accent-primary);
+}
+
+/* --- Tag Cloud Sizes --- */
+ul.tags.cloud.index.group li a.cloud1 {
+    font-size: 0.9rem;
+}
+
+ul.tags.cloud.index.group li a.cloud2 {
+    font-size: 1rem;
+}
+
+ul.tags.cloud.index.group li a.cloud3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+ul.tags.cloud.index.group li a.cloud4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+ul.tags.cloud.index.group li a.cloud5 {
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+ul.tags.cloud.index.group li a.cloud6 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+ul.tags.cloud.index.group li a.cloud7 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+ul.tags.cloud.index.group li a.cloud8 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+
+/* ==========================================================================
+   TAG SHOW PAGE (Individual Tag Profile)
+   ========================================================================== */
+
+/* --- Primary Header Module --- */
+#main.tags-show .primary.header.module {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin: var(--margin-md) 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--gap-md);
+    align-items: center;
+}
+
+#main.tags-show .primary.header.module h2.heading {
+    margin: 0;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: var(--font-size-h2);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-md-bold);
+    border: none;
+    /* overrides global */
+    padding: 0;
+}
+
+#main.tags-show .primary.header.module .icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid var(--border-base);
+    background: var(--bg-surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#main.tags-show .primary.header.module .icon:empty {
+    display: none;
+}
+
+/* Fallback if no icon */
+#main.tags-show .primary.header.module:has(.icon:empty) {
+    grid-template-columns: 1fr;
+}
+
+#main.tags-show .primary.header.module:has(.icon:empty)>* {
+    grid-column: 1;
+}
+
+/* Header Actions */
+#main.tags-show .primary.header.module ul.navigation.actions {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main.tags-show .primary.header.module ul.navigation.actions li {
+    margin: 0;
+}
+
+#main.tags-show .primary.header.module ul.navigation.actions li::before {
+    content: none;
+}
+
+#main.tags-show .primary.header.module ul.navigation.actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+}
+
+#main.tags-show .primary.header.module ul.navigation.actions a:hover {
+    background: var(--bg-surface-1);
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+/* --- Description Paragraph --- */
+#main.tags-show .tag.home.profile>p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-h4);
+    margin: var(--margin-md) 0;
+    line-height: var(--line-height-body);
+}
+
+#main.tags-show .tag.home.profile>p a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+#main.tags-show .tag.home.profile>p a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* --- Listbox Groups (Parent tags, Synonyms, Metatags) --- */
+#main.tags-show .listbox.group {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+}
+
+#main.tags-show .listbox.group h3.heading {
+    font-size: var(--font-size-h3);
+    color: var(--text-primary);
+    margin: 0 0 var(--margin-sm) 0;
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-xs);
+}
+
+/* Commas list & Tree index */
+#main.tags-show .listbox.group ul.tags.commas,
+#main.tags-show .listbox.group ul.tags.tree.index {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+}
+
+#main.tags-show .listbox.group ul.tags.tree.index {
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+
+#main.tags-show .listbox.group ul li {
+    margin: 0;
+}
+
+#main.tags-show .listbox.group ul li::before {
+    content: none;
+}
+
+/* Standard tag pill style */
+#main.tags-show .listbox.group a.tag {
+    display: inline-block;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: var(--font-size-h5);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+}
+
+#main.tags-show .listbox.group a.tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
+
+/* Nested tree logic */
+#main.tags-show .listbox.group ul.tags.tree.index ul {
+    margin-left: var(--margin-lg);
+    margin-top: var(--margin-xs);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+
+
+/* ==========================================================================
+   MOBILE OVERRIDES
+   ========================================================================== */
+@media (max-width: 600px) {
+
+    /* Stack cloud font sizes to be a bit smaller */
+    ul.tags.cloud.index.group li a.cloud8 {
+        font-size: 1.6rem;
+    }
+
+    ul.tags.cloud.index.group li a.cloud7 {
+        font-size: 1.45rem;
+    }
+
+    ul.tags.cloud.index.group li a.cloud6 {
+        font-size: 1.3rem;
+    }
+
+    ul.tags.cloud.index.group li a.cloud5 {
+        font-size: 1.2rem;
+    }
+
+    /* Center header for tag show profile */
+    #main.tags-show .primary.header.module {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    #main.tags-show .primary.header.module .icon {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #main.tags-show .primary.header.module h2.heading,
+    #main.tags-show .primary.header.module ul.navigation.actions {
+        grid-column: 1;
+        grid-row: auto;
+        justify-content: center;
+    }
+}

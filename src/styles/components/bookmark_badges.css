@@ -1,0 +1,94 @@
+
+/* Positioning on Desktop - absolute top right within card container */
+.bookmark.blurb {
+    position: relative;
+}
+
+.bookmark.blurb p.status {
+    position: absolute;
+    top: var(--pad-sm, 1rem);
+    right: var(--pad-sm, 1rem);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs, 0.5rem);
+    margin: 0;
+    z-index: 2;
+}
+
+.bookmark.blurb p.status a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Rec Badge (Warm Gold / Orange) */
+.bookmark.blurb p.status span.rec {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(255, 179, 128, 0.15);
+    color: #ffb380;
+    border: 1px solid rgba(255, 179, 128, 0.3);
+    line-height: normal;
+}
+
+/* Private Badge (Soft Red) */
+.bookmark.blurb p.status span.private {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(255, 139, 139, 0.15);
+    color: var(--color-warning, #ff8b8b);
+    border: 1px solid rgba(255, 139, 139, 0.3);
+    line-height: normal;
+}
+
+/* Public Badge (Soft Green) */
+.bookmark.blurb p.status span.public {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm, 4px);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(139, 255, 139, 0.15);
+    color: var(--color-success, #8bff8b);
+    border: 1px solid rgba(139, 255, 139, 0.3);
+    line-height: normal;
+}
+
+/* Bookmark Count text */
+.bookmark.blurb p.status span.count {
+    font-size: var(--font-size-h5, 0.8rem);
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+.bookmark.blurb p.status span.count a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-hover, 0.2s) ease;
+}
+
+.bookmark.blurb p.status span.count a:hover {
+    color: var(--accent-primary);
+}
+
+/* Mobile: Reposition absolute elements to static block flow to avoid clipping */
+@media (max-width: 767px) {
+    .bookmark.blurb p.status {
+        position: static;
+        float: none;
+        display: flex;
+        align-items: center;
+        margin: 0 0 var(--margin-xs, 0.8rem) 0;
+        justify-content: flex-start;
+        gap: var(--gap-sm, 0.6rem);
+    }
+}

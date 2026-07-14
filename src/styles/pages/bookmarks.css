@@ -1,0 +1,11 @@
+/* file: src/styles/pages/bookmarks.css */
+
+#main.bookmarks-index ol.bookmark.index li.blurb.bookmark ul.actions {
+    margin: 0 !important;
+    padding: var(--pad-sm);
+}
+
+#main.bookmarks-index ol.bookmark.index li.blurb.bookmark ul.actions li a,
+#main.bookmarks-index ol.bookmark.index li.blurb.bookmark .user.module.group {
+    background: var(--bg-surface-1) !important;
+}
