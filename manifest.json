@@ -140,12 +140,92 @@
         },
         {
             "matches": [
+                "*://*.archiveofourown.org/users/*/works*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/fic_card.css",
+                "src/styles/components/filter.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/dashboard.css",
+                "src/styles/pages/users_works.css",
+                "src/styles/components/primary_user_module.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/users/*/bookmarks*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/fic_card.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/dashboard.css",
+                "src/styles/components/filter.css",
+                "src/styles/pages/users_bookmarks.css",
+                "src/styles/components/primary_user_module.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/users/*/inbox*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/inbox_comment.css",
+                "src/styles/components/reply_comment.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/dashboard.css",
+                "src/styles/pages/users_inbox.css",
+                "src/styles/components/primary_user_module.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/users/*"
             ],
             "exclude_matches": [
                 "*://*.archiveofourown.org/users/*/profile*",
                 "*://*.archiveofourown.org/users/*/pseuds*",
-                "*://*.archiveofourown.org/users/*/preferences*"
+                "*://*.archiveofourown.org/users/*/preferences*",
+                "*://*.archiveofourown.org/users/*/bookmarks*",
+                "*://*.archiveofourown.org/users/*/inbox*"
             ],
             "js": [
                 "src/scripts/observer.js"

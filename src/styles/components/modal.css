@@ -9,7 +9,7 @@
     width: 100vw;
     height: 100vh;
     background: var(--bg-surface-1);
-    z-index: var(--z-2);
+    z-index: 100005 !important;
 }
 
 /* Popup Model: Contains Content */
@@ -20,7 +20,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: var(--z-1);
+    z-index: 100006 !important; 
     box-sizing: border-box;
     pointer-events: none;
 }

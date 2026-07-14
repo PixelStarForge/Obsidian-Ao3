@@ -1,0 +1,347 @@
+/* file: src/styles/pages/users_inbox.css */
+
+/* ============================================================
+   USER'S INBOX PAGE (Dashboard Context)
+   ============================================================ */
+
+/* ---- Two-column layout inside the main area (Desktop) ---- */
+@media (min-width: 1096px) {
+    #main.inbox-show.dashboard {
+        display: grid;
+        grid-template-columns: 2.2fr 1fr;
+        gap: var(--gap-md);
+        align-items: start;
+    }
+
+    /* Everything defaults to the left column */
+    #main.inbox-show.dashboard>* {
+        grid-column: 1;
+    }
+
+    /* Pushes the filters to the right column, spanning downward */
+    #main.inbox-show.dashboard>form.filters {
+        grid-column: 2;
+        grid-row: 2 / span 10;
+        margin-bottom: 0;
+        position: sticky;
+        top: var(--pad-md);
+        /* Enable independent scrolling */
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+    }
+}
+
+/* ---- Page heading ---- */
+#main.inbox-show.dashboard h2.heading {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin: 0 0 var(--margin-md) 0;
+}
+
+/* ---- Mass Edit Options (Top & Bottom Bars) ---- */
+#main.inbox-show form#inbox-form fieldset.actions {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: var(--margin-md) 0;
+}
+
+#main.inbox-show form#inbox-form fieldset.actions legend {
+    display: none;
+}
+
+#main.inbox-show form#inbox-form fieldset.actions ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main.inbox-show form#inbox-form fieldset.actions ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main.inbox-show form#inbox-form fieldset.actions ul li::before {
+    content: none;
+}
+
+/* Standard Buttons */
+#main.inbox-show form#inbox-form fieldset.actions ul li a,
+#main.inbox-show form#inbox-form fieldset.actions ul li input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+#main.inbox-show form#inbox-form fieldset.actions ul li a:hover,
+#main.inbox-show form#inbox-form fieldset.actions ul li input[type="submit"]:hover {
+    background: var(--bg-surface-1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Danger Button (Delete From Inbox) */
+#main.inbox-show form#inbox-form fieldset.actions ul li input[value="Delete From Inbox"] {
+    color: var(--color-warning);
+}
+
+#main.inbox-show form#inbox-form fieldset.actions ul li input[value="Delete From Inbox"]:hover {
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border-color: var(--color-warning);
+}
+
+/* ----- Comments Fieldset Reset ----- */
+#main.inbox-show form#inbox-form fieldset.comments {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+#main.inbox-show form#inbox-form fieldset.comments legend {
+    display: none;
+}
+
+/* ---- Bottom "Top of Inbox" Link ---- */
+#main.inbox-show.dashboard p.narrow-shown {
+    display: none;
+    text-align: center;
+    margin: 0;
+}
+
+#main.inbox-show.dashboard p.narrow-shown a {
+    display: inline-block;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-sm) var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+    cursor: pointer;
+}
+
+#main.inbox-show.dashboard p.narrow-shown a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+
+/* ---- Mobile overrides (max-width: 1095px) ---- */
+@media (max-width: 1095px) {
+    #main.inbox-show.dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-md);
+    }
+
+    /* Show the Filters toggle button on mobile */
+    #main.inbox-show.dashboard p.narrow-shown.actions {
+        display: block !important;
+        text-align: left;
+        margin: 0;
+    }
+
+    /* Show the "Top of Inbox" bottom link on mobile */
+    #main.inbox-show.dashboard p.narrow-shown:not(.actions) {
+        display: block;
+    }
+}
+
+/* ============================================================
+   INBOX FILTER RADIO PILLS
+   ============================================================ */
+
+#main form#inbox-filters {
+    background: var(--bg-surface-1);
+
+}
+
+#main form#inbox-filters button {
+    display: none;
+}
+
+#main form#inbox-filters fieldset {
+    border: none;
+}
+
+/* Filter Section Headers */
+#main form#inbox-filters dt {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    margin: var(--margin-md) 0 var(--margin-sm) 0;
+    padding-bottom: var(--pad-xs);
+    border-bottom: 1px solid var(--border-base);
+}
+
+#main form#inbox-filters dt:first-child {
+    margin-top: 0;
+}
+
+/* Hide Accessibility Landmark */
+#main form#inbox-filters dt.landmark {
+    display: none;
+}
+
+/* Flex Container for Pills */
+#main form#inbox-filters dd ul {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+}
+
+#main form#inbox-filters dd ul li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    list-style: none !important;
+}
+
+/* Hide Native Radios & Indicators */
+#main form#inbox-filters dd ul input[type="radio"],
+#main form#inbox-filters dd ul span.indicator {
+    display: none !important;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+/* Standard Pill Label Styling */
+#main form#inbox-filters dd ul label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    user-select: none;
+    text-align: center;
+}
+
+#main form#inbox-filters dd ul label:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    background: var(--bg-surface-1);
+}
+
+/* Active/Checked Pill Styling */
+#main form#inbox-filters dd ul label:has(input[type="radio"]:checked) {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+    font-weight: var(--font-weight-md-bold);
+}
+
+/* Mobile touch targets for pills */
+@media (max-width: 1095px) {
+    #main form#inbox-filters dd ul label {
+        min-height: 44px;
+        font-size: var(--font-size-h4);
+        padding: 0 var(--pad-sm);
+    }
+}
+
+/* ============================================================
+   INBOX FILTER BUTTONS (Submit & Close)
+   ============================================================ */
+
+/* ----- Submit Button ----- */
+#main form#inbox-filters dd.submit.actions {
+    margin: var(--margin-md) 0 0 0;
+    display: flex;
+    width: 100%;
+}
+
+#main form#inbox-filters dd.submit.actions input[type="submit"] {
+    width: 100%;
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-sm);
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-md-bold);
+    font-size: var(--font-size-h4);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+#main form#inbox-filters dd.submit.actions input[type="submit"]:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
+
+/* ----- Native Close Button ("Top of Inbox") ----- */
+/* Override the .hidden class when the modal is active */
+#main form#inbox-filters.mobile-active p.narrow-shown.hidden {
+    display: block !important;
+    text-align: center;
+    margin: var(--margin-md) auto 0 auto;
+    width: 100%;
+}
+
+#main form#inbox-filters p.narrow-shown a#leave_filters {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+    cursor: pointer;
+}
+
+#main form#inbox-filters p.narrow-shown a#leave_filters:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}

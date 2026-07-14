@@ -6,7 +6,7 @@
     border: 1px solid var(--border-base);
     border-radius: var(--radius-md);
     padding: var(--pad-md);
-    
+
 }
 
 /* Draggable reply modal */
@@ -16,7 +16,6 @@
     border-radius: var(--radius-lg);
     padding: 0;
     margin: var(--margin-md) 0;
-    max-width: 700px;
 }
 
 #reply-to-comment.hidden {
@@ -291,5 +290,50 @@ form.new_comment {
         padding: 0 var(--pad-sm);
         font-size: var(--font-size-h5);
         white-space: nowrap;
+    }
+}
+
+/* ----- Comment Pseud Select Dropdown ----- */
+.post.comment fieldset h4.heading select {
+    background: var(--bg-surface-2);
+    color: var(--accent-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-xxs) 1.8rem var(--pad-xxs) var(--pad-xs);
+    margin: 0 var(--margin-xs);
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: var(--font-weight-hg-bold);
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    /* Custom chevron stroke matching text-secondary (#A1A1AA) */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A1A1AA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 0.9rem;
+    transition: all var(--transition-hover);
+    vertical-align: middle;
+}
+
+.post.comment fieldset h4.heading select:hover,
+.post.comment fieldset h4.heading select:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(226, 166, 255, 0.2);
+}
+
+.post.comment fieldset h4.heading select option {
+    background: var(--bg-surface-1);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-body);
+}
+
+/* Mobile responsive alignment */
+@media (max-width: 600px) {
+    .post.comment fieldset h4.heading select {
+        padding: var(--pad-xxs) 1.6rem var(--pad-xxs) var(--pad-xs);
+        margin: var(--margin-xxs) 0;
+        display: inline-block;
     }
 }

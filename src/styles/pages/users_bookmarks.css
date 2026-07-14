@@ -1,0 +1,158 @@
+/* file: src/styles/pages/users_bookmarks.css */
+
+/* ============================================================
+   USER'S BOOKMARKS PAGE (Dashboard Context)
+   ============================================================ */
+
+/* ---- Two-column layout inside the main area (Desktop) ---- */
+@media (min-width: 1096px) {
+    #main.bookmarks-index.dashboard {
+        display: grid;
+        grid-template-columns: 2.2fr 1fr;
+        gap: var(--gap-md);
+        align-items: start;
+    }
+
+    /* Everything defaults to the left column */
+    #main.bookmarks-index.dashboard>* {
+        grid-column: 1;
+    }
+
+    /* Pushes the filters to the right column, spanning downward */
+    #main.bookmarks-index.dashboard>form.filters {
+        grid-column: 2;
+        grid-row: 2 / span 10;
+        margin-bottom: 0;
+        position: sticky;
+        top: var(--pad-md);
+        /* Enable independent scrolling */
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+    }
+}
+
+/* ---- Page heading ---- */
+#main.bookmarks-index.dashboard h2.heading {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin: 0 0 var(--margin-md) 0;
+}
+
+/* ---- Sub-navigation (Edit Bookmarks, Bookmarks, Filters) ---- */
+/* Removed the .module wrapper requirement to catch Bookmarks markup properly */
+#main.bookmarks-index.dashboard ul.navigation.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--margin-md) 0;
+}
+
+#main.bookmarks-index.dashboard ul.navigation.actions li {
+    list-style: none;
+    margin: 0;
+}
+
+#main.bookmarks-index.dashboard ul.navigation.actions li::before {
+    content: none;
+}
+
+/* Sub-nav Buttons */
+#main.bookmarks-index.dashboard ul.navigation.actions li a,
+#main.bookmarks-index.dashboard ul.navigation.actions li span.current {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-lw-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    box-sizing: border-box;
+}
+
+#main.bookmarks-index.dashboard ul.navigation.actions li a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
+
+/* Current active tab */
+#main.bookmarks-index.dashboard ul.navigation.actions li span.current {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+    font-weight: var(--font-weight-md-bold);
+    cursor: default;
+}
+
+/* ---- Bottom "Top of Work Index" Link ---- */
+#main.bookmarks-index.dashboard p.narrow-shown {
+    display: none;
+    text-align: center;
+    margin: var(--margin-md) auto;
+}
+
+#main.bookmarks-index.dashboard p.narrow-shown a {
+    display: inline-block;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-sm) var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+    cursor: pointer;
+}
+
+#main.bookmarks-index.dashboard p.narrow-shown a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+
+/* ---- Mobile overrides (max-width: 1095px) ---- */
+@media (max-width: 1095px) {
+    #main.bookmarks-index.dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-md);
+    }
+
+    /* Force show the Filters toggle button on mobile */
+    #main.bookmarks-index.dashboard ul.navigation.actions li.narrow-shown {
+        display: inline-block !important;
+    }
+
+    /* Show the "Top of Work Index" bottom link on mobile */
+    #main.bookmarks-index.dashboard p.narrow-shown {
+        display: block;
+    }
+}
+
+#main.bookmarks-index.dashboard .own.user.module {
+    background: var(--bg-surface-1);
+}
+#main.bookmarks-index.dashboard .own.user.module ul.tags.commas {
+    padding-bottom: var(--pad-sm);
+}
+
+#main.bookmarks-index.dashboard .own.user.module ul.tags.commas li  {
+    background: var(--bg-surface-2) !important;
+}
