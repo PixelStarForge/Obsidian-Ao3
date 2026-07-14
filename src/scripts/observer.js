@@ -208,7 +208,8 @@ function groupStatsInPairs() {
         'li.work.blurb dl.stats, ' +
         'li.series.blurb dl.stats, ' +
         'dl.work.meta.group dl.stats, ' +
-        'li.fandom.listbox.group dd dl.stats'
+        'li.fandom.listbox.group dd dl.stats, ' +
+        'dl.statistics.meta.group'
     );
     statsList.forEach(stats => {
         if (stats.dataset.statsGrouped) return;
@@ -224,7 +225,7 @@ function groupStatsInPairs() {
             pairs.push(pair);
         }
         stats.innerHTML = '';
-        stats.style.cssText = 'display: flex !important; flex-wrap: wrap !important; gap: 0.5rem !important;';
+        stats.style.cssText = 'display: flex !important; flex-wrap: wrap !important; gap: 0.5rem;';
         pairs.forEach(pair => stats.appendChild(pair));
         stats.dataset.statsGrouped = 'true';
     });

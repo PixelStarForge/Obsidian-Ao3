@@ -1,0 +1,313 @@
+/* file: src/styles/pages/users_subscriptions.css */
+
+/* ============================================================
+   USER'S SUBSCRIPTIONS PAGE (Dashboard Context)
+   ============================================================ */
+
+/* ---- Page heading ---- */
+#main.subscriptions-index.dashboard h2.heading {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin: 0 0 var(--margin-md) 0;
+}
+
+/* Hide redundant accessibility headings */
+#main.subscriptions-index.dashboard h3.landmark.heading {
+    display: none;
+}
+
+/* ---- Sub-navigation (All, Series, Users, Works, Delete All) ---- */
+#main.subscriptions-index.dashboard ul.navigation.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--margin-lg) 0;
+}
+
+#main.subscriptions-index.dashboard ul.navigation.actions li {
+    list-style: none;
+    margin: 0;
+}
+
+#main.subscriptions-index.dashboard ul.navigation.actions li::before {
+    content: none;
+}
+
+#main.subscriptions-index.dashboard ul.navigation.actions li a,
+#main.subscriptions-index.dashboard ul.navigation.actions li span.current {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-lw-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    box-sizing: border-box;
+}
+
+#main.subscriptions-index.dashboard ul.navigation.actions li a:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
+
+#main.subscriptions-index.dashboard ul.navigation.actions li span.current {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+    font-weight: var(--font-weight-md-bold);
+    cursor: default;
+}
+
+/* Highlight the "Delete All Subscriptions" button */
+#main.subscriptions-index.dashboard ul.navigation.actions li a[href*="confirm_delete_all"] {
+    color: var(--color-warning);
+    border-color: rgba(255, 139, 139, 0.3);
+}
+
+#main.subscriptions-index.dashboard ul.navigation.actions li a[href*="confirm_delete_all"]:hover {
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border-color: var(--color-warning);
+}
+
+
+/* ---- List of Subscriptions (Grid Layout) ---- */
+#main.subscriptions-index.dashboard dl.subscription.index.group {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    margin: var(--margin-md) 0;
+    padding: 0;
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dt {
+    grid-column: 1;
+    padding: var(--pad-md);
+    border-bottom: 1px solid var(--border-base);
+    font-size: var(--font-size-h4);
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dd {
+    grid-column: 2;
+    padding: var(--pad-md);
+    border-bottom: 1px solid var(--border-base);
+    margin: 0;
+    text-align: right;
+}
+
+/* Remove bottom border for the last items so they don't double up with the container */
+#main.subscriptions-index.dashboard dl.subscription.index.group dt:nth-last-of-type(1),
+#main.subscriptions-index.dashboard dl.subscription.index.group dd:nth-last-of-type(1) {
+    border-bottom: none;
+}
+
+/* ---- Subscription Title & Author Typography ---- */
+#main.subscriptions-index.dashboard dl.subscription.index.group dt a:first-of-type {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color var(--transition-hover);
+    display: inline-block;
+    margin-right: var(--margin-xs);
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dt a:first-of-type:hover {
+    color: var(--accent-primary);
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dt a[rel="author"] {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-lw-bold);
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dt a[rel="author"]:hover {
+    color: var(--accent-hover);
+}
+
+/* ---- Unsubscribe Button ---- */
+#main.subscriptions-index.dashboard dl.subscription.index.group dd form {
+    margin: 0;
+    padding: 0;
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dd input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    font-family: inherit;
+    /* Truncate text if it gets too long */
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dd input[type="submit"]:hover {
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border-color: var(--color-warning);
+}
+
+
+/* ---- Mobile Responsive ---- */
+@media (max-width: 768px) {
+    #main.subscriptions-index.dashboard dl.subscription.index.group {
+        grid-template-columns: 1fr;
+    }
+
+    #main.subscriptions-index.dashboard dl.subscription.index.group dt {
+        grid-column: 1;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    #main.subscriptions-index.dashboard dl.subscription.index.group dd {
+        grid-column: 1;
+        text-align: left;
+        padding-top: var(--pad-sm);
+    }
+
+    #main.subscriptions-index.dashboard dl.subscription.index.group dd input[type="submit"] {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+/* ---- Unsubscribe Button ---- */
+#main.subscriptions-index.dashboard dl.subscription.index.group dd form {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    /* Prevents the form from forcing grid expansion */
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dd input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-md-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    font-family: inherit;
+    box-sizing: border-box;
+    /* CRITICAL: Includes padding in the width calculation */
+
+    /* Truncate text if it gets too long */
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#main.subscriptions-index.dashboard dl.subscription.index.group dd input[type="submit"]:hover {
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border-color: var(--color-warning);
+}
+
+
+/* ---- Mobile Responsive ---- */
+@media (max-width: 768px) {
+    #main.subscriptions-index.dashboard dl.subscription.index.group {
+        grid-template-columns: minmax(0, 100%);
+        /* Forces the grid to respect screen bounds */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #main.subscriptions-index.dashboard dl.subscription.index.group dt {
+        grid-column: 1;
+        border-bottom: none;
+        padding-bottom: 0;
+        min-width: 0;
+        /* Allows text to wrap safely */
+        word-break: break-word;
+        /* Prevents long titles/names from breaking layout */
+    }
+
+    #main.subscriptions-index.dashboard dl.subscription.index.group dd {
+        grid-column: 1;
+        text-align: left;
+        padding-top: var(--pad-sm);
+        min-width: 0;
+        /* Allows button truncation to activate */
+    }
+
+    #main.subscriptions-index.dashboard dl.subscription.index.group dd input[type="submit"] {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* ---- Destructive Action Button ---- */
+#main.subscriptions-confirm_delete_all.dashboard form.destroy p.actions {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: var(--margin-md) 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#main.subscriptions-confirm_delete_all.dashboard form.destroy p.actions input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-lg);
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border: 1px solid var(--color-warning);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    font-family: inherit;
+}
+
+#main.subscriptions-confirm_delete_all.dashboard form.destroy p.actions input[type="submit"]:hover {
+    background: transparent;
+    color: var(--color-warning);
+}
+

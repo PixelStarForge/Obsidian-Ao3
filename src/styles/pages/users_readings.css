@@ -1,0 +1,47 @@
+/* file: src/styles/pages/users_readings.css */
+
+/* ---- Page heading ---- */
+#main.readings-confirm_clear.dashboard h2.heading {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin: 0 0 var(--margin-md) 0;
+}
+
+/* ---- Destructive Action Button ---- */
+#main.readings-confirm_clear.dashboard form.destroy p.actions {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: var(--margin-md) 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#main.readings-confirm_clear.dashboard form.destroy p.actions input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-lg);
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border: 1px solid var(--color-warning);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    font-family: inherit;
+}
+
+#main.readings-confirm_clear.dashboard form.destroy p.actions input[type="submit"]:hover {
+    background: transparent;
+    color: var(--color-warning);
+}
+
+.readings-index .work.blurb .user.group.module .actions li form input {
+    background: var(--bg-surface-1) !important;
+}
