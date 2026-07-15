@@ -267,6 +267,10 @@
    KUDOS CONTAINER & USERNAMES
    ============================================================ */
 
+#kudos:not(:has(p)) {
+    display: none !important;
+}
+
 #kudos {
     display: block;
     background: var(--bg-surface-1);

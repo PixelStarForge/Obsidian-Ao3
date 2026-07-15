@@ -10,8 +10,10 @@
 #main ul.autocomplete,
 #main dd.autocomplete ul.autocomplete,
 #main .autocomplete ul.autocomplete {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row !important;
     align-items: center;
     gap: var(--gap-sm);
     background: var(--bg-surface-2);
@@ -37,8 +39,7 @@
 #main dd.autocomplete ul.autocomplete li.input {
     flex: 1 1 auto;
     display: inline-flex;
-    min-width: 80px;
-    position: relative;
+    width: 100%;
 }
 
 /* ---- Input field (transparent, no border) ---- */
@@ -55,6 +56,7 @@
     color: var(--text-primary);
     width: 100%;
     font-size: var(--font-size-h4);
+    text-align: left;
 }
 
 /* ---- Tag pill ---- */
@@ -88,7 +90,8 @@
 
 #main ul.autocomplete li.added.tag span.delete a:hover,
 #main dd.autocomplete ul.autocomplete li.added.tag span.delete a:hover {
-    color: #ff4d4d; /* intentionally hard‑coded for safety, you can define a variable */
+    color: #ff4d4d;
+    /* intentionally hard‑coded for safety, you can define a variable */
 }
 
 /* ---- Suggestion dropdown container ---- */
@@ -137,14 +140,15 @@
 
 #main .autocomplete.dropdown li,
 #main div.autocomplete.dropdown li {
-    padding: var(--pad-sm) var(--pad-md);
-    margin: var(--margin-xs);
+    padding: var(--pad-xs);
+    margin: 0;
     font-size: var(--font-size-h4);
     color: var(--text-primary);
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     transition: all var(--transition-hover);
     text-align: left;
+    word-break: break-all;
 }
 
 #main .autocomplete.dropdown li:hover,

@@ -55,7 +55,7 @@
     overflow-y: auto;
     padding: var(--pad-sm);
     scrollbar-width: thin;
-    scrollbar-color: var(--accent-hover) var(--border-base);
+    scrollbar-color: var(--accent-primary) var(--border-base);
     background: var(--bg-surface-2);
     border: 1px solid var(--border-base);
     border-radius: var(--radius-lg);

@@ -622,35 +622,6 @@ form.filters+p.footnote a:hover {
     display: block;
 }
 
-/* ----- Help / Tooltip Icons (Circular Buttons) ----- */
-#main form.filters a.help.symbol.question {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background: var(--bg-surface-2);
-    border: 1px solid var(--border-base);
-    border-radius: 50%;
-    color: var(--accent-primary);
-    font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-hg-bold);
-    text-decoration: none;
-    transition: all var(--transition-hover);
-    line-height: 1;
-
-}
-
-#main form.filters a.help.symbol.question:hover {
-    background: var(--bg-base);
-    border-color: var(--accent-primary);
-}
-
-#main form.filters a.help.symbol.question span.symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* ----- Static Options (Recs, Bookmarks with notes) ----- */
 #main form.filters dd.options ul {

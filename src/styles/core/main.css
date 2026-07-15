@@ -13,8 +13,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-html{
+html {
     overflow-x: clip;
+}
+
+ul,ol {
+    list-style: none;
 }
 
 .clear,
@@ -53,4 +57,10 @@ h6 {
 ::selection {
     background-color: var(--accent-primary);
     color: var(--bg-base);
+}
+
+
+select {
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--accent-primary) var(--bg-surface-2) !important;
 }

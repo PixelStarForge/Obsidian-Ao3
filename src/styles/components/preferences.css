@@ -38,35 +38,6 @@ form.edit_preference h4.heading {
     font-weight: var(--font-weight-md-bold);
 }
 
-/* ----- Help / Tooltip Icons ----- */
-form.edit_preference a.help.symbol.question {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background: var(--bg-surface-2);
-    border: 1px solid var(--border-base);
-    border-radius: 50%;
-    color: var(--accent-primary);
-    font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-hg-bold);
-    text-decoration: none;
-    transition: all var(--transition-hover);
-    line-height: 1;
-}
-
-form.edit_preference a.help.symbol.question:hover {
-    background: var(--bg-base);
-    border-color: var(--accent-primary);
-}
-
-form.edit_preference a.help.symbol.question span.symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* ----- Checkbox Lists ----- */
 form.edit_preference ul {
     list-style: none;

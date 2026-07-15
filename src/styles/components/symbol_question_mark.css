@@ -1,0 +1,35 @@
+/* file: src/styles/components/symbol_question_mark.css */
+
+.symbol.question:not(:has(span.text)) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: 50%;
+    color: var(--accent-primary);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-hg-bold);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+    line-height: 1;
+
+}
+
+.symbol.question:hover {
+    background: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+.symbol.question span.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol.question span.symbol:hover {
+    background: var(--bg-base);
+    border-color: var(--accent-primary);
+}

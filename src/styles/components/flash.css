@@ -94,34 +94,11 @@ p.notes a:hover {
     text-decoration: underline;
 }
 
-/* Help icon inline styling */
-p.notes a.help.symbol.question {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background: var(--bg-surface-1);
-    border: 1px solid var(--border-base);
-    border-radius: 50%;
-    color: var(--accent-primary);
-    font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-hg-bold);
-    text-decoration: none;
-    vertical-align: text-bottom;
-}
-
-p.notes a.help.symbol.question:hover {
-    background: var(--bg-base);
-    border-color: var(--accent-primary);
-    text-decoration: none;
-}
-
-p.notes a.help.symbol.question span.symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
+.required.notice,
+span.warning {
+    display: inline-block;
+    color: var(--color-warning);
+    margin: var(--margin-sm) !important;
 }
 
 /* ===== CAUTION NOTICE ===== */

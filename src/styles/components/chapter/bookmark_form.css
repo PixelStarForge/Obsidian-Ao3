@@ -216,8 +216,7 @@
 }
 
 /* Autocomplete and Help Tooltips Inheritances */
-.post.bookmark a.help,
-.post.bookmark span.symbol.question {
+.post.bookmark a.help {
     background: transparent;
     border: none;
     box-shadow: none;
@@ -230,6 +229,30 @@
     justify-content: center;
 }
 
+
+/* --- Bookmark Pseud Select Dropdown --- */
+select#bookmark_pseud_id {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-sm) var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-family: inherit;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    transition: border-color var(--transition-hover);
+}
+
+select#bookmark_pseud_id:focus {
+    border-color: var(--accent-primary);
+}
+
+select#bookmark_pseud_id option {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+}
 
 /* ============================================================
    RESPONSIVE LAYOUTS (Desktop / Tablet vs Mobile)

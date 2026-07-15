@@ -491,3 +491,36 @@ function startup() {
 
 // Start everything
 startup();
+
+
+
+// Style TinyMCE iframe body natively for dark mode text-weight contrast
+// Style TinyMCE iframe body natively for dark mode text-weight contrast
+function styleEditorIframe() {
+    const iframe = document.getElementById('content_ifr');
+    if (iframe && iframe.contentDocument) {
+        const doc = iframe.contentDocument;
+        if (!doc.getElementById('obsidian-iframe-styles')) {
+            const style = doc.createElement('style');
+            style.id = 'obsidian-iframe-styles';
+            style.innerHTML = `
+                body#tinymce {
+                    background-color: var(--bg-surface-2, #222225) !important;
+                    color: var(--text-primary, #E4E4E7) !important;
+                    font-family: var(--font-stack-ui, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+                    -webkit-font-smoothing: antialiased !important;
+                    padding: 0.5rem !important;
+                }
+                
+                strong, b {
+                    font-weight: 800 !important;
+                    color: var(--text-primary, #E4E4E7) !important;
+                }
+            `;
+            doc.head.appendChild(style);
+        }
+    }
+}
+
+// Watch for editor load dynamically
+setInterval(styleEditorIframe, 1000);

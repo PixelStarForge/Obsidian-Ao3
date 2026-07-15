@@ -1,0 +1,85 @@
+/* --- Scoped Notes Lists on Tag Sets Creation Page --- */
+.owned_tag_sets-new ul.notes,
+.tag_set_nominations-new ul.notes {
+    background-color: var(--bg-surface-2);
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    list-style-type: none;
+}
+
+.owned_tag_sets-new ul.notes li,
+.tag_set_nominations-new ul.notes li {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+
+.owned_tag_sets-new ul.notes li strong,
+.owned_tag_sets-new ul.notes li em,
+.tag_set_nominations-newul.notes li strong,
+.tag_set_nominations-new ul.notes li em {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* --- Tag Sets Index Listing Search Bar --- */
+.owned_tag_sets-index .search form.search fieldset {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-md, 0.5rem) !important;
+}
+
+.owned_tag_sets-index .search form.search input.text {
+    background: var(--bg-surface-2, #222225) !important;
+    border: 1px solid var(--border-base, #27272A) !important;
+    padding: var(--pad-sm, 0.4rem) var(--pad-md, 0.8rem) !important;
+    border-radius: var(--radius-sm, 4px) !important;
+    font-size: var(--font-size-h4, 14px) !important;
+    width: 180px !important;
+    transition: all var(--transition-menu, 0.15s ease-in-out) !important;
+    color: var(--accent-primary, #E2A6FF) !important;
+    outline: none !important;
+}
+
+.owned_tag_sets-index .search form.search input.text:focus {
+    border-color: var(--accent-primary, #E2A6FF) !important;
+    width: 200px !important;
+    background: var(--bg-surface-1, #161618) !important;
+}
+
+.owned_tag_sets-index .search form.search input[type="submit"] {
+    background: var(--accent-primary, #E2A6FF) !important;
+    color: #0A0A0B !important;
+    border: none !important;
+    padding: var(--pad-sm, 0.4rem) var(--pad-md, 0.8rem) !important;
+    border-radius: var(--radius-sm, 4px) !important;
+    font-size: var(--font-size-h4, 14px) !important;
+    font-weight: var(--font-weight-hg-bold, 700) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-menu, 0.15s ease-in-out) !important;
+}
+
+.owned_tag_sets-index .search form.search input[type="submit"]:hover,
+.owned_tag_sets-index .search form.search input[type="submit"]:focus {
+    background: var(--accent-hover, #D2FFA6) !important;
+    opacity: 0.9 !important;
+}
+
+
+.owned_tag_sets-index .tag.tagset .index.group li.picture.blurb ul.actions {
+    margin: 0 !important;
+    padding: var(--pad-sm) !important;
+}
+
+.owned_tag_sets-index .tag.tagset .index.group li.picture.blurb ul.actions li a {
+    background-color: var(--bg-surface-1) !important;
+}
+

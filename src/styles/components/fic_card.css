@@ -442,3 +442,73 @@ ul.index:has(.blurb) li::before {
     color: var(--text-muted);
     margin: 0;
 }
+
+/* --- Collection Blurb Overrides --- */
+
+/* Metadata Labels and Spacing */
+.collection.blurb h4.heading span.name {
+    color: var(--text-muted) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: normal !important;
+    margin-left: var(--margin-xs) !important;
+    display: inline-block !important;
+}
+
+/* Owner Link Styles */
+.collection.blurb h4.heading a.owner {
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    transition: color var(--transition-hover) !important;
+}
+
+.collection.blurb h4.heading a.owner:hover {
+    color: var(--accent-primary) !important;
+}
+
+/* Thumbnail Image Position */
+.collection.blurb .header.module .icon {
+    float: right !important;
+}
+
+/* Collection Status Banner */
+.collection.blurb p.type {
+    padding: var(--pad-sm) var(--pad-md) !important;
+    margin: 0 !important;
+    color: var(--text-muted) !important;
+    font-size: var(--font-size-h5) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 1px solid var(--border-base) !important;
+}
+
+.collection.blurb ul.actions {
+    margin: 0 !important;
+    padding: var(--pad-sm) !important;
+}
+
+.collection.blurb ul.actions li form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-1);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-lw-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-hover);
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.collection.blurb ul.actions li form button:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: var(--bg-surface-1);
+}
