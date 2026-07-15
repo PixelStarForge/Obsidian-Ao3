@@ -140,3 +140,10 @@ form.new_collection_item a.collection_item_form_placement_close:hover {
     color: var(--bg-base);
 }
 
+.chapters-preview .edit_chapter fieldset {
+    border: none !important;
+}
+
+.chapters-preview .edit_chapter fieldset legend {
+    display: none !important;
+}

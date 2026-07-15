@@ -1,0 +1,201 @@
+/* --- Simple Post Forms Overrides (Block User Form) --- */
+form.single.simple.post fieldset {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+/* Legend styled as h3/h4 header */
+form.single.simple.post fieldset>legend {
+    display: none;
+
+}
+
+/* Horizontal Inline Alignment */
+form.single.simple.post p {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+    margin: 0;
+    padding: 0;
+}
+
+form.single.simple.post label.landmark {
+    display: none;
+}
+
+/* Autocomplete field spacing */
+form.single.simple.post ul.autocomplete {
+    flex-grow: 1;
+    max-width: 400px;
+    background-color: var(--bg-base);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    margin: 0;
+}
+
+/* Block Button themed in Warning colors */
+form.single.simple.post .submit.actions input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-lg);
+    background: var(--color-warning);
+    color: var(--bg-base);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+form.single.simple.post .submit.actions input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 480px) {
+    form.single.simple.post p {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form.single.simple.post ul.autocomplete {
+        max-width: 100%;
+    }
+
+    form.single.simple.post .submit.actions input[type="submit"] {
+        width: 100%;
+    }
+}
+
+
+.pseud.index.group {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.user.pseud.blurb {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* --- User Pseud Card Overrides --- */
+
+/* Hide landmark headers inside card */
+.user.pseud.blurb .landmark {
+    display: none;
+}
+
+/* Base Description Box Layout */
+.user.pseud.blurb blockquote.userstuff {
+    padding: var(--pad-md);
+    margin: 0;
+    border-bottom: 1px solid var(--border-base);
+    color: var(--text-primary);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+}
+
+/* Actions Footer Style */
+.user.pseud.blurb ul.actions {
+    background: var(--bg-surface-2);
+    padding: var(--pad-sm) var(--pad-md);
+    margin: 0;
+    border-top: none;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    display: flex;
+    gap: var(--gap-sm);
+    list-style: none;
+}
+
+
+
+/* Setup header module as 2x2 grid */
+.user.pseud.blurb .header.module {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    /* Override auto-minimum track size */
+    grid-template-rows: auto auto;
+    row-gap: var(--gap-sm);
+    column-gap: var(--gap-lg);
+    padding: var(--pad-md);
+    border-bottom: 1px solid var(--border-base);
+    box-sizing: border-box;
+}
+
+.user.pseud.blurb .header.module h4.heading {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    font-size: var(--font-size-h3);
+    word-break: break-all;
+    min-width: 0;
+    /* Enable shrinking below content size */
+}
+
+.user.pseud.blurb .header.module h5.heading {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    min-width: 0;
+    /* Enable shrinking below content size */
+}
+
+.user.pseud.blurb .header.module h5.heading a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.user.pseud.blurb .header.module h5.heading a:hover {
+    color: var(--accent-primary);
+}
+
+/* Span icon vertically across both grid rows on far right */
+.user.pseud.blurb .header.module .icon {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+}
+
+.user.pseud.blurb .header.module .icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--border-base);
+    background-color: var(--bg-surface-2);
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 769px) {
+    .user.pseud.blurb {
+        width: 100%;
+    }
+
+    .pseud.index.group {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.user.pseud.blurb .header.module h4.heading:hover {
+    text-decoration: none !important;
+}
+
+.user.pseud.blurb ul.actions li a {
+    background: var(--bg-surface-1) !important;
+}

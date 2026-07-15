@@ -94,9 +94,36 @@
         },
         {
             "matches": [
-                "*://*.archiveofourown.org/users/*/pseuds*"
+                "*://*.archiveofourown.org/users/*/pseuds/*/edit"
             ],
             "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/profile_info.css",
+                "src/styles/pages/profile.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/dashboard.css",
+                "src/styles/components/primary_user_module.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/users/*/pseuds*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/users/*/pseuds/*/edit"
+            ],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -120,9 +147,37 @@
         },
         {
             "matches": [
-                "*://*.archiveofourown.org/users/*/profile*"
+                "*://*.archiveofourown.org/users/*/profile/edit*"
             ],
             "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/profile_info.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/dashboard.css",
+                "src/styles/pages/profile.css",
+                "src/styles/components/primary_user_module.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/users/*/profile*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/users/*/profile/edit*"
+            ],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -147,7 +202,9 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/works*"
             ],
-            "exclude_matches": [],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/users/*/works/show_multiple*"
+            ],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -165,8 +222,8 @@
                 "src/styles/components/filter.css",
                 "src/styles/components/autocomplete.css",
                 "src/styles/components/dashboard.css",
+                "src/styles/components/forms.css",
                 "src/styles/components/bookmark_badges.css",
-                "src/styles/pages/users_works.css",
                 "src/styles/components/primary_user_module.css"
             ],
             "run_at": "document_start"
@@ -379,6 +436,57 @@
         },
         {
             "matches": [
+                "*://*.archiveofourown.org/users/*/change*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/dashboard.css",
+                "src/styles/pages/profile.css",
+                "src/styles/components/primary_user_module.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/users/*/blocked/*",
+                "*://*.archiveofourown.org/users/*/muted/*"
+            ],
+            "exclude_matches": [
+               
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/fic_card.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/dashboard.css",
+                "src/styles/pages/block_mute.css",
+                "src/styles/components/primary_user_module.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/users/*"
             ],
             "exclude_matches": [
@@ -389,7 +497,9 @@
                 "*://*.archiveofourown.org/users/*/inbox*",
                 "*://*.archiveofourown.org/users/*/stats*",
                 "*://*.archiveofourown.org/users/*/readings*",
-                "*://*.archiveofourown.org/users/*/subscriptions*"
+                "*://*.archiveofourown.org/users/*/change_*",
+                "*://*.archiveofourown.org/users/*/subscriptions*",
+                "*://*.archiveofourown.org/users/*/blocked/*"
             ],
             "js": [
                 "src/scripts/observer.js"
@@ -531,6 +641,78 @@
         },
         {
             "matches": [
+                "*://*.archiveofourown.org/works/*/chapters/*/preview*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/pages/chapter_show.css",
+                "src/styles/components/rich_text_editor.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/works/*/chapters/new*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/works/*/chapters/*/preview*"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/rich_text_editor.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/users/*/works/show_multiple*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/pages/works_show_multiple.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/rich_text_editor.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/tags/*/works*"
             ],
             "exclude_matches": [],
@@ -558,7 +740,9 @@
             "matches": [
                 "*://*.archiveofourown.org/works*"
             ],
-            "exclude_matches": [],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/works/*/chapters/new*"
+            ],
             "js": [
                 "src/scripts/observer.js"
             ],

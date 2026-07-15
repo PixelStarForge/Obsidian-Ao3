@@ -1,0 +1,171 @@
+/* --- Edit Multiple Works Form Wrapper --- */
+#edit-multiple-works fieldset {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+    box-sizing: border-box;
+}
+
+#edit-multiple-works fieldset>legend {
+    display: none !important;
+}
+
+/* --- Global Actions Lists --- */
+#edit-multiple-works ul.actions {
+    display: flex;
+    gap: var(--gap-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--margin-md) 0;
+}
+
+#edit-multiple-works ul.actions li {
+    display: inline-flex;
+}
+
+#edit-multiple-works ul.actions li::before {
+    content: none;
+}
+
+#edit-multiple-works ul.actions a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-md-bold);
+    font-size: var(--font-size-h5);
+}
+
+
+/* --- Fandom Listbox Group Containers --- */
+#edit-multiple-works fieldset.fandom.listbox {
+    background: var(--bg-surface-2) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-md) !important;
+    margin-bottom: var(--margin-md) !important;
+}
+
+#edit-multiple-works fieldset.fandom.listbox h5.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-primary);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: var(--pad-sm);
+    margin: 0 0 var(--margin-md) 0;
+}
+
+#edit-multiple-works fieldset.fandom.listbox h5.heading ul.actions {
+    margin: 0 !important;
+}
+
+/* --- Concise Works Lists --- */
+#edit-multiple-works ul.index {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#edit-multiple-works ul.index.concise {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+#edit-multiple-works ul.index.concise li {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    padding: var(--pad-xs) 0;
+}
+
+#edit-multiple-works ul.index.concise li::before {
+    content: none;
+}
+
+#edit-multiple-works ul.index.concise li label.action {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+#edit-multiple-works ul.index.concise li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: var(--font-size-h4);
+    transition: color var(--transition-hover);
+}
+
+#edit-multiple-works ul.index.concise li a:hover {
+    color: var(--accent-primary);
+}
+
+/* --- Action Submit Button Blocks --- */
+#edit-multiple-works fieldset p.submit {
+    display: flex;
+    gap: var(--gap-md);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#edit-multiple-works input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-lg);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+#edit-multiple-works input[type="submit"]:hover {
+    background: var(--bg-surface-1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* --- Specific Button Action Variants --- */
+#edit-multiple-works input[value="Edit"] {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+#edit-multiple-works input[value="Edit"]:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--bg-base);
+}
+
+#edit-multiple-works input[value="Orphan"] {
+    color: var(--color-pending, #FFCCA6);
+    border-color: var(--color-pending, #FFCCA6);
+}
+
+#edit-multiple-works input[value="Orphan"]:hover {
+    background: var(--color-pending, #FFCCA6);
+    border-color: var(--color-pending, #FFCCA6);
+    color: var(--bg-base);
+}
+
+#edit-multiple-works input[value="Delete"] {
+    color: var(--color-warning, #FFA6A6);
+    border-color: var(--color-warning, #FFA6A6);
+}
+
+#edit-multiple-works input[value="Delete"]:hover {
+    background: var(--color-warning, #FFA6A6);
+    border-color: var(--color-warning, #FFA6A6);
+    color: var(--bg-base);
+}

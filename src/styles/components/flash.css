@@ -1,7 +1,8 @@
 /* file: src/styles/components/flash.css */
 
 /* Flash message container */
-.flash {
+.flash,
+.notice {
     background: var(--bg-surface-1);
     border: 1px solid var(--border-base);
     border-left: 4px solid var(--accent-primary);
@@ -24,7 +25,7 @@
 }
 
 /* Success/Notice state */
-.flash.notice,
+.flash.notice,.notice
 .flash.success {
     border-left-color: var(--accent-primary);
 }
@@ -97,8 +98,8 @@ p.notes a:hover {
 .required.notice,
 span.warning {
     display: inline-block;
-    color: var(--color-warning);
-    margin: var(--margin-sm) !important;
+    color: var(--color-warning) !important;
+    border-left-color: var(--color-warning) !important;
 }
 
 /* ===== CAUTION NOTICE ===== */
