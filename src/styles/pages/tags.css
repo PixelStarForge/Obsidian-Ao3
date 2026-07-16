@@ -309,48 +309,7 @@ ul.tags.cloud.index.group li a.cloud8 {
     padding-bottom: var(--pad-xs);
 }
 
-/* Commas list & Tree index */
-#main.tags-show .listbox.group ul.tags.commas,
-#main.tags-show .listbox.group ul.tags.tree.index {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap-sm);
-}
 
-#main.tags-show .listbox.group ul.tags.tree.index {
-    flex-direction: column;
-    gap: var(--gap-xs);
-}
-
-#main.tags-show .listbox.group ul li {
-    margin: 0;
-}
-
-#main.tags-show .listbox.group ul li::before {
-    content: none;
-}
-
-/* Standard tag pill style */
-#main.tags-show .listbox.group a.tag {
-    display: inline-block;
-    background: var(--bg-surface-2);
-    border: 1px solid var(--border-base);
-    padding: var(--pad-xs) var(--pad-sm);
-    border-radius: var(--radius-sm);
-    color: var(--text-secondary);
-    font-size: var(--font-size-h5);
-    text-decoration: none;
-    transition: all var(--transition-hover);
-}
-
-#main.tags-show .listbox.group a.tag:hover {
-    border-color: var(--accent-primary);
-    color: var(--accent-primary);
-    background: var(--bg-surface-1);
-}
 
 /* Nested tree logic */
 #main.tags-show .listbox.group ul.tags.tree.index ul {

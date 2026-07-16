@@ -1,0 +1,92 @@
+/* file: src/styles/components/aboutus.css */
+
+
+/* ==========================================================================
+   SYSTEM DOCUMENTS OVERRIDES (About, Terms of Service, FAQ Pages)
+   ========================================================================== */
+
+/* Scoped Page Container Wrapper */
+#main.system.docs.region {
+    max-width: 900px !important;
+    margin: 2rem auto !important;
+    padding: var(--pad-md) !important;
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    box-sizing: border-box !important;
+}
+
+/* Header style with Accent color */
+#main.system.docs.region h2.heading {
+    font-size: var(--font-size-h2, 24px) !important;
+    color: var(--accent-primary) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    padding-bottom: var(--pad-sm) !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+}
+
+/* Abbreviation reset */
+#main.system.docs.region h2.heading abbr {
+    color: var(--accent-primary) !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+
+/* Informational Paragraphs typography */
+#main.system.docs.region .userstuff p {
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body, 16px) !important;
+    line-height: var(--line-height-body, 1.6) !important;
+    margin-bottom: var(--margin-md) !important;
+}
+
+#main.system.docs.region .userstuff p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Accent link styles inside text blocks */
+#main.system.docs.region .userstuff a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    border-bottom: 1px solid transparent !important;
+    transition: all var(--transition-hover) !important;
+}
+
+#main.system.docs.region .userstuff a:hover {
+    border-bottom-color: var(--accent-primary) !important;
+}
+
+/* Scoped informational lists overrides */
+#main.system.docs.region .userstuff ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: var(--margin-md) 0 var(--margin-md) var(--pad-md) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--gap-sm) !important;
+}
+
+#main.system.docs.region .userstuff ul li {
+    color: var(--text-secondary) !important;
+    font-size: var(--font-size-h4) !important;
+    line-height: var(--line-height-body) !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+#main.system.docs.region .userstuff ul li::before {
+    content: "• " !important;
+    color: var(--accent-primary) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    margin-right: var(--margin-xs) !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    #main.system.docs.region {
+        margin: var(--margin-md) auto !important;
+        padding: var(--pad-sm) !important;
+    }
+}

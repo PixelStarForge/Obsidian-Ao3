@@ -38,6 +38,7 @@
 #main ul.autocomplete li.input,
 #main dd.autocomplete ul.autocomplete li.input {
     flex: 1 1 auto;
+    flex-direction: column;
     display: inline-flex;
     width: 100%;
 }
@@ -127,6 +128,7 @@
     font-size: var(--font-size-h4);
     margin: 0;
     height: auto;
+
 }
 
 /* ---- Dropdown list and items ---- */

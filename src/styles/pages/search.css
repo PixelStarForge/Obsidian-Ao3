@@ -1,0 +1,118 @@
+/* file: src/styles/pages/search.css */
+
+.bookmarks-search h3.heading {
+    margin-bottom: var(--margin-sm) !important;
+}
+
+.bookmarks-search ol.bookmark.index.group li.bookmark.blurb ul.actions {
+    margin: 0 !important;
+    padding: var(--pad-sm) !important;
+}
+
+.bookmarks-search ol.bookmark.index.group li.bookmark.blurb ul.actions li a {
+    background: var(--bg-surface-1) !important;
+}
+
+.bookmarks-search ol.bookmark.index.group li.bookmark.blurb .user.module.group {
+    background: var(--bg-surface-1) !important;
+}
+
+
+
+/* --- Scoped Compact Tags Directory (5-Column Card Layout) --- */
+
+/* Responsive 5-column compact desktop grid */
+ol.tag.index.group {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    /* Force minimum track size to 0 */
+    gap: var(--gap-sm, 10px) !important;
+    /* Add gap spacing between cards */
+    list-style: none !important;
+    padding: 0 var(--pad-sm, 10px) !important;
+    /* Lateral padding prevents scrollbar overlap */
+    margin: var(--margin-md) 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Individual Compact Card Item */
+ol.tag.index.group li {
+    background: var(--bg-surface-1) !important;
+    /* Card background */
+    border: 1px solid var(--border-base) !important;
+    /* Card border */
+    border-radius: var(--radius-sm) !important;
+    /* Rounded card corners */
+    padding: var(--pad-sm) var(--pad-md) !important;
+    /* Compact padding spacing */
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    list-style: none !important;
+    transition: border-color var(--transition-hover), background-color var(--transition-hover) !important;
+}
+
+ol.tag.index.group li:hover {
+    border-color: var(--accent-primary) !important;
+    /* Highlight card border on hover */
+    background-color: var(--bg-surface-2) !important;
+    /* Deepen card background on hover */
+}
+
+ol.tag.index.group li::before {
+    content: none !important;
+}
+
+/* Inner Text & Muted Count Alignment */
+ol.tag.index.group li span {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    /* Push count to far right */
+    color: var(--text-muted) !important;
+    font-size: var(--font-size-h5) !important;
+    width: 100% !important;
+}
+
+/* Tag Link styling inside cards */
+ol.tag.index.group li span a.tag {
+    color: var(--accent-primary) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    /* Medium weight for card titles */
+    text-decoration: none !important;
+    flex-grow: 1 !important;
+    margin-left: var(--margin-xs) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 80% !important;
+    /* Leave room for counts */
+}
+
+ol.tag.index.group li span a.tag:hover {
+    text-decoration: underline !important;
+}
+
+/* --- Responsive Viewport Spacing --- */
+@media (max-width: 1200px) {
+    ol.tag.index.group {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    ol.tag.index.group {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    ol.tag.index.group {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}

@@ -2,219 +2,224 @@
 
 /* Hide skip-to-main link */
 #outer #skiplinks {
-    display: none;
+    display: none !important;
 }
 
 /* Work Search Text left side of search input */
 #header nav[aria-label="Site"] .primary.navigation.actions .search .search fieldset p .landmark {
-    display: none;
+    display: none !important;
 }
 
 #header nav[aria-label="Site"] .primary.navigation.actions .search .search fieldset p .submit {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
 }
 
 
 /* Container wrapper */
 #outer {
-    margin: 0 auto;
-    padding: 0 var(--pad-md);
-    width: 100%;
-    box-sizing: border-box;
+    margin: 0 auto !important;
+    padding: 0 var(--pad-md) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 /* Main header flex container */
 #header {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-    width: 100%;
-    padding: var(--pad-sm) 0;
-    border-bottom: 2px solid var(--border-base);
-    box-sizing: border-box;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: var(--gap-lg) !important;
+    width: 100% !important;
+    padding: var(--pad-sm) 0 !important;
+    /* Force left and right padding to 0 */
+    border-bottom: 2px solid var(--border-base) !important;
+    box-sizing: border-box !important;
 }
 
 /* Logo and site title */
 #header .heading {
-    order: 1;
-    flex-shrink: 0;
-    margin: 0;
+    order: 1 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    float: none !important;
 }
 
 #header .heading a {
-    display: flex;
-    align-items: center;
-    color: var(--accent-primary);
-    gap: var(--gap-sm);
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-hg-bold);
-    text-decoration: none;
+    display: flex !important;
+    align-items: center !important;
+    color: var(--accent-primary) !important;
+    gap: var(--gap-sm) !important;
+    font-size: var(--font-size-h3) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    text-decoration: none !important;
 }
 
 #header .heading a:hover {
-    color: var(--accent-primary);
+    color: var(--accent-primary) !important;
 }
 
 #header .heading span {
-    display: inline;
+    display: inline !important;
 }
 
 /* Primary site navigation (Fandoms, Browse, Search, About) */
 #header nav[aria-label="Site"] {
-    order: 2;
-    flex-grow: 1;
+    order: 2 !important;
+    flex-grow: 1 !important;
 }
 
 #header nav[aria-label="Site"] .primary.navigation.actions {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    list-style: none;
-    gap: var(--gap-md);
-    padding: 0;
-    margin: 0;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center !important;
+    list-style: none !important;
+    gap: var(--gap-md) !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 #header nav[aria-label="Site"] .primary.navigation.actions li a {
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-md-bold);
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-md-bold) !important;
 }
 
 /* User greeting and login area (pushed right) */
 #header #greeting {
-    display: flex;
-    align-items: center;
-    order: 3;
-    flex-shrink: 0;
-    margin-left: auto;
-    gap: var(--gap-md);
+    display: flex !important;
+    align-items: center !important;
+    order: 3 !important;
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    /* Force zero right margin */
+    gap: var(--gap-md) !important;
 }
 
 #greeting ul.user {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: var(--gap-md);
-    align-items: center;
+    display: flex !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: var(--gap-md) !important;
+    align-items: center !important;
 }
 
 #greeting li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
 }
 
 #greeting li::before {
-    content: none;
-    display: none;
+    content: none !important;
+    display: none !important;
 }
 
 #greeting li a {
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-md-bold);
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-md-bold) !important;
 }
 
 /* User icon */
 #greeting p.icon {
-    margin: 0;
+    margin: 0 !important;
 }
 
 #greeting p.icon a img.icon {
-    display: block;
-    width: 36px;
-    height: 36px;
-    object-fit: cover;
-    border: 1px solid var(--border-base);
-    border-radius: 50%;
+    display: block !important;
+    width: 36px !important;
+    height: 36px !important;
+    object-fit: cover !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: 50% !important;
 }
 
 /* Search bar positioning */
 #header nav[aria-label="Site"] li.search {
-    margin-left: auto;
+    margin-left: auto !important;
 }
 
 #header form.search fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 #header form.search p {
-    display: flex;
-    align-items: center;
-    gap: var(--gap-md);
-    margin: 0;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-md) !important;
+    margin: 0 !important;
 }
 
 /* Search input field */
 #header input.text {
-    background: var(--bg-surface-2);
-    border: 1px solid var(--border-base);
-    padding: var(--pad-sm) var(--pad-md);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-h4);
-    width: 180px;
-    transition: all var(--transition-menu);
-    color: var(--accent-primary);
+    background: var(--bg-surface-2) !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    width: 180px !important;
+    transition: all var(--transition-menu) !important;
+    color: var(--accent-primary) !important;
+    box-sizing: border-box !important;
 }
 
 #header input.text:focus {
-    border-color: var(--accent-primary);
-    outline: none;
-    width: 200px;
-    background: var(--bg-surface-1);
+    border-color: var(--accent-primary) !important;
+    outline: none !important;
+    width: 200px !important;
+    background: var(--bg-surface-1) !important;
 }
 
 /* Search button */
 #header input.button {
-    background: var(--accent-primary);
-    color: black;
-    border: none;
-    padding: var(--pad-sm) var(--pad-md);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-hg-bold);
-    cursor: pointer;
-    transition: all var(--transition-menu);
+    background: var(--accent-primary) !important;
+    color: black !important;
+    border: none !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-menu) !important;
 }
 
 #header input.button:hover,
 #header input.button:focus {
-    background: var(--accent-hover);
+    background: var(--accent-hover) !important;
 }
 
 /* Hide search tooltip */
 #header span.tip {
-    display: none;
+    display: none !important;
 }
 
 /* Dropdown base styles */
 .dropdown {
-    position: relative;
+    position: relative !important;
 }
 
 /* Dropdown menu container */
 .dropdown .dropdown-menu,
 .dropdown #small_login {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--bg-surface-1);
-    border: 1px solid var(--border-base);
-    border-radius: var(--radius-md);
-    padding: var(--pad-sm) 0;
-    z-index: 1000;
-    list-style: none;
-    transition: all var(--transition-menu);
-    width: max-content;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    font-size: var(--font-size-h4);
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-sm) 0 !important;
+    z-index: 1000 !important;
+    list-style: none !important;
+    transition: all var(--transition-menu) !important;
+    width: max-content !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    font-size: var(--font-size-h4) !important;
 }
 
 /* Show dropdown on hover/focus */
@@ -222,345 +227,351 @@
 .dropdown:focus-within .dropdown-menu,
 .dropdown:hover #small_login,
 .dropdown:focus-within #small_login {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
 }
 
 /* Dropdown menu items */
 .dropdown .dropdown-menu li a {
-    display: block;
-    padding: var(--pad-sm) var(--pad-md);
+    display: block !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
 }
 
 .dropdown .dropdown-menu li a:hover {
-    background: var(--bg-surface-2);
+    background: var(--bg-surface-2) !important;
 }
 
 /* Login Section */
 #header #login {
-    order: 3;
-    flex-shrink: 0;
-    margin-left: 0;
+    order: 3 !important;
+    flex-shrink: 0 !important;
+    margin-left: 0 !important;
 }
 
 /* Login Text */
 #header #login .user.actions #login-dropdown {
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-md-bold);
-
+    font-size: var(--font-size-h3) !important;
+    font-weight: var(--font-weight-md-bold) !important;
 }
 
 /* Login Popup */
 #header #login #small_login {
-    right: 0;
-    left: auto;
-    padding: var(--pad-md);
-    width: 250px;
+    right: 0 !important;
+    left: auto !important;
+    padding: var(--pad-md) !important;
+    width: 250px !important;
 }
 
 #header #login #small_login dl {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 #header #login #small_login dt {
-    font-size: var(--font-size-h3);
-    margin: var(--margin-xs) 0;
+    font-size: var(--font-size-h3) !important;
+    margin: var(--margin-xs) 0 !important;
 }
 
 #header #login #small_login dd {
-    margin: 0;
-    font-size: var(--font-size-h4);
+    margin: 0 !important;
+    font-size: var(--font-size-h4) !important;
 }
 
 /* Username, Password Text */
 #header #login #small_login label {
-    color: var(--text-secondary);
-    letter-spacing: 1px;
-    display: block;
+    color: var(--text-secondary) !important;
+    letter-spacing: 1px !important;
+    display: block !important;
 }
 
 /* Username Password Input */
 #header #login #small_login #user_session_login_small,
 #header #login #small_login #user_session_password_small {
-    width: 100%;
-    box-sizing: border-box;
-    background: var(--bg-surface-2);
-    border: 1px solid var(--border-base);
-    color: var(--accent-primary);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-h3);
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: var(--bg-surface-2) !important;
+    border: 1px solid var(--border-base) !important;
+    color: var(--accent-primary) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h3) !important;
 }
 
 /* Remember Me Checkbox and Submit Button */
 #header #login #small_login p.submit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: var(--margin-md);
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-top: var(--margin-md) !important;
 }
 
 /* Rememebr Me Checkbox Text */
 #header #login #small_login p.submit label {
-    font-size: var(--font-size-h4);
-    display: flex;
-    align-items: center;
-    gap: var(--gap-xs);
-    cursor: pointer;
-    color: var(--text-primary);
+    font-size: var(--font-size-h4) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-xs) !important;
+    cursor: pointer !important;
+    color: var(--text-primary) !important;
 }
 
 #header #login #small_login #user_remember_me_small {
-    accent-color: var(--accent-hover);
-    border: 1px solid var(--border-base);
-    width: 15px;
-    height: 15px;
-    margin: 0;
-    cursor: pointer;
+    accent-color: var(--accent-hover) !important;
+    border: 1px solid var(--border-base) !important;
+    width: 15px !important;
+    height: 15px !important;
+    margin: 0 !important;
+    cursor: pointer !important;
 }
 
 #header #login #small_login p.submit input[type="submit"] {
-    background: var(--accent-primary);
-    color: #000000;
-    border: 1px solid var(--border-base);
-    padding: var(--pad-sm) var(--pad-md);
-    font-size: var(--font-size-h4);
-    border-radius: var(--radius-sm);
-    font-weight: var(--font-weight-hg-bold);
-    cursor: pointer;
+    background: var(--accent-primary) !important;
+    color: #000000 !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    font-size: var(--font-size-h4) !important;
+    border-radius: var(--radius-sm) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    cursor: pointer !important;
 }
 
-
 #header #login #small_login ul.footnote {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: var(--margin-md);
-    padding-top: var(--pad-md);
-    border-top: 1px solid var(--border-base);
-    display: flex;
-    justify-content: space-between;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: var(--margin-md) !important;
+    padding-top: var(--pad-md) !important;
+    border-top: 1px solid var(--border-base) !important;
+    display: flex !important;
+    justify-content: space-between !important;
 }
 
 #header #login #small_login li::before {
-    content: none;
+    content: none !important;
 }
 
 /* Bottom Links */
 #small_login ul.footnote a {
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h4) !important;
 }
 
 /* ========== MOBILE RESPONSIVE (max-width: 1096px) ========== */
 
 @media (max-width: 1096px) {
     #header {
-        flex-flow: row wrap;
-        justify-content: space-between;
-        gap: var(--gap-sm);
-        padding: var(--pad-sm) 0;
+        display: flex !important;
+        flex-direction: column !important;
+        /* Stack vertically row by row */
+        align-items: flex-start !important;
+        /* Align logo strictly on left */
+        gap: var(--gap-sm) !important;
+        padding: var(--pad-sm) 0 !important;
+        /* Remove horizontal padding on mobile */
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     #header .heading {
-        order: 1;
-        width: auto;
+        order: 1 !important;
+        width: auto !important;
+        float: none !important;
+        margin-right: auto !important;
+        /* Push everything else to right, anchor logo left */
     }
 
     /* User area moves to row 2, full width */
     #header #greeting {
-        order: 2;
-        width: 100%;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        gap: var(--gap-md);
-        border-top: 1px solid var(--border-base);
-        margin-left: 0;
-        padding: var(--pad-xs);
+        order: 2 !important;
+        width: 100% !important;
+        flex-flow: row nowrap !important;
+        justify-content: flex-start !important;
+        gap: var(--gap-md) !important;
+        border-top: 1px solid var(--border-base) !important;
+        margin-left: 0 !important;
+        padding: var(--pad-xs) !important;
+        float: none !important;
     }
 
     #greeting ul.user {
-        display: contents;
+        display: contents !important;
     }
 
     #greeting li:nth-child(1) {
-        order: 1;
+        order: 1 !important;
     }
 
     #greeting li:nth-child(2) {
-        order: 2;
+        order: 2 !important;
     }
 
     #greeting p.icon {
-        order: 3;
+        order: 3 !important;
     }
 
     /* Logout pushed to far right */
     #greeting li:has(a[href*="logout"]) {
-        order: 4;
-        margin-left: auto;
+        order: 4 !important;
+        margin-left: auto !important;
     }
-
 
     /* Site navigation moves to row 3, full width */
     #header nav[aria-label="Site"] {
-        order: 3;
-        width: 100%;
-        border-top: 1px solid var(--border-base);
-        padding: var(--pad-sm) 0;
+        order: 3 !important;
+        width: 100% !important;
+        border-top: 1px solid var(--border-base) !important;
+        padding: var(--pad-sm) 0 !important;
     }
 
     #header nav[aria-label="Site"] .primary.navigation.actions {
-        flex-flow: row wrap;
-        gap: var(--gap-sm);
+        flex-flow: row wrap !important;
+        gap: var(--gap-sm) !important;
     }
 
     /* Dropdown positioning (prevent off-screen bleed) */
     #header nav[aria-label="Site"] ul.primary li:nth-child(-n+2) ul.menu {
-        left: 0;
-        right: auto;
+        left: 0 !important;
+        right: auto !important;
     }
 
     #header nav[aria-label="Site"] ul.primary li:nth-child(n+3) ul.menu {
-        left: auto;
-        right: 0;
+        left: auto !important;
+        right: 0 !important;
     }
 
     /* Search bar on same row, far right */
     #header nav[aria-label="Site"] li.search {
-        margin-left: auto;
-        margin-right: 0;
-        width: auto;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        width: auto !important;
     }
 
     #header form.search p {
-        width: auto;
-        gap: var(--gap-sm);
+        width: auto !important;
+        gap: var(--gap-sm) !important;
     }
 
     #header input.text {
-        width: 150px;
-        padding: var(--pad-xs) var(--pad-sm);
+        width: 150px !important;
+        padding: var(--pad-xs) var(--pad-sm) !important;
     }
 
     #header input.text:focus {
-        width: 180px;
+        width: 180px !important;
     }
 
     #header input.button {
-        font-size: 12px;
-        padding: var(--pad-xs) var(--pad-sm);
+        font-size: 12px !important;
+        padding: var(--pad-xs) var(--pad-sm) !important;
     }
-
 }
 
 /* ========== VERY SMALL SCREENS (max-width: 480px) ========== */
 
 @media (max-width: 480px) {
     #header nav[aria-label="Site"] ul.primary {
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
     }
 
     /* Search bar goes full width on own row */
     #header nav[aria-label="Site"] li.search {
-        margin-left: 0;
-        width: 100%;
-        margin-top: var(--pad-sm);
+        margin-left: 0 !important;
+        width: 100% !important;
+        margin-top: var(--pad-sm) !important;
     }
 
     #header form.search p {
-        width: 100%;
+        width: 100% !important;
     }
 
     #header input.text {
-        width: auto;
-        flex-grow: 1;
+        width: auto !important;
+        flex-grow: 1 !important;
     }
 
     #header input.text:focus {
-        width: auto;
+        width: auto !important;
     }
 }
 
 /* ==========================================================================
-   HEADER COLLECTION TITLE ON TOP ROW INLINE BADGE
-   ========================================================================== */
+HEADER COLLECTION TITLE ON TOP ROW INLINE BADGE
+========================================================================== */
 
 /* 1. Base Desktop Layout (min-width: 1097px) */
-#header.collection h2.collections {
-    position: static;
-    float: none;
-    order: 2;
-    align-self: center;
-    margin: 0;
-    font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-hg-bold);
-    color: var(--accent-rels);
-    background: var(--bg-surface-2);
-    border: 1px solid var(--border-base);
-    padding: var(--pad-xs) var(--pad-sm);
-    border-radius: var(--radius-sm);
-    max-width: 250px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+#header.collection:has(h2.collections) h2.collections {
+    position: static !important;
+    float: none !important;
+    order: 2 !important;
+    align-self: center !important;
+    margin: 0 !important;
+    font-size: var(--font-size-h5) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    color: var(--accent-rels) !important;
+    background: var(--bg-surface-2) !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-xs) var(--pad-sm) !important;
+    border-radius: var(--radius-sm) !important;
+    max-width: 250px !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
 }
 
 /* Desktop Width Tightening (Between 1097px and 1400px) */
 @media (min-width: 1097px) and (max-width: 1400px) {
-    #header.collection {
-        gap: var(--gap-sm);
+    #header.collection:has(h2.collections) {
+        gap: var(--gap-sm) !important;
     }
 
-    #header.collection h2.collections {
-        max-width: 160px;
-        font-size: 12px;
+    #header.collection:has(h2.collections) h2.collections {
+        max-width: 160px !important;
+        font-size: 12px !important;
     }
 }
 
 /* 2. Mobile Specific Overrides (Strict Vertical Column Stacking) */
 @media (max-width: 1096px) {
-    #header.collection {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: var(--gap-xs);
+    #header.collection:has(h2.collections) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: var(--gap-xs) !important;
     }
 
-    #header.collection h1.heading {
-        order: 1;
-        width: 100%;
-        text-align: center;
+    #header.collection:has(h2.collections) h1.heading {
+        order: 1 !important;
+        width: 100% !important;
+        text-align: center !important;
     }
 
-    #header.collection #login,
-    #header.collection #greeting {
-        order: 2;
-        width: 100%;
-        box-sizing: border-box;
+    #header.collection:has(h2.collections) #login,
+    #header.collection:has(h2.collections) #greeting {
+        order: 2 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    #header.collection h2.collections {
-        position: static;
-        float: none;
-        order: 3;
-        width: calc(100% - 1rem);
-        max-width: none;
-        text-align: center;
-        margin: var(--margin-sm) auto;
-        font-size: 12px;
-        padding: var(--pad-sm) var(--pad-md);
-        box-sizing: border-box;
-        display: block;
-        background: var(--bg-surface-2);
-        border: 1px solid var(--border-base);
-        border-radius: var(--radius-sm);
-        color: var(--accent-rels);
+    #header.collection:has(h2.collections) h2.collections {
+        position: static !important;
+        float: none !important;
+        order: 3 !important;
+        width: calc(100% - 1rem) !important;
+        max-width: none !important;
+        text-align: center !important;
+        margin: var(--margin-sm) auto !important;
+        font-size: 12px !important;
+        padding: var(--pad-sm) var(--pad-md) !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        background: var(--bg-surface-2) !important;
+        border: 1px solid var(--border-base) !important;
+        border-radius: var(--radius-sm) !important;
+        color: var(--accent-rels) !important;
     }
 
-    #header.collection nav[aria-label="Site"] {
-        order: 4;
-        width: 100%;
-        box-sizing: border-box;
+    #header.collection:has(h2.collections) nav[aria-label="Site"] {
+        order: 4 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 }

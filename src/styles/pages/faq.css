@@ -1,0 +1,769 @@
+/* ==========================================================================
+   FAQ & TOS SHOW PAGES (FAQ, TOS, Content Policy, Privacy Policy)
+   DARK THEME, FULLY POLISHED - Scoped Overrides
+   ========================================================================== */
+
+/* ---------- 1. PAGE HEADING ---------- */
+#main.system.docs.support.faq.index h2.heading,
+#main.system.docs.support.faq.show h2.heading,
+#main.system.docs.tos h2.heading,
+#main.system.docs.tos_faq h2.heading {
+    font-size: var(--font-size-h2) ;
+    color: var(--accent-primary) ;
+    margin: 0 0 var(--margin-md) 0 ;
+    font-weight: var(--font-weight-hg-bold) ;
+}
+
+#main.system.docs.support.faq.show h2.heading a,
+#main.system.docs.tos h2.heading a,
+#main.system.docs.tos_faq h2.heading a {
+    color: var(--accent-primary) ;
+    text-decoration: none ;
+}
+
+#main.system.docs.support.faq.show h2.heading a:hover,
+#main.system.docs.tos h2.heading a:hover,
+#main.system.docs.tos_faq h2.heading a:hover {
+    color: var(--accent-hover);
+}
+
+#main.system.docs.support.faq.index p.notes {
+    background: var(--bg-surface-2) ;
+    border: 1px solid var(--border-base) ;
+    border-left: 4px solid var(--accent-primary) ;
+    border-radius: var(--radius-sm) ;
+    padding: var(--pad-sm) var(--pad-md) ;
+    margin-bottom: var(--margin-md) ;
+    color: var(--text-primary) ;
+    font-size: var(--font-size-h4) ;
+    line-height: var(--line-height-body) ;
+}
+
+/* ---------- 2. NOTICES & NOTES ---------- */
+#main.system.docs.support.faq.index p.notice {
+    background: var(--bg-surface-2) ;
+    border: 1px solid var(--border-base) ;
+    border-left: 4px solid var(--color-warning) ;
+    border-radius: var(--radius-sm) ;
+    padding: var(--pad-sm) var(--pad-md) ;
+    margin-bottom: var(--margin-md) ;
+    color: var(--text-primary) ;
+    font-size: var(--font-size-h4) ;
+    line-height: var(--line-height-body) ;
+}
+
+#main.system.docs.support.faq.index p.notes {
+    color: var(--text-secondary) ;
+    font-size: var(--font-size-h4) ;
+    margin-bottom: var(--margin-md) ;
+}
+
+#main.system.docs.support.faq.index p.notes a {
+    color: var(--accent-primary) ;
+    text-decoration: none ;
+}
+
+#main.system.docs.support.faq.index p.notes a:hover {
+    color: var(--accent-hover);
+}
+
+/* ---------- 3. LANGUAGE FILTER ---------- */
+#main.system.docs.support.faq.index ul.navigation.actions {
+    display: flex ;
+    gap: var(--gap-sm) ;
+    list-style: none ;
+    padding: 0 ;
+    margin: 0 0 var(--margin-md) 0 ;
+}
+
+#main.system.docs.support.faq.index ul.navigation.actions li {
+    margin: 0 ;
+}
+
+#main.system.docs.support.faq.index ul.navigation.actions form p {
+    display: flex ;
+    align-items: center ;
+    gap: var(--gap-sm) ;
+    margin: 0 ;
+}
+
+#main.system.docs.support.faq.index ul.navigation.actions label {
+    font-size: var(--font-size-h5) ;
+    color: var(--text-secondary) ;
+}
+
+#main.system.docs.support.faq.index ul.navigation.actions select {
+    background: var(--bg-surface-2) ;
+    color: var(--text-primary) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-sm) ;
+    padding: var(--pad-xs) var(--pad-sm) ;
+    font-size: var(--font-size-h4) ;
+    outline: none ;
+    cursor: pointer ;
+}
+
+#main.system.docs.support.faq.index ul.navigation.actions select:focus {
+    border-color: var(--accent-primary) ;
+}
+
+#main.system.docs.support.faq.index ul.navigation.actions input[type="submit"] {
+    height: 36px ;
+    padding: 0 var(--pad-lg) ;
+    background: var(--accent-primary) ;
+    color: var(--bg-base) ;
+    border: none ;
+    border-radius: var(--radius-sm) ;
+    font-size: var(--font-size-h4) ;
+    font-weight: var(--font-weight-hg-bold) ;
+    cursor: pointer ;
+    transition: all var(--transition-hover) ;
+}
+
+#main.system.docs.support.faq.index ul.navigation.actions input[type="submit"]:hover {
+    background: var(--accent-hover) ;
+    color: var(--bg-base) ;
+}
+
+/* ---------- 4. CATEGORIES HEADING & EXPAND/COLLAPSE CONTROLS ---------- */
+#main.system.docs.support.faq.index .categories h3.heading {
+    font-size: var(--font-size-h3) ;
+    color: var(--text-primary) ;
+    margin: var(--margin-lg) 0 var(--margin-md) 0 ;
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+}
+
+#main.system.docs.support.faq.index .categories h3.heading ul.showme.actions {
+    display: flex ;
+    gap: var(--gap-sm) ;
+    list-style: none ;
+    padding: 0 ;
+    margin: 0 ;
+}
+
+#main.system.docs.support.faq.index .categories h3.heading ul.showme.actions a {
+    display: inline-flex ;
+    align-items: center ;
+    justify-content: center ;
+    height: 28px ;
+    padding: 0 var(--pad-sm) ;
+    background: var(--bg-surface-1) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-sm) ;
+    font-size: var(--font-size-h5) ;
+    color: var(--text-secondary) ;
+    text-decoration: none ;
+    transition: all var(--transition-hover) ;
+}
+
+#main.system.docs.support.faq.index .categories h3.heading ul.showme.actions a:hover {
+    background: var(--bg-surface-2) ;
+    border-color: var(--accent-primary) ;
+    color: var(--text-primary) ;
+}
+
+/* ---------- 5. FAQ INDEX – CATEGORY CARDS ---------- */
+#main.system.docs.support.faq.index ul.faq.index.group {
+    list-style: none ;
+    padding: 0 ;
+    margin: 0 ;
+    display: flex ;
+    flex-direction: column ;
+    gap: var(--gap-lg) ;
+}
+
+#main.system.docs.support.faq.index ul.faq.index.group li.category {
+    background: var(--bg-surface-1) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-md) ;
+    padding: var(--pad-md) ;
+    transition: border-color var(--transition-hover) ;
+}
+
+#main.system.docs.support.faq.index ul.faq.index.group li.category:hover {
+    border-color: var(--accent-primary) ;
+}
+
+#main.system.docs.support.faq.index ul.faq.index.group li.category>a {
+    display: block ;
+    font-size: var(--font-size-h3) ;
+    font-weight: var(--font-weight-md-bold) ;
+    color: var(--accent-primary) ;
+    text-decoration: none ;
+    margin-bottom: var(--margin-sm) ;
+}
+
+#main.system.docs.support.faq.index ul.faq.index.group li.category>a:hover {
+    color: var(--accent-hover) ;
+}
+
+/* Nested questions list – display left without  to allow JS show/hide */
+#main.system.docs.support.faq.index ul.faq.index.group li.category ul.questions {
+    list-style: none ;
+    padding: 0 0 0 var(--pad-md) ;
+    margin: 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs) ;
+}
+
+#main.system.docs.support.faq.index ul.faq.index.group li.category ul.questions li {
+    margin: 0 ;
+}
+
+#main.system.docs.support.faq.index ul.faq.index.group li.category ul.questions a {
+    display: block ;
+    padding: 0.3rem var(--pad-sm) ;
+    font-size: var(--font-size-h4) ;
+    color: var(--text-secondary) ;
+    text-decoration: none ;
+    border-radius: var(--radius-sm) ;
+    transition: all var(--transition-hover) ;
+}
+
+#main.system.docs.support.faq.index ul.faq.index.group li.category ul.questions a:hover {
+    background: var(--bg-surface-2) ;
+    color: var(--text-primary) ;
+}
+
+/* ---------- 6. TABLE OF CONTENTS (TOC) ---------- */
+#main.system.docs.support.faq.show nav.toc,
+#main.system.docs.tos nav.toc,
+#main.system.docs.tos_faq #toc {
+    background: var(--bg-surface-1) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-md) ;
+    padding: var(--pad-md) ;
+    margin-bottom: var(--margin-lg) ;
+}
+
+#main.system.docs.support.faq.show nav.toc h3.heading,
+#main.system.docs.tos nav.toc h3.heading,
+#main.system.docs.tos_faq #toc h3.heading {
+    font-size: var(--font-size-h3) ;
+    color: var(--accent-primary) ;
+    margin: 0 0 var(--margin-sm) 0 ;
+    border-bottom: 1px solid var(--border-base) ;
+    padding-bottom: var(--pad-xs) ;
+    font-weight: var(--font-weight-md-bold) ;
+}
+
+#main.system.docs.support.faq.show nav.toc ul.toc,
+#main.system.docs.tos nav.toc ul.toc,
+#main.system.docs.tos nav.toc ol.toc,
+#main.system.docs.tos_faq #toc ul.toc {
+    list-style: none ;
+    padding: 0 ;
+    margin: 0 ;
+    display: flex ;
+    flex-direction: column ;
+    gap: var(--gap-xs) ;
+}
+
+#main.system.docs.support.faq.show nav.toc ul.toc li,
+#main.system.docs.tos nav.toc ul.toc li,
+#main.system.docs.tos nav.toc ol.toc li,
+#main.system.docs.tos_faq #toc ul.toc li {
+    list-style: none ;
+}
+
+#main.system.docs.support.faq.show nav.toc ul.toc li a,
+#main.system.docs.tos nav.toc ul.toc li a,
+#main.system.docs.tos nav.toc ol.toc li a,
+#main.system.docs.tos_faq #toc ul.toc li a {
+    display: block ;
+    padding: 0.3rem var(--pad-sm) ;
+    color: var(--text-secondary) ;
+    text-decoration: none ;
+    border-radius: var(--radius-sm) ;
+    font-size: var(--font-size-h4) ;
+    transition: all var(--transition-hover) ;
+}
+
+#main.system.docs.support.faq.show nav.toc ul.toc li a:hover,
+#main.system.docs.tos nav.toc ul.toc li a:hover,
+#main.system.docs.tos nav.toc ol.toc li a:hover,
+#main.system.docs.tos_faq #toc ul.toc li a:hover {
+    background: var(--bg-surface-2) ;
+    color: var(--text-primary) ;
+}
+
+/* ---------- 7. MAIN CONTENT AREA ---------- */
+#main.system.docs.support.faq.show #faq,
+#main.system.docs.tos .userstuff,
+#main.system.docs.tos_faq .userstuff {
+    color: var(--text-primary) ;
+    line-height: var(--line-height-body) ;
+}
+
+#main.system.docs.support.faq.show #faq h3,
+#main.system.docs.tos .userstuff h3,
+#main.system.docs.tos .userstuff h4,
+#main.system.docs.tos_faq .userstuff h4,
+#main.system.docs.tos_faq .userstuff h5 {
+    font-size: var(--font-size-h3) ;
+    color: var(--text-primary) ;
+    margin: var(--margin-lg) 0 var(--margin-sm) 0 ;
+    padding-top: var(--pad-sm) ;
+    border-top: 1px solid var(--border-base) ;
+    font-weight: var(--font-weight-md-bold) ;
+}
+
+#main.system.docs.support.faq.show #faq h3:first-of-type,
+#main.system.docs.tos .userstuff h3:first-of-type,
+#main.system.docs.tos_faq .userstuff h4:first-of-type {
+    border-top: none ;
+    margin-top: 0 ;
+}
+
+#main.system.docs.support.faq.show #faq p,
+#main.system.docs.tos .userstuff p,
+#main.system.docs.tos_faq .userstuff p {
+    margin-bottom: var(--margin-md) ;
+    font-size: var(--font-size-body) ;
+    color: var(--text-primary) ;
+}
+
+#main.system.docs.support.faq.show #faq a,
+#main.system.docs.tos .userstuff a,
+#main.system.docs.tos_faq .userstuff a {
+    color: var(--accent-primary) ;
+    text-decoration: none ;
+}
+
+#main.system.docs.support.faq.show #faq a:hover,
+#main.system.docs.tos .userstuff a:hover,
+#main.system.docs.tos_faq .userstuff a:hover {
+    color: var(--accent-hoverF);
+}
+
+#main.system.docs.support.faq.show #faq abbr,
+#main.system.docs.tos .userstuff abbr,
+#main.system.docs.tos_faq .userstuff abbr {
+    color: var(--text-secondary) ;
+    border-bottom: 1px dotted var(--border-base) ;
+    cursor: help ;
+}
+
+#main.system.docs.support.faq.show #faq ul,
+#main.system.docs.support.faq.show #faq ol,
+#main.system.docs.tos .userstuff ul,
+#main.system.docs.tos .userstuff ol,
+#main.system.docs.tos_faq .userstuff ul,
+#main.system.docs.tos_faq .userstuff ol {
+    margin: var(--margin-sm) 0 var(--margin-md) var(--pad-md) ;
+    padding: 0 ;
+}
+
+#main.system.docs.support.faq.show #faq li,
+#main.system.docs.tos .userstuff li,
+#main.system.docs.tos_faq .userstuff li {
+    margin-bottom: var(--margin-xs) ;
+    font-size: var(--font-size-body) ;
+}
+
+/* Definition lists */
+#main.system.docs.support.faq.show #faq dl,
+#main.system.docs.tos .userstuff dl,
+#main.system.docs.tos_faq .userstuff dl {
+    margin: var(--margin-md) 0 var(--margin-lg) 0 ;
+}
+
+#main.system.docs.support.faq.show #faq dt,
+#main.system.docs.tos .userstuff dt,
+#main.system.docs.tos_faq .userstuff dt {
+    font-weight: var(--font-weight-hg-bold) ;
+    color: var(--text-primary) ;
+    margin-top: var(--margin-md) ;
+    display: flex ;
+    align-items: center ;
+    gap: var(--gap-sm) ;
+    font-size: var(--font-size-body) ;
+}
+
+#main.system.docs.support.faq.show #faq dt img,
+#main.system.docs.tos .userstuff dt img,
+#main.system.docs.tos_faq .userstuff dt img {
+    width: 24px ;
+    height: 24px ;
+    object-fit: contain ;
+    border-radius: 3px ;
+}
+
+#main.system.docs.support.faq.show #faq dd,
+#main.system.docs.tos .userstuff dd,
+#main.system.docs.tos_faq .userstuff dd {
+    margin-left: var(--pad-md) ;
+    color: var(--text-secondary) ;
+    font-size: var(--font-size-h4) ;
+    margin-top: var(--margin-xs) ;
+}
+
+/* Blockquotes */
+#main.system.docs.support.faq.show #faq blockquote,
+#main.system.docs.tos .userstuff blockquote,
+#main.system.docs.tos_faq .userstuff blockquote {
+    background: var(--bg-surface-2) ;
+    border-left: 4px solid var(--accent-primary) ;
+    margin: var(--margin-md) 0 ;
+    padding: var(--pad-sm) var(--pad-md) ;
+    border-radius: var(--radius-sm) ;
+    color: var(--text-secondary) ;
+}
+
+/* Code / pre */
+#main.system.docs.support.faq.show #faq code,
+#main.system.docs.tos .userstuff code,
+#main.system.docs.tos_faq .userstuff code {
+    background: var(--bg-surface-2) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: 3px ;
+    padding: 0.1rem 0.3rem ;
+    font-family: monospace ;
+    font-size: var(--font-size-h5) ;
+    color: var(--color-pending) ;
+}
+
+#main.system.docs.support.faq.show #faq pre,
+#main.system.docs.tos .userstuff pre,
+#main.system.docs.tos_faq .userstuff pre {
+    background: var(--bg-base) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-sm) ;
+    padding: var(--pad-md) ;
+    overflow-x: auto ;
+    white-space: pre-wrap ;
+    word-wrap: break-word ;
+    font-size: var(--font-size-h5) ;
+    line-height: var(--line-height-body) ;
+    margin: var(--margin-md) 0 ;
+}
+
+#main.system.docs.support.faq.show #faq pre code,
+#main.system.docs.tos .userstuff pre code,
+#main.system.docs.tos_faq .userstuff pre code {
+    background: none ;
+    border: none ;
+    padding: 0 ;
+    color: var(--text-primary) ;
+}
+
+/* Images */
+#main.system.docs.support.faq.show #faq img,
+#main.system.docs.tos .userstuff img,
+#main.system.docs.tos_faq .userstuff img {
+    max-width: 100% ;
+    height: auto ;
+    border-radius: var(--radius-sm) ;
+    border: 1px solid var(--border-base) ;
+}
+
+/* Embedded videos/iframes */
+#main.system.docs.support.faq.show #faq iframe,
+#main.system.docs.tos .userstuff iframe,
+#main.system.docs.tos_faq .userstuff iframe {
+    max-width: 100% ;
+}
+
+/* Horizontal rules */
+#main.system.docs.support.faq.show #faq hr,
+#main.system.docs.tos .userstuff hr,
+#main.system.docs.tos_faq .userstuff hr {
+    border: none ;
+    border-top: 1px solid var(--border-base) ;
+    margin: var(--margin-lg) 0 ;
+}
+
+/* ---------- 8. TABLES & NESTED TOC CARDS ---------- */
+#main.system.docs.support.faq.show table,
+#main.system.docs.tos table,
+#main.system.docs.tos_faq table {
+    width: 100% ;
+    border-collapse: collapse ;
+    margin: var(--margin-md) 0 ;
+    background: var(--bg-surface-1) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-md) ;
+    overflow: hidden ;
+}
+
+#main.system.docs.support.faq.show table th,
+#main.system.docs.support.faq.show table td,
+#main.system.docs.tos table th,
+#main.system.docs.tos table td,
+#main.system.docs.tos_faq table th,
+#main.system.docs.tos_faq table td {
+    padding: 0.6rem var(--pad-sm) ;
+    border-bottom: 1px solid var(--border-base) ;
+    font-size: var(--font-size-h4) ;
+    color: var(--text-primary) ;
+    text-align: left ;
+}
+
+#main.system.docs.support.faq.show table th,
+#main.system.docs.tos table th,
+#main.system.docs.tos_faq table th {
+    background: var(--bg-surface-2) ;
+    color: var(--text-primary) ;
+    font-weight: var(--font-weight-md-bold) ;
+}
+
+#main.system.docs.support.faq.show table tr:last-child td,
+#main.system.docs.tos table tr:last-child td,
+#main.system.docs.tos_faq table tr:last-child td {
+    border-bottom: none ;
+}
+
+/* FAQ Index category "card" styling mapped to the TOS nested TOC items */
+#main.system.docs.tos nav.toc ol.toc>li,
+#main.system.docs.tos_faq #toc ul.toc>li {
+    background: var(--bg-surface-1) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-md) ;
+    padding: 0.4rem var(--pad-sm) ;
+    transition: border-color var(--transition-hover) ;
+    margin-bottom: var(--margin-md) ;
+}
+
+#main.system.docs.tos nav.toc ol.toc>li:hover,
+#main.system.docs.tos_faq #toc ul.toc>li:hover {
+    border-color: var(--accent-primary) ;
+}
+
+#main.system.docs.tos nav.toc ol.toc>li details summary,
+#main.system.docs.tos_faq #toc ul.toc>li>a {
+    display: block ;
+    font-size: var(--font-size-h3) ;
+    font-weight: var(--font-weight-md-bold) ;
+    color: var(--accent-primary) ;
+    text-decoration: none ;
+    margin-bottom: var(--margin-sm) ;
+    cursor: pointer ;
+}
+
+#main.system.docs.tos nav.toc ol.toc>li details summary h4,
+#main.system.docs.tos_faq #toc ul.toc>li>a {
+    border: none ;
+    margin-top: 0.5rem ;
+}
+
+#main.system.docs.tos nav.toc ol.toc>li details summary:hover,
+#main.system.docs.tos_faq #toc ul.toc>li>a:hover {
+    color: var(--accent-hover) ;
+}
+
+/* Nested sub‑questions */
+#main.system.docs.tos nav.toc ol.toc>li details ol,
+#main.system.docs.tos_faq #toc ul.toc>li>ul {
+    margin-left: var(--pad-md) ;
+    gap: var(--gap-xs) ;
+    display: flex ;
+    flex-direction: column ;
+}
+
+/* ---------- 9. SYSTEM TOAST / FLASH NOTICES ---------- */
+.flash {
+    background: var(--bg-surface-2) ;
+    border: 1px solid var(--border-base) ;
+    border-left: 4px solid var(--accent-primary) ;
+    border-radius: var(--radius-sm) ;
+    color: var(--text-primary) ;
+    padding: var(--pad-sm) var(--pad-md) ;
+    margin-top: var(--margin-md) ;
+    margin-bottom: var(--margin-md) ;
+    font-size: 13px ;
+    font-weight: var(--font-weight-md-bold) ;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) ;
+}
+
+.flash:empty {
+    margin: 0 ;
+    padding: 0 ;
+    border: none ;
+    box-shadow: none ;
+}
+
+.flash.notice,
+.flash.success {
+    border-left-color: var(--accent-primary) ;
+}
+
+.flash.error,
+.flash.alert {
+    border-left-color: var(--color-warning) ;
+}
+
+.flash a {
+    color: var(--accent-primary) ;
+    text-decoration: none ;
+}
+
+.flash ul {
+    list-style: disc ;
+    margin: var(--margin-sm) 0 0 var(--margin-md) ;
+    padding: 0 ;
+}
+
+.flash li {
+    margin-bottom: 0.2rem ;
+    display: list-item ;
+    list-style-type: disc ;
+    color: var(--text-primary) ;
+}
+
+/* ---------- 10. NAVIGATION ACTIONS ---------- */
+#main.system.tos_faq ul.navigation.actions,
+#main.system ul.navigation.actions {
+    display: flex ;
+    flex-wrap: wrap ;
+    gap: var(--gap-sm) ;
+    list-style: none ;
+    padding: 0 ;
+    margin: 0 0 var(--margin-md) 0 ;
+}
+
+#main.system ul.navigation.actions li {
+    margin: 0 ;
+}
+
+#main.system ul.navigation.actions a,
+#main.system ul.navigation.actions span.current {
+    display: inline-flex ;
+    align-items: center ;
+    justify-content: center ;
+    height: 36px ;
+    padding: 0 var(--pad-md) ;
+    background: var(--bg-surface-1) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-sm) ;
+    font-size: var(--font-size-h5) ;
+    color: var(--text-secondary) ;
+    text-decoration: none ;
+    transition: all var(--transition-hover) ;
+}
+
+#main.system ul.navigation.actions a:hover {
+    background: var(--bg-surface-2) ;
+    border-color: var(--accent-primary) ;
+    color: var(--text-primary) ;
+}
+
+#main.system ul.navigation.actions span.current {
+    background: var(--accent-primary) ;
+    color: var(--bg-base) ;
+    border-color: var(--accent-primary) ;
+    font-weight: var(--font-weight-hg-bold) ;
+}
+
+/* ---------- 11. RESPONSIVE ---------- */
+@media (max-width: 600px) {
+    #main.system.docs.support.faq.index .categories h3.heading {
+        flex-direction: column ;
+        align-items: flex-start ;
+        gap: 0.5rem ;
+    }
+
+    #main.system.docs.support.faq.index ul.faq.index.group li.category {
+        padding: 0.8rem var(--pad-sm) ;
+    }
+
+    #main.system.docs.support.faq.show nav.toc,
+    #main.system.docs.tos nav.toc,
+    #main.system.docs.tos_faq #toc {
+        padding: 0.8rem var(--pad-sm) ;
+    }
+
+    #main.system.docs.support.faq.show #faq dt,
+    #main.system.docs.tos .userstuff dt,
+    #main.system.docs.tos_faq .userstuff dt {
+        flex-direction: column ;
+        align-items: flex-start ;
+        gap: var(--gap-xs) ;
+    }
+
+    #main.system.docs.support.faq.show #faq dd,
+    #main.system.docs.tos .userstuff dd,
+    #main.system.docs.tos_faq .userstuff dd {
+        margin-left: var(--pad-sm) ;
+    }
+
+    #main.system.docs.support.faq.show #faq ul,
+    #main.system.docs.support.faq.show #faq ol,
+    #main.system.docs.tos .userstuff ul,
+    #main.system.docs.tos .userstuff ol,
+    #main.system.docs.tos_faq .userstuff ul,
+    #main.system.docs.tos_faq .userstuff ol {
+        margin-left: var(--pad-md) ;
+    }
+}
+
+/* ==========================================================================
+   DETAILS.TOC CARDS (For FAQ Sub-sections)
+   ========================================================================== */
+
+/* The Card Container */
+.userstuff details.toc {
+    background: var(--bg-surface-1) ;
+    border: 1px solid var(--border-base) ;
+    border-radius: var(--radius-md) ;
+    padding: 0.4rem var(--pad-sm) ;
+    margin-bottom: var(--margin-sm) ;
+    transition: border-color var(--transition-hover) ;
+}
+
+.userstuff details.toc:hover {
+    border-color: var(--accent-primary) ;
+}
+
+/* The Title / Summary Header */
+.userstuff details.toc summary {
+    cursor: pointer ;
+    margin-bottom: var(--margin-xs) ;
+}
+
+.userstuff details.toc summary h5.heading {
+    display: inline-block ;
+    font-size: 1.05rem ;
+    font-weight: var(--font-weight-md-bold) ;
+    color: var(--accent-primary) ;
+    text-decoration: none ;
+    margin: 0 ;
+    padding: 0 ;
+    border: none ;
+}
+
+.userstuff details.toc summary:hover h5.heading {
+    color: var(--accent-hover) ;
+}
+
+/* The Nested List of Questions – display left without  to allow native details toggle */
+.userstuff details.toc ul {
+    list-style: none ;
+    padding: 0 0 0 var(--pad-sm) ;
+    margin: 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs) ;
+}
+
+.userstuff details.toc ul li {
+    list-style: none ;
+    margin: 0 ;
+}
+
+.userstuff details.toc ul li a {
+    display: block ;
+    padding: 0.3rem var(--pad-sm) ;
+    font-size: var(--font-size-h4) ;
+    color: var(--text-secondary) ;
+    text-decoration: none ;
+    border-radius: var(--radius-sm) ;
+    transition: all var(--transition-hover) ;
+}
+
+.userstuff details.toc ul li a:hover {
+    background: var(--bg-surface-2) ;
+    color: var(--text-primary) ;
+}

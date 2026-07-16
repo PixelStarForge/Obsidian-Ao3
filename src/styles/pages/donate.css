@@ -1,0 +1,75 @@
+/* ==========================================================================
+   DONATE PAGE – Dark Theme
+   ========================================================================== */
+
+/* ---------- 1. PAGE HEADINGS ---------- */
+#main.system.docs.donate h2.heading {
+    font-size: var(--font-size-h2) !important;
+    color: var(--accent-primary) !important;
+    margin: 0 0 var(--margin-sm) 0 !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    border-bottom: none !important;
+}
+
+#main.system.docs.donate h3.heading {
+    font-size: var(--font-size-h3) !important;
+    color: var(--text-secondary) !important;
+    margin: 0 0 var(--margin-lg) 0 !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    padding-bottom: var(--pad-sm) !important;
+}
+
+/* ---------- 2. CONTENT CARD ---------- */
+#main.system.docs.donate .userstuff {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-lg) var(--pad-xl) !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body) !important;
+    line-height: var(--line-height-body) !important;
+    box-sizing: border-box !important;
+}
+
+/* ---------- 3. TEXT ELEMENTS ---------- */
+#main.system.docs.donate .userstuff h3 {
+    font-size: var(--font-size-h3) !important;
+    color: var(--text-primary) !important;
+    margin: var(--margin-lg) 0 var(--margin-md) 0 !important;
+    padding-top: var(--pad-sm) !important;
+    border-top: 1px solid var(--border-base) !important;
+}
+
+#main.system.docs.donate .userstuff h3:first-of-type {
+    border-top: none !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+#main.system.docs.donate .userstuff p {
+    margin: 0 0 var(--margin-md) 0 !important;
+}
+
+#main.system.docs.donate .userstuff p:last-child {
+    margin-bottom: 0 !important;
+}
+
+#main.system.docs.donate .userstuff a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    transition: color var(--transition-hover) !important;
+}
+
+#main.system.docs.donate .userstuff a:hover {
+    color: var(--accent-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* ---------- 4. RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    #main.system.docs.donate .userstuff {
+        padding: var(--pad-md) !important;
+    }
+}

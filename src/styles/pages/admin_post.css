@@ -1,0 +1,370 @@
+/* file: src/styles/pages/admin_posts.css */
+
+/* ==========================================================================
+   AO3 NEWS (ADMIN POSTS INDEX & SHOW) – Dark Theme Scoped
+   ========================================================================== */
+
+/* ---------- 1. HEADER MODULE OVERRIDES ---------- */
+#main.admin_posts-index .primary.header.module {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--gap-md) !important;
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-md) !important;
+    margin-bottom: var(--margin-lg) !important;
+    box-sizing: border-box !important;
+}
+
+#main.admin_posts-index .primary.header.module h2.heading {
+    margin: 0 !important;
+    font-size: var(--font-size-h2) !important;
+    color: var(--text-primary) !important;
+    border: none !important;
+    padding: 0 !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+}
+
+#main.admin_posts-index .primary.header.module h2.heading a {
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+#main.admin_posts-index .primary.header.module .icon {
+    display: none !important;
+}
+
+/* ---------- 2. FILTER & RSS SUBNAV ---------- */
+#main.admin_posts-index .primary.header.module ul.navigation.actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: var(--gap-md) !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+#main.admin_posts-index .primary.header.module ul.navigation.actions li {
+    display: inline-flex !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+#main.admin_posts-index .primary.header.module form p {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: var(--gap-sm) !important;
+    margin: 0 !important;
+}
+
+#main.admin_posts-index .primary.header.module label {
+    font-size: var(--font-size-h5) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-secondary) !important;
+}
+
+#main.admin_posts-index .primary.header.module select {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    padding-right: 2rem !important;
+    font-size: var(--font-size-h4) !important;
+    outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E4E4E7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right var(--pad-md) center !important;
+    background-size: 0.8rem !important;
+    cursor: pointer !important;
+    transition: border-color var(--transition-hover) !important;
+}
+
+#main.admin_posts-index .primary.header.module select:focus {
+    border-color: var(--accent-primary) !important;
+}
+
+#main.admin_posts-index .primary.header.module input[type="submit"],
+#main.admin_posts-index .primary.header.module a.rss {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 var(--pad-lg) !important;
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border: none !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+}
+
+#main.admin_posts-index .primary.header.module input[type="submit"]:hover {
+    background: var(--accent-hover) !important;
+}
+
+#main.admin_posts-index .primary.header.module a.rss {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+}
+
+#main.admin_posts-index .primary.header.module a.rss:hover {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+/* ---------- 3. NEWS POST CARDS (Index & Show views) ---------- */
+:is(.admin_posts-index, .admin_posts-show) .news.module.group {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    margin-bottom: var(--margin-lg) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .header {
+    padding: var(--pad-md) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    background: transparent !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group h3.heading {
+    margin: 0 !important;
+    font-size: var(--font-size-h3) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group h3.heading a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+    transition: color var(--transition-hover) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group h3.heading a:hover {
+    text-decoration: underline !important;
+}
+
+/* ---------- 4. POST METADATA (Wrapper / DL) ---------- */
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .wrapper {
+    background: var(--bg-surface-2) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta {
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: max-content 1fr !important;
+    gap: var(--gap-sm) var(--gap-lg) !important;
+    align-items: start !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta dt {
+    color: var(--text-muted) !important;
+    font-size: var(--font-size-h5) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
+    padding-top: 0.15rem !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta dd {
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-h4) !important;
+    margin: 0 !important;
+}
+
+/* Metadata Tags & Languages Lists */
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--gap-sm) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta ul li {
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta a.tag,
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta ul.languages a {
+    display: inline-block !important;
+    background: var(--bg-surface-1) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-xs) var(--pad-sm) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h5) !important;
+    text-decoration: none !important;
+    transition: all var(--transition-hover) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta a.tag:hover,
+:is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta ul.languages a:hover {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+/* ---------- 5. USERSTUFF CONTENT ---------- */
+:is(.admin_posts-index, .admin_posts-show) .news.module.group h4.landmark.heading,
+:is(.admin_posts-index, .admin_posts-show) .news.module.group h3.landmark.heading {
+    display: none !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff {
+    padding: var(--pad-md) !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body) !important;
+    line-height: var(--line-height-body) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff p {
+    margin: 0 0 var(--margin-md) 0 !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff p:last-child {
+    margin-bottom: 0 !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff h3,
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff h4 {
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-h3) !important;
+    margin: var(--margin-lg) 0 var(--margin-sm) 0 !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    padding-bottom: var(--pad-xs) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff a:hover {
+    text-decoration: underline !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff ul,
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff ol {
+    margin: var(--margin-sm) 0 var(--margin-md) var(--pad-md) !important;
+    padding: 0 !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff li {
+    margin-bottom: var(--margin-xs) !important;
+    list-style: none !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff ul li::before {
+    content: "• " !important;
+    color: var(--accent-primary) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    margin-right: var(--margin-xs) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: var(--radius-sm) !important;
+    display: block !important;
+    margin: var(--margin-md) auto !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group .userstuff hr {
+    border: none !important;
+    border-top: 1px solid var(--border-base) !important;
+    margin: var(--margin-lg) 0 !important;
+}
+
+/* ---------- 6. FOOTER ACTIONS (Comments) ---------- */
+:is(.admin_posts-index, .admin_posts-show) .news.module.group ul.actions {
+    background: var(--bg-surface-2) !important;
+    border-top: 1px solid var(--border-base) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    list-style: none !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group ul.actions li {
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group ul.actions a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;
+    padding: 0 var(--pad-md) !important;
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h5) !important;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+    transition: all var(--transition-hover) !important;
+    font-weight: var(--font-weight-lw-bold) !important;
+}
+
+:is(.admin_posts-index, .admin_posts-show) .news.module.group ul.actions a:hover {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+/* ---------- 7. RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    #main.admin_posts-index .primary.header.module form p {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    #main.admin_posts-index .primary.header.module select {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #main.admin_posts-index .primary.header.module input[type="submit"] {
+        margin-top: var(--margin-sm) !important;
+        width: 100% !important;
+    }
+
+    :is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta {
+        grid-template-columns: 1fr !important;
+        gap: var(--gap-sm) !important;
+    }
+
+    :is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta dt {
+        margin-top: var(--margin-sm) !important;
+        text-align: left !important;
+    }
+
+    :is(.admin_posts-index, .admin_posts-show) .news.module.group dl.meta dt:first-child {
+        margin-top: 0 !important;
+    }
+}
