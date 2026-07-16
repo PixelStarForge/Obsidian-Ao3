@@ -1,0 +1,257 @@
+/* file: src/styles/pages/collections_bookmarks.css */
+
+/* --- Integrated Recent Bookmark Panel (Full Width Card Pane) --- */
+
+/* Force container to stretch 100% width of parent card */
+.blurb .recent.module {
+    background: var(--bg-surface-2) !important;
+    border-top: 1px solid var(--border-base) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.blurb .recent.module ul.bookmark.index {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+/* Reset inner card borders and margins to align flush */
+.blurb .recent.module .blurb {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Header inside nested card */
+.blurb .recent.module .blurb .header.module {
+    background: transparent !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    /* Align left */
+    gap: var(--gap-md) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.blurb .recent.module .blurb h5.byline.heading {
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-muted) !important;
+    margin: 0 !important;
+    flex-grow: 1 !important;
+    /* Push subsequent elements to far right */
+}
+
+.blurb .recent.module .blurb h5.byline.heading a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+}
+
+
+.blurb .recent.module .blurb p.datetime {
+    font-size: var(--font-size-h5) !important;
+    color: var(--text-muted) !important;
+    margin: 0 !important;
+    position: static !important;
+    /* Reset native absolute positioning */
+    transform: none !important;
+}
+
+/* Rec Status Badge */
+.blurb .recent.module .blurb span.rec {
+    background: var(--bg-surface-2) !important;
+    color: var(--color-pending, #FFCCA6) !important;
+    border: 1px solid var(--color-pending, #FFCCA6) !important;
+    padding: 2px 6px !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: 11px !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    display: inline-block !important;
+}
+
+/* Metadata Labels & Fields */
+.blurb .recent.module .blurb h6.meta.heading {
+    font-size: var(--font-size-h5) !important;
+    color: var(--text-muted) !important;
+    text-transform: uppercase !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    letter-spacing: 0.5px !important;
+    margin: var(--margin-md) var(--pad-md) 0 var(--pad-md) !important;
+}
+
+.blurb .recent.module .blurb ul.meta {
+    list-style: none !important;
+    padding: 0 var(--pad-md) !important;
+    margin: var(--margin-xs) 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--gap-sm) !important;
+}
+
+.blurb .recent.module .blurb ul.meta li {
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+/* Bookmark tag list styled as Rose (Pink) pill tags */
+.blurb .recent.module .blurb ul.meta.tags a.tag {
+    display: inline-block !important;
+    background: var(--bg-surface-1) !important;
+    color: var(--accent-rose, #FFA6D2) !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-xs) var(--pad-sm) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h5) !important;
+    text-decoration: none !important;
+    transition: all var(--transition-hover) !important;
+}
+
+.blurb .recent.module .blurb ul.meta.tags a.tag:hover {
+    border-color: var(--accent-rose, #FFA6D2) !important;
+    background: var(--bg-surface-2) !important;
+}
+
+/* Bookmark Collection list styled as standard links */
+.blurb .recent.module .blurb ul.meta:not(.tags) a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+}
+
+.blurb .recent.module .blurb ul.meta:not(.tags) a:hover {
+    text-decoration: underline !important;
+}
+
+/* Summary / Notes Panel */
+.blurb .recent.module .blurb blockquote.userstuff.summary {
+    background: var(--bg-base) !important;
+    border-left: 3px solid var(--accent-primary) !important;
+    padding: var(--pad-md) !important;
+    margin: var(--margin-md) var(--pad-md) !important;
+    border-bottom: none !important;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+}
+
+.blurb .recent.module .blurb blockquote.userstuff.summary::before {
+    content: "Bookmark Notes" !important;
+    display: block !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    color: var(--text-muted) !important;
+    margin-bottom: var(--margin-sm) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    letter-spacing: 0.5px !important;
+}
+
+.blurb .recent.module .blurb blockquote.userstuff.summary p {
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body) !important;
+    margin: 0 !important;
+}
+
+/* Actions Footer inside nested card */
+.blurb .recent.module .blurb ul.actions {
+    background: var(--bg-surface-2) !important;
+    border-top: 1px solid var(--border-base) !important;
+    border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    margin-top: var(--margin-md) !important;
+    display: flex !important;
+    gap: var(--gap-sm) !important;
+    list-style: none !important;
+}
+
+.blurb .recent.module .blurb ul.actions li {
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+.blurb .recent.module .blurb ul.actions li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 28px !important;
+    padding: 0 var(--pad-md) !important;
+    background: var(--bg-surface-1) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    text-decoration: none !important;
+    transition: all var(--transition-hover) !important;
+    font-weight: var(--font-weight-lw-bold) !important;
+}
+
+.blurb .recent.module .blurb ul.actions li a:hover {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+/* Delete / destructive buttons */
+.blurb .recent.module .blurb ul.actions li a[data-method="delete"] {
+    color: var(--color-warning) !important;
+    border-color: var(--color-warning) !important;
+}
+
+.blurb .recent.module .blurb ul.actions li a[data-method="delete"]:hover {
+    background: var(--color-warning) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--color-warning) !important;
+}
+
+.blurb .recent.module .blurb p.status {
+    margin: 0 !important;
+    position: static !important;
+    /* Reset native absolute positioning */
+    transform: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+
+.collections-show ul.actions li a {
+    background: var(--bg-surface-1) !important;
+}
+
+/* --- Global Blockquote & Collection Type Label --- */
+blockquote.userstuff {
+    background: var(--bg-surface-2) !important;
+    border-left: 3px solid var(--accent-primary) !important;
+    padding: var(--pad-md) !important;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+    margin: var(--margin-md) 0 !important;
+}
+
+blockquote.userstuff p {
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body) !important;
+    line-height: var(--line-height-body) !important;
+    margin: 0 !important;
+}
+
+p.type {
+    color: var(--text-muted) !important;
+    font-size: var(--font-size-h5) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: var(--margin-sm) 0 !important;
+    display: inline-block !important;
+}

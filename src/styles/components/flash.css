@@ -50,12 +50,12 @@
 /* ===== MUTED NOTICE ===== */
 .muted.notice {
     background: var(--bg-surface-2);
-    border: 4px solid var(--border-base);
-    border-left: 3px solid var(--text-muted);
+    border: 1px solid var(--border-base);
+    border-left: 3px solid var(--accent-primary);
     border-radius: var(--radius-md);
     color: var(--text-secondary);
     padding: var(--pad-sm) var(--pad-md);
-    margin: var(--margin-sm) 0;
+    margin: 0;
     font-size: var(--font-size-h4);
     line-height: var(--line-height-body);
     box-shadow: none;

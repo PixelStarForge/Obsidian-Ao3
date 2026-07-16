@@ -1,0 +1,181 @@
+/* file: src/styles/pages/collections_signup.css */
+
+fieldset {
+    border: none;
+}
+
+/* file: src/styles/pages/collections_signup.css */
+
+/* --- 1. Subnav Navigation & Search Bar Layout --- */
+.challenge_signups-index ul.navigation.actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+    margin-bottom: var(--margin-lg);
+    padding: 0;
+    list-style: none;
+}
+
+.challenge_signups-index ul.navigation.actions li {
+    display: inline-flex;
+    align-items: center;
+}
+
+.challenge_signups-index ul.navigation.actions li::before {
+    content: none;
+}
+
+/* Header style search bar */
+.challenge_signups-index li.search form.search fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+
+.challenge_signups-index li.search form.search input.text {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    width: 180px;
+    transition: all var(--transition-hover);
+    color: var(--accent-primary);
+    outline: none;
+}
+
+.challenge_signups-index li.search form.search input.text:focus {
+    border-color: var(--accent-primary);
+    width: 200px;
+    background: var(--bg-surface-1);
+}
+
+.challenge_signups-index li.search form.search input[type="submit"] {
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border: none;
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-hg-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+.challenge_signups-index li.search form.search input[type="submit"]:hover {
+    background: var(--accent-hover);
+    opacity: 0.9;
+}
+
+/* CSV Download button */
+.challenge_signups-index ul.navigation.actions a[href*=".csv"] {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 var(--pad-md);
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    transition: all var(--transition-hover);
+}
+
+.challenge_signups-index ul.navigation.actions a[href*=".csv"]:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* --- 2. Participant List as Cards --- */
+.challenge_signups-index dl.index.group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    margin: var(--margin-lg) 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Card Header */
+.challenge_signups-index dt.participant {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-bottom: none;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    padding: var(--pad-md);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+    margin: 0;
+}
+
+.challenge_signups-index dt.participant a {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-hg-bold);
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.challenge_signups-index dt.participant a:hover {
+    text-decoration: underline;
+}
+
+/* Dark theme friendly mail envelope icon */
+.challenge_signups-index dt.participant a.mailto img {
+    width: 16px;
+    height: 12px;
+    filter: invert(1) brightness(0.8);
+    vertical-align: middle;
+}
+
+/* Card Body */
+.challenge_signups-index dd {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: var(--pad-md);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+}
+
+
+/* --- 4. Toggled Prompt Header --- */
+.challenge_signups-index .toggled {
+    margin-top: var(--margin-md);
+}
+
+.challenge_signups-index .toggled .listbox .heading {
+    font-size: var(--font-size-h4);
+    color: var(--text-primary);
+    padding-bottom: var(--pad-xs);
+    margin: 0 0 var(--margin-md) 0;
+    font-weight: var(--font-weight-md-bold);
+}
+
+a.help.symbol.question.modal {
+    margin-left: var(--margin-sm);
+}
+
+.challenge_signups-index ul.actions {
+    margin: 0 !important;
+}
+
+.challenge_signups-index h4.heading {
+    margin: 0 !important;
+}
+
+.edit_challenge_signup h3.heading {
+    margin-bottom: var(--margin-md);
+}
+
+span.symbol.question {
+    border: none !important;
+}

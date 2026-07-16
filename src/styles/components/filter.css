@@ -249,25 +249,6 @@
     list-style: none;
 }
 
-/* ----- Checkboxes & radios ----- */
-#main form.filters dd.expandable label {
-    display: flex;
-    align-items: center;
-    gap: var(--gap-sm);
-    color: var(--text-secondary);
-    font-size: var(--font-size-h4);
-    cursor: pointer;
-}
-
-#main form.filters dd.expandable input[type="checkbox"],
-#main form.filters dd.expandable input[type="radio"] {
-    accent-color: var(--accent-primary);
-    width: 15px;
-    height: 15px;
-    margin: 0;
-    flex-shrink: 0;
-    cursor: pointer;
-}
 
 #main form.filters dd.expandable label:has(input:checked) {
     color: var(--text-primary);
@@ -653,14 +634,7 @@ form.filters+p.footnote a:hover {
     cursor: pointer;
 }
 
-#main form.filters dd.options input[type="checkbox"] {
-    accent-color: var(--accent-primary);
-    width: 15px;
-    height: 15px;
-    margin: 0;
-    flex-shrink: 0;
-    cursor: pointer;
-}
+
 
 #main form.filters dd.options label:has(input:checked) {
     color: var(--text-primary);
@@ -669,4 +643,30 @@ form.filters+p.footnote a:hover {
 /* Hide native visual indicators */
 #main form.filters dd.options span.indicator {
     display: none;
+}
+
+/* --- Restore Original Float-Based Sidebar Layout --- */
+@media (min-width: 1096px) {
+
+    /* Float index list left when filters are present */
+    #main:has(form.filters) :is(ol.work.index, ul.index:has(.blurb), ol.index:has(.blurb)) {
+        float: left ;
+        width: 69% ;
+        clear: none ;
+    }
+
+    /* Float filters container right */
+    #main form.filters {
+        float: right !important;
+        width: 29% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Clear floats on parent container */
+    #main::after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
 }

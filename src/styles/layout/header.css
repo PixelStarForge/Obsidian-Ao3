@@ -324,7 +324,7 @@
     background: var(--accent-primary);
     color: #000000;
     border: 1px solid var(--border-base);
-    padding: var(--pad-sm) var(--pad-md) ;
+    padding: var(--pad-sm) var(--pad-md);
     font-size: var(--font-size-h4);
     border-radius: var(--radius-sm);
     font-weight: var(--font-weight-hg-bold);
@@ -479,5 +479,88 @@
 
     #header input.text:focus {
         width: auto;
+    }
+}
+
+/* ==========================================================================
+   HEADER COLLECTION TITLE ON TOP ROW INLINE BADGE
+   ========================================================================== */
+
+/* 1. Base Desktop Layout (min-width: 1097px) */
+#header.collection h2.collections {
+    position: static;
+    float: none;
+    order: 2;
+    align-self: center;
+    margin: 0;
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-hg-bold);
+    color: var(--accent-rels);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    padding: var(--pad-xs) var(--pad-sm);
+    border-radius: var(--radius-sm);
+    max-width: 250px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Desktop Width Tightening (Between 1097px and 1400px) */
+@media (min-width: 1097px) and (max-width: 1400px) {
+    #header.collection {
+        gap: var(--gap-sm);
+    }
+
+    #header.collection h2.collections {
+        max-width: 160px;
+        font-size: 12px;
+    }
+}
+
+/* 2. Mobile Specific Overrides (Strict Vertical Column Stacking) */
+@media (max-width: 1096px) {
+    #header.collection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap-xs);
+    }
+
+    #header.collection h1.heading {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    #header.collection #login,
+    #header.collection #greeting {
+        order: 2;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #header.collection h2.collections {
+        position: static;
+        float: none;
+        order: 3;
+        width: calc(100% - 1rem);
+        max-width: none;
+        text-align: center;
+        margin: var(--margin-sm) auto;
+        font-size: 12px;
+        padding: var(--pad-sm) var(--pad-md);
+        box-sizing: border-box;
+        display: block;
+        background: var(--bg-surface-2);
+        border: 1px solid var(--border-base);
+        border-radius: var(--radius-sm);
+        color: var(--accent-rels);
+    }
+
+    #header.collection nav[aria-label="Site"] {
+        order: 4;
+        width: 100%;
+        box-sizing: border-box;
     }
 }

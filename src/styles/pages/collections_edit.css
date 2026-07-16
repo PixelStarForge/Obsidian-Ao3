@@ -1,0 +1,260 @@
+/* file: src/styles/pages/collections_edit.css */
+
+/* ==========================================================================
+   COLLECTIONS EDIT & CREATION LAYOUTS (Header & Profile Settings)
+   ========================================================================== */
+
+/* --- 1. Base Fieldset Containers --- */
+form fieldset {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-md) !important;
+    margin-bottom: var(--margin-md) !important;
+    box-sizing: border-box !important;
+}
+
+form fieldset>legend {
+    display: none !important;
+}
+
+form fieldset>h3.heading {
+    font-size: var(--font-size-h3) !important;
+    color: var(--accent-primary) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    padding-bottom: var(--pad-sm) !important;
+    margin: 0 0 var(--margin-md) 0;
+    font-weight: var(--font-weight-md-bold) !important;
+}
+
+/* --- 2. Header DL Grid Alignment --- */
+form dl {
+    display: grid !important;
+    grid-template-columns: minmax(160px, 220px) 1fr !important;
+    row-gap: var(--margin-lg) !important;
+    column-gap: var(--gap-lg) !important;
+    align-items: start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Hide non-semantic wrappers containing hidden inputs to prevent grid cell shifting */
+form dl p:has(input[type="hidden"]) {
+    display: none !important;
+}
+
+form dl dd {
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--gap-sm) !important;
+    padding-bottom: var(--pad-sm) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    box-sizing: border-box !important;
+}
+
+form dl dt {
+    text-align: right !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-h4) !important;
+    margin: 0 !important;
+}
+
+form dl dt:last-of-type,
+form dl dd:last-of-type {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+/* --- 3. Inputs, Selects, & Textareas --- */
+form dl dd :is(input[type="text"], input[type="file"], select, textarea) {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    font-size: var(--font-size-h4) !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+    transition: border-color var(--transition-hover) !important;
+}
+
+form dl dd :is(input[type="text"], select, textarea):focus {
+    border-color: var(--accent-primary) !important;
+}
+
+form dl dd textarea {
+    min-height: 120px !important;
+    resize: vertical !important;
+}
+
+form dl dd input[type="file"] {
+    cursor: pointer !important;
+}
+
+/* Footnotes & help text */
+form dl dd p.footnote {
+    font-size: var(--font-size-h5) !important;
+    color: var(--text-muted) !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Autocomplete Boxes */
+form dl dd ul.autocomplete {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+form :is(ul, p).notes {
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+/* --- 4. Custom Icon Notes Panel --- */
+form ul.notes {
+    background: var(--bg-surface-2) !important;
+    border-left: 3px solid var(--accent-secondary) !important;
+    padding: var(--pad-md) !important;
+    border-radius: var(--radius-sm) !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+form ul.notes li {
+    color: var(--text-secondary) !important;
+    font-size: var(--font-size-h4) !important;
+    line-height: var(--line-height-body) !important;
+    margin-bottom: var(--margin-xs) !important;
+}
+
+form ul.notes li:last-child {
+    margin-bottom: 0 !important;
+}
+
+form ul.notes li img.icon {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover !important;
+    margin-right: var(--margin-sm) !important;
+}
+
+/* Inline Checkbox and Label wrapping */
+form dl dd:has(input[type="checkbox"]) {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: var(--gap-sm) !important;
+}
+
+form dl dd:has(input[type="checkbox"]) label {
+    font-size: var(--font-size-h4) !important;
+    color: var(--text-secondary) !important;
+    cursor: pointer !important;
+}
+
+/* Force Notes List inside dd to take full width */
+form dl dd ul.notes {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    margin-bottom: var(--margin-sm) !important;
+}
+
+/* --- 5. Profile Settings (Direct Textareas) --- */
+fieldset.profile p.note {
+    font-size: var(--font-size-h5) !important;
+    color: var(--text-muted) !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+    line-height: var(--line-height-body) !important;
+}
+
+/* Profile Textarea Titles */
+fieldset.profile h3.heading {
+    font-size: var(--font-size-h3) !important;
+    color: var(--accent-primary) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+    padding-bottom: var(--pad-sm) !important;
+    margin: var(--margin-lg) 0 var(--margin-md) 0 !important;
+    font-weight: var(--font-weight-md-bold) !important;
+}
+
+/* Full Width Textarea alignment inside profile fieldset */
+fieldset.profile p:has(textarea) {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+fieldset.profile textarea {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    font-size: var(--font-size-h4) !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    min-height: 180px !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+    transition: border-color var(--transition-hover) !important;
+}
+
+fieldset.profile textarea:focus {
+    border-color: var(--accent-primary) !important;
+}
+
+/* --- 6. Character Counters & LiveValidation --- */
+form .LV_validation_message {
+    font-size: var(--font-size-h5) !important;
+    color: var(--color-warning) !important;
+    margin-top: var(--margin-xs) !important;
+    display: block !important;
+}
+
+form .LV_validation_message.LV_valid {
+    display: none !important;
+}
+
+form p.character_counter {
+    font-size: var(--font-size-h5) !important;
+    color: var(--text-muted) !important;
+    margin: var(--margin-xs) 0 0 0 !important;
+    text-align: right !important;
+    width: 100% !important;
+}
+
+form p.character_counter .value {
+    color: var(--accent-primary) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+}
+
+/* --- 7. Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    form dl {
+        grid-template-columns: 1fr !important;
+        row-gap: var(--margin-md) !important;
+    }
+
+    form dl dt {
+        text-align: left !important;
+        padding-top: 0 !important;
+        padding-bottom: var(--pad-xs) !important;
+    }
+}
+
+
+fieldset:has(p span input[type="submit"]),
+fieldset:has(p.submit input[type="submit"]) {
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}

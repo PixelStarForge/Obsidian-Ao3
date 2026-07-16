@@ -1,0 +1,95 @@
+/* file: src/styles/pages/collections_profile.css */
+
+
+/* --- Collection Profile Meta Info Block & Scoped Rules --- */
+
+/* Metadata Card wrapper container */
+.collection_profile-show .wrapper {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-md) !important;
+    margin-bottom: var(--margin-md) !important;
+    box-sizing: border-box !important;
+}
+
+/* Two-column grid layout for details */
+.collection_profile-show .wrapper dl.meta.group {
+    display: grid !important;
+    grid-template-columns: minmax(180px, 240px) 1fr !important;
+    row-gap: var(--margin-md) !important;
+    column-gap: var(--gap-lg) !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.collection_profile-show .wrapper dl.meta dt {
+    text-align: right !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-h4) !important;
+    margin: 0 !important;
+}
+
+.collection_profile-show .wrapper dl.meta dd {
+    color: var(--text-secondary) !important;
+    font-size: var(--font-size-h4) !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.collection_profile-show .wrapper dl.meta dd a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+    font-weight: var(--font-weight-md-bold) !important;
+}
+
+.collection_profile-show .wrapper dl.meta dd a:hover {
+    text-decoration: underline !important;
+}
+
+/* Maintainer commas list overrides */
+.collection_profile-show .wrapper dl.meta dd ul.commas {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    gap: var(--gap-xs) !important;
+}
+
+.collection_profile-show .wrapper dl.meta dd ul.commas li::before {
+    content: none !important;
+}
+
+/* Nested List Spacing inside profile blockquotes */
+.collection_profile-show blockquote.userstuff ol,
+.collection_profile-show blockquote.userstuff ul {
+    margin: 0 !important;
+    padding-left: var(--pad-md) !important;
+}
+
+.collection_profile-show blockquote.userstuff li {
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body) !important;
+    line-height: var(--line-height-body) !important;
+    margin-bottom: var(--margin-sm) !important;
+}
+
+.collection_profile-show blockquote.userstuff li:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .collection_profile-show .wrapper dl.meta.group {
+        grid-template-columns: 1fr !important;
+        row-gap: var(--margin-sm) !important;
+    }
+
+    .collection_profile-show .wrapper dl.meta dt {
+        text-align: left !important;
+        padding-bottom: var(--pad-xs) !important;
+    }
+}

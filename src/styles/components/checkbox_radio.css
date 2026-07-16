@@ -1,0 +1,85 @@
+input[type="checkbox"] {
+    accent-color: var(--accent-primary);
+    width: 16px;
+    height: 16px;
+    margin: 3px 0 0 0;
+    /* optical vertical alignment with label text */
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+
+/* --- Custom Checkbox and Radio Overrides --- */
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-color: var(--bg-base, #0A0A0B) !important;
+    border: 1px solid var(--accent-primary, #27272A) !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    cursor: pointer !important;
+    outline: none !important;
+    margin: 0 0.5rem 0 0 !important;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-out !important;
+}
+
+input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 4px !important;
+}
+
+input[type="radio"] {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50% !important;
+}
+
+/* --- Hover and Focus States --- */
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    border-color: var(--accent-primary, #E2A6FF) !important;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+    box-shadow: 0 0 0 3px rgba(226, 166, 255, 0.2) !important;
+    border-color: var(--accent-primary, #E2A6FF) !important;
+}
+
+/* --- Checkbox Checked Marker --- */
+input[type="checkbox"]:checked {
+    background-color: var(--accent-primary, #E2A6FF) !important;
+    border-color: var(--accent-primary, #E2A6FF) !important;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 5px !important;
+    top: 2px !important;
+    width: 4px !important;
+    height: 8px !important;
+    border: solid var(--bg-base, #0A0A0B) !important;
+    border-width: 0 2px 2px 0 !important;
+    transform: rotate(45deg) !important;
+}
+
+/* --- Radio Checked Marker --- */
+input[type="radio"]:checked {
+    border-color: var(--accent-primary, #E2A6FF) !important;
+    background-color: var(--bg-base, #0A0A0B) !important;
+}
+
+input[type="radio"]:checked::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 4px !important;
+    top: 4px !important;
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background-color: var(--accent-primary, #E2A6FF) !important;
+}

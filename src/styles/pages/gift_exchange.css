@@ -1,0 +1,136 @@
+/* ==========================================================================
+   GIFT EXCHANGE SETTINGS OVERRIDES (Schedule, Requests, and Offers)
+   ========================================================================== */
+
+/* --- 1. Grid Container Base Layout --- */
+.gift_exchange-edit form dl {
+    display: grid !important;
+    grid-template-columns: minmax(160px, 220px) 1fr !important;
+    row-gap: var(--margin-lg) !important;
+    column-gap: var(--gap-lg) !important;
+    align-items: start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force notices inside dl to span both columns to prevent grid shifting */
+.gift_exchange-edit form dl> :is(p, div, .notice) {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+}
+
+/* Subtle line separator */
+.gift_exchange-edit form dl dd {
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--gap-sm) !important;
+    padding-bottom: var(--pad-sm) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+}
+
+.gift_exchange-edit form dl dt {
+    text-align: right !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-h4) !important;
+    margin: 0 !important;
+}
+
+.gift_exchange-edit form dl dt:last-of-type,
+.gift_exchange-edit form dl dd:last-of-type {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+/* --- 2. Complex Row-Based Inputs (Inline Alignment) --- */
+.gift_exchange-edit form dl dd.complex {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: var(--gap-md) !important;
+}
+
+.gift_exchange-edit form dl dd input.number {
+    width: 80px !important;
+    text-align: center !important;
+}
+
+.gift_exchange-edit form dl dd.complex label {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: var(--gap-xs) !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+}
+
+.gift_exchange-edit form dl dd.complex label input[type="checkbox"] {
+    margin-left: var(--margin-xs) !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    align-self: center !important;
+}
+
+fieldset:has(p.submit) {
+    margin: 0 !important;
+}
+
+/* --- Mobile Viewport Overflow Protection overrides --- */
+@media (max-width: 768px) {
+
+    /* Prevent textareas, textboxes, and nested containers from exceeding screen bounds */
+    .gift_exchange-edit :is(input[type="text"], textarea, select, fieldset, dl, dd) {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Force nested dt and dd elements to stack vertically on mobile */
+    .gift_exchange-edit form dl {
+        grid-template-columns: 1fr !important;
+        row-gap: var(--margin-md) !important;
+    }
+
+    .gift_exchange-edit form dl dt {
+        text-align: left !important;
+        padding-bottom: var(--pad-xs) !important;
+    }
+}
+
+/* --- Mobile Layout Improvements for Complex Form Rows --- */
+@media (max-width: 768px) {
+
+    /* Stack components vertically on mobile screens */
+    :is(form.post, form.verbose, form.tagset, form.edit_challenge_signup, form.new_chapter, #bookmark-form form) dl dd.complex {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: var(--gap-md) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Standardize mobile size for number inputs */
+    :is(form.post, form.verbose, form.tagset, form.edit_challenge_signup, form.new_chapter, #bookmark-form form) dl dd.complex input.number {
+        width: 100px !important;
+    }
+
+    /* Turn checkboxes into touch-friendly full-width list blocks */
+    :is(form.post, form.verbose, form.tagset, form.edit_challenge_signup, form.new_chapter, #bookmark-form form) dl dd.complex label {
+        display: flex !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+        /* Push checkbox indicator to far right */
+        background: var(--bg-surface-2) !important;
+        border: 1px solid var(--border-base) !important;
+        padding: var(--pad-sm) var(--pad-md) !important;
+        border-radius: var(--radius-sm) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Reset spacing for right-aligned mobile checkboxes */
+    :is(form.post, form.verbose, form.tagset, form.edit_challenge_signup, form.new_chapter, #bookmark-form form) dl dd.complex label input[type="checkbox"] {
+        margin: 0 !important;
+    }
+}

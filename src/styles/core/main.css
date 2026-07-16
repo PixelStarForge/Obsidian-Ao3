@@ -17,7 +17,8 @@ html {
     overflow-x: clip;
 }
 
-ul,ol {
+ul,
+ol {
     list-style: none;
 }
 

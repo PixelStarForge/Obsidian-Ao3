@@ -1,0 +1,87 @@
+/* --- Gift Search Form Overrides --- */
+form#gift-search.simple.search fieldset {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+}
+
+form#gift-search.simple.search legend {
+    display: none !important;
+}
+
+/* Horizontal Inline Alignment */
+form#gift-search.simple.search p {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-sm) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+form#gift-search.simple.search label {
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-primary) !important;
+    margin-right: var(--margin-xs) !important;
+}
+
+/* Query Input with Width Transition */
+form#gift-search.simple.search input.text {
+    background: var(--bg-surface-2) !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    width: 180px !important;
+    transition: all var(--transition-hover) !important;
+    color: var(--accent-primary) !important;
+    outline: none !important;
+}
+
+form#gift-search.simple.search input.text:focus {
+    border-color: var(--accent-primary) !important;
+    width: 200px !important;
+    background: var(--bg-surface-1) !important;
+}
+
+/* Search Button */
+form#gift-search.simple.search span.submit input.button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 var(--pad-lg) !important;
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border: none !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+}
+
+form#gift-search.simple.search span.submit input.button:hover {
+    background: var(--accent-hover) !important;
+    opacity: 0.9 !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 480px) {
+    form#gift-search.simple.search p {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    form#gift-search.simple.search input.text {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    form#gift-search.simple.search input.text:focus {
+        width: 100% !important;
+    }
+}

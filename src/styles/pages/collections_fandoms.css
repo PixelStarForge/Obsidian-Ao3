@@ -1,0 +1,86 @@
+/* file: src/styles/pages/collections_fandoms.css */
+
+
+/* --- Media Filter Form Overrides --- */
+form.filter#media-filter fieldset {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Horizontal Inline Alignment */
+form.filter#media-filter p {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-md) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Select Dropdown with Custom Arrow */
+form.filter#media-filter select#media_id {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    font-size: var(--font-size-h4) !important;
+    font-family: inherit;
+    cursor: pointer !important;
+    outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E4E4E7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right var(--pad-md) center !important;
+    background-size: 0.8rem !important;
+    padding-right: 2.2rem !important;
+    max-width: 320px !important;
+    transition: border-color var(--transition-hover) !important;
+}
+
+form.filter#media-filter select#media_id:focus {
+    border-color: var(--accent-primary) !important;
+}
+
+form.filter#media-filter select#media_id option {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Show button styling */
+form.filter#media-filter input[type="submit"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 var(--pad-lg) !important;
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+}
+
+form.filter#media-filter input[type="submit"]:hover {
+    background: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 480px) {
+    form.filter#media-filter p {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    form.filter#media-filter select#media_id {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
