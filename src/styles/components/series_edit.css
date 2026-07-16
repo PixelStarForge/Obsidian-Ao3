@@ -1,0 +1,351 @@
+/* file: src/styles/components/series_edit.css */
+
+/* ==========================================================================
+   SERIES EDIT FORM STYLING
+   ========================================================================== */
+
+/* Main Form Container */
+#work-form.simple.post.series form.edit_series {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fieldset Reset */
+#work-form.simple.post.series fieldset {
+    background: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    margin-bottom: var(--margin-md);
+    box-sizing: border-box;
+}
+
+#work-form.simple.post.series fieldset>legend {
+    display: none;
+}
+
+#work-form.simple.post.series fieldset> :is(h3, h4).heading {
+    font-size: var(--font-size-h3);
+    color: var(--accent-primary);
+    padding-bottom: var(--pad-sm);
+    margin: 0 0 var(--margin-md) 0;
+    font-weight: var(--font-weight-md-bold);
+}
+
+/* Required notice */
+#work-form.simple.post.series p.required.notice {
+    font-size: var(--font-size-h5);
+    color: var(--text-muted);
+    margin: 0 0 var(--margin-lg) 0;
+    line-height: var(--line-height-body);
+}
+
+/* DL Grid Layout */
+#work-form.simple.post.series dl {
+    display: grid;
+    grid-template-columns: minmax(160px, 220px) 1fr;
+    row-gap: var(--margin-lg);
+    column-gap: var(--gap-lg);
+    align-items: start;
+    margin: 0;
+    padding: 0;
+}
+
+/* DT (Labels) */
+#work-form.simple.post.series dl dt {
+    text-align: right;
+    font-weight: var(--font-weight-md-bold);
+    color: var(--text-primary);
+    font-size: var(--font-size-h4);
+    margin: 0;
+}
+
+#work-form.simple.post.series dl dt label {
+    display: inline;
+    font-weight: var(--font-weight-md-bold);
+    cursor: pointer;
+}
+
+#work-form.simple.post.series dl dt label.required::after {
+    content: "*";
+    color: var(--color-warning);
+    margin-left: var(--margin-xs);
+}
+
+/* DD (Values) */
+#work-form.simple.post.series dl dd {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    padding-bottom: var(--pad-sm);
+    border-bottom: 1px solid var(--border-base);
+}
+
+#work-form.simple.post.series dl dt:last-of-type,
+#work-form.simple.post.series dl dd:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Text Inputs */
+#work-form.simple.post.series input[type="text"] {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-sm) var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-family: inherit;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color var(--transition-hover);
+}
+
+#work-form.simple.post.series input[type="text"]:focus {
+    border-color: var(--accent-primary);
+}
+
+/* Textareas */
+#work-form.simple.post.series textarea {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-sm) var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color var(--transition-hover);
+    min-height: 120px;
+    resize: vertical;
+}
+
+#work-form.simple.post.series textarea:focus {
+    border-color: var(--accent-primary);
+}
+
+/* Select Dropdowns */
+#work-form.simple.post.series select {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--pad-sm) var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-family: inherit;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    transition: border-color var(--transition-hover);
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+}
+
+#work-form.simple.post.series select:focus {
+    border-color: var(--accent-primary);
+}
+
+/* Checkboxes */
+#work-form.simple.post.series input[type="checkbox"] {
+    accent-color: var(--accent-primary);
+    width: 16px;
+    height: 16px;
+    margin: 0 var(--margin-xs) 0 0;
+    cursor: pointer;
+}
+
+#work-form.simple.post.series dd label[for="series_complete"] {
+    color: var(--text-secondary);
+    font-size: var(--font-size-h4);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+
+/* Character Counters */
+#work-form.simple.post.series p.character_counter {
+    font-size: var(--font-size-h5);
+    color: var(--text-muted);
+    margin: var(--margin-xs) 0 0 0;
+    text-align: left;
+    width: 100%;
+}
+
+#work-form.simple.post.series p.character_counter .value {
+    color: var(--accent-primary);
+    font-weight: var(--font-weight-md-bold);
+}
+
+/* Help Icons */
+#work-form.simple.post.series a.help.symbol.question {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-base);
+    border-radius: 50%;
+    color: var(--accent-primary);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-hg-bold);
+    text-decoration: none;
+    transition: all var(--transition-hover);
+    line-height: 1;
+    margin-left: var(--margin-xs);
+    vertical-align: middle;
+}
+
+#work-form.simple.post.series a.help.symbol.question:hover {
+    background: var(--bg-base);
+    border-color: var(--accent-primary);
+}
+
+/* Plain text helper text */
+#work-form.simple.post.series dd::before {
+    content: attr(data-helper);
+    display: block;
+    font-size: var(--font-size-h5);
+    color: var(--text-muted);
+    margin-bottom: var(--margin-xs);
+}
+
+/* Validation messages */
+#work-form.simple.post.series .LV_validation_message {
+    font-size: var(--font-size-h5);
+    color: var(--color-warning);
+    margin-top: var(--margin-xs);
+    display: none;
+}
+
+#work-form.simple.post.series .LV_validation_message:not(.LV_valid) {
+    display: block;
+}
+
+/* Hidden fieldset for co-authors */
+#work-form.simple.post.series fieldset#co-authors-options {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+#work-form.simple.post.series fieldset#co-authors-options.hidden {
+    display: none !important;
+}
+
+#work-form.simple.post.series ul.autocomplete {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Submit Button & Cancel Link */
+#work-form.simple.post.series fieldset.create {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: var(--margin-xl);
+}
+
+#work-form.simple.post.series p.submit.cancel.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#work-form.simple.post.series input[type="submit"],
+#work-form.simple.post.series button[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-lg);
+    background: var(--accent-primary);
+    color: var(--bg-base);
+    border: 1px solid var(--accent-primary);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    cursor: pointer;
+    transition: all var(--transition-hover);
+}
+
+#work-form.simple.post.series input[type="submit"]:hover,
+#work-form.simple.post.series button[type="submit"]:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--bg-base);
+}
+
+/* Cancel Link */
+#work-form.simple.post.series p.submit.cancel.actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 var(--pad-md);
+    background: transparent;
+    color: var(--color-warning);
+    border: 1px solid var(--color-warning);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-md-bold);
+    transition: all var(--transition-hover);
+}
+
+#work-form.simple.post.series p.submit.cancel.actions a:hover {
+    background: var(--color-warning);
+    color: var(--bg-base);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #work-form.simple.post.series dl {
+        grid-template-columns: 1fr;
+        row-gap: var(--margin-md);
+    }
+
+    #work-form.simple.post.series dl dt {
+        text-align: left;
+        padding-top: 0;
+        padding-bottom: var(--pad-xs);
+        border-bottom: none;
+    }
+
+    #work-form.simple.post.series dl dt:last-of-type {
+        padding-bottom: 0;
+    }
+
+    #work-form.simple.post.series input[type="text"],
+    #work-form.simple.post.series select {
+        max-width: 100%;
+    }
+
+    #work-form.simple.post.series p.submit.cancel.actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #work-form.simple.post.series input[type="submit"],
+    #work-form.simple.post.series button[type="submit"],
+    #work-form.simple.post.series p.submit.cancel.actions a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

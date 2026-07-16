@@ -1,0 +1,252 @@
+/* file: src/styles/pages/edit_multiple.css */
+
+/* ==========================================================================
+   EDIT MULTIPLE WORKS LAYOUTS (Works List & Privacy Settings)
+   ========================================================================== */
+
+/* --- 1. Work Index description list styled as standard card blurbs --- */
+.works-edit_multiple dl.work.index.group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    /* Managed by card-specific top margins */
+    margin: var(--margin-md) 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+/* Card Header (Title & Fandom) */
+.works-edit_multiple dl.work.index.group dt {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-bottom: none !important;
+    border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+    padding: var(--pad-md) !important;
+    margin-top: var(--margin-md) !important;
+    font-size: var(--font-size-h3) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-primary) !important;
+    display: block !important;
+}
+
+/* Reset top margin on first card header */
+.works-edit_multiple dl.work.index.group dt:first-of-type {
+    margin-top: 0 !important;
+}
+
+/* Card title link colors */
+.works-edit_multiple dl.work.index.group dt a:first-of-type {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+    transition: color var(--transition-hover) !important;
+}
+
+.works-edit_multiple dl.work.index.group dt a:first-of-type:hover {
+    text-decoration: underline !important;
+}
+
+/* Scoped Fandom Badge */
+.works-edit_multiple dl.work.index.group dt a.tag {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-secondary) !important;
+    padding: var(--pad-xs) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    text-decoration: none !important;
+    border: 1px solid var(--border-base) !important;
+    display: inline-block !important;
+    margin-left: var(--margin-xs) !important;
+    transition: all var(--transition-hover) !important;
+}
+
+.works-edit_multiple dl.work.index.group dt a.tag:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+}
+
+/* Card Body (Tags panel) */
+.works-edit_multiple dl.work.index.group dd {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-top: none !important;
+    border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+    padding: 0 var(--pad-md) var(--pad-md) var(--pad-md) !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+}
+
+/* Tag cloud list inside card dd */
+.works-edit_multiple dl.work.index.group ul.tags.commas {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-flow: row wrap !important;
+    gap: var(--gap-sm) !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas li {
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas li::before {
+    content: none !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas a.tag {
+    display: inline-block !important;
+    background: var(--bg-surface-2) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-xs) var(--pad-sm) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h5) !important;
+    text-decoration: none !important;
+    transition: all var(--transition-hover) !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas a.tag:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+}
+
+/* Color overrides matching standard card semantic tags */
+.works-edit_multiple dl.work.index.group ul.tags.commas li.warnings a.tag {
+    color: var(--color-warning) !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas li.relationships a.tag {
+    color: var(--color-relationship) !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas li.characters a.tag {
+    color: var(--color-character) !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas li.warnings a.tag:hover {
+    border-color: var(--color-warning) !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas li.relationships a.tag:hover {
+    border-color: var(--color-relationship) !important;
+}
+
+.works-edit_multiple dl.work.index.group ul.tags.commas li.characters a.tag:hover {
+    border-color: var(--color-character) !important;
+}
+
+/* --- 2. Privacy Fieldset List alignment --- */
+.works-edit_multiple dl dd ul li {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Center nested checkboxes & radio inputs inside labels */
+.works-edit_multiple dl dd ul li label {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: var(--gap-sm) !important;
+    color: var(--text-secondary) !important;
+    font-size: var(--font-size-h4) !important;
+    cursor: pointer !important;
+    line-height: normal !important;
+}
+
+.works-edit_multiple dl dd ul li label input[type="radio"],
+.works-edit_multiple dl dd ul li label input[type="checkbox"] {
+    margin: 0 !important;
+    align-self: center !important;
+    flex-shrink: 0 !important;
+}
+
+
+fieldset.privacy {
+    background: var(--bg-surface-1) !important;
+    padding: var(--pad-md) !important;
+    border: 1px solid var(--border-base) !important;
+}
+
+/* --- Mobile Layout Improvements for Edit Multiple Page --- */
+@media (max-width: 768px) {
+
+    /* Prevent overall page and form wrapper overflows */
+    .works-edit_multiple form,
+    .works-edit_multiple fieldset,
+    .works-edit_multiple dl,
+    .works-edit_multiple dd {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+
+    /* Shrink legacy cards padding on mobile screen sizes */
+    .works-edit_multiple dl.work.index.group dt {
+        font-size: var(--font-size-h4) !important;
+        padding: var(--pad-sm) !important;
+    }
+
+    .works-edit_multiple dl.work.index.group dd {
+        padding: 0 var(--pad-sm) var(--pad-sm) var(--pad-sm) !important;
+        margin-bottom: var(--margin-sm) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #main.works-edit_multiple {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    .works-edit_multiple form {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    fieldset.work.meta {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: var(--pad-sm) !important;
+        margin: 0 0 var(--margin-md) 0 !important;
+        overflow: hidden !important;
+    }
+
+    fieldset.work.meta dl {
+        grid-template-columns: 1fr !important;
+        row-gap: var(--margin-md) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    fieldset.work.meta dl dt {
+        text-align: left !important;
+        padding-bottom: var(--pad-xs) !important;
+    }
+
+    fieldset.work.meta dl dd {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    fieldset.work.meta dl dd select {
+        max-width: 100% !important;
+    }
+
+    fieldset.work.meta dl dd input[type="text"],
+    fieldset.work.meta ul.autocomplete {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    fieldset.work.meta ul.autocomplete li.input input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}

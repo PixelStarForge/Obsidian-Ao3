@@ -1,0 +1,45 @@
+/* Series fieldset actions alignment */
+fieldset#series-options dd ul.actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--gap-sm) !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: flex-start !important;
+}
+
+fieldset#series-options dd ul.actions li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+fieldset#series-options dd ul.actions li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--bg-surface-2) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    text-decoration: none !important;
+    transition: all var(--transition-hover) !important;
+    min-width: 200px !important;
+}
+fieldset#series-options dd ul.actions li a:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+}
+
+fieldset#series-options dd ul.actions li a[rel="nofollow"] {
+    border-color: var(--color-warning) !important;
+    color: var(--color-warning) !important;
+}
+
+fieldset#series-options dd ul.actions li a[rel="nofollow"]:hover {
+    background: var(--color-warning) !important;
+    color: var(--bg-base) !important;
+}

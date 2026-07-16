@@ -1,0 +1,55 @@
+/* --- Collection Profile Textareas --- */
+fieldset.profile textarea {
+    background: var(--bg-surface-2) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    font-size: var(--font-size-h4) !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    min-height: 180px !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+    transition: border-color var(--transition-hover) !important;
+}
+
+fieldset.profile textarea:focus {
+    border-color: var(--accent-primary) !important;
+}
+
+/* --- Informational Notes List --- */
+ul.notes {
+    background: var(--bg-surface-2) !important;
+    border-left: 3px solid var(--accent-secondary) !important;
+    padding: var(--pad-md) !important;
+    border-radius: var(--radius-sm) !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+    list-style: none !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+ul.notes li {
+    color: var(--text-secondary) !important;
+    font-size: var(--font-size-h4) !important;
+    line-height: var(--line-height-body) !important;
+    margin-bottom: var(--margin-xs) !important;
+}
+
+ul.notes li:last-child {
+    margin-bottom: 0 !important;
+}
+
+ul.notes li::before {
+    color: var(--accent-primary) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    margin-right: var(--margin-xs) !important;
+}
+
+ul.notes li strong,
+ul.notes li em {
+    color: var(--text-primary) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    font-style: normal !important;
+}

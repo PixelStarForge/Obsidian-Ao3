@@ -1,0 +1,96 @@
+/*  */
+
+/* --- Manage Series Sortable List Overrides --- */
+#manage-series {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-md) !important;
+    margin-bottom: var(--margin-md) !important;
+    box-sizing: border-box !important;
+}
+
+#manage-series ul#sortable_series_list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--gap-sm) !important;
+}
+
+#manage-series li.serial-position-list {
+    background: var(--bg-surface-2) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--pad-sm) var(--pad-md) !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-md) !important;
+    list-style: none !important;
+}
+
+#manage-series li.serial-position-list::before {
+    content: none !important;
+}
+
+/* Position Input Field */
+#manage-series input.serial-position-field {
+    background: var(--bg-base) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: var(--pad-xs) var(--pad-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    width: 60px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    outline: none !important;
+}
+
+#manage-series input.serial-position-field:focus {
+    border-color: var(--accent-primary) !important;
+}
+
+#manage-series li.serial-position-list span[id^="position-for-"] {
+    font-weight: var(--font-weight-hg-bold) !important;
+    color: var(--accent-primary) !important;
+}
+
+#manage-series li.serial-position-list h3.heading {
+    font-size: var(--font-size-h4) !important;
+    color: var(--text-primary) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+/* Submit Action Button positioning */
+#manage-series p.submit.actions {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#manage-series p.submit.actions input[type="submit"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 var(--pad-lg) !important;
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+}
+
+#manage-series p.submit.actions input[type="submit"]:hover {
+    background: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}

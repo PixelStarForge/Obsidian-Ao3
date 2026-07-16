@@ -660,7 +660,9 @@
                 "*://*.archiveofourown.org/chapters/*"
             ],
             "exclude_matches": [
-                "*://*.archiveofourown.org/works/new*"
+                "*://*.archiveofourown.org/works/new*",
+                "*://*.archiveofourown.org/works/*/edit_tags*",
+                "*://*.archiveofourown.org/works/*/update_tags*"
             ],
             "js": [
                 "src/scripts/observer.js"
@@ -690,6 +692,60 @@
         },
         {
             "matches": [
+                "*://*.archiveofourown.org/works/*/edit_tags*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/works/new*"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/works/*/update_tags*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/works/new*"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/page_update_tags.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/modal.css",
+                "src/styles/pages/chapter_show.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/chapter/chapter_navigation_actions.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/works/*/chapters/*/preview*"
             ],
             "exclude_matches": [],
@@ -703,6 +759,31 @@
                 "src/styles/layout/footer.css",
                 "src/styles/components/modal.css",
                 "src/styles/components/flash.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/pages/chapter_show.css",
+                "src/styles/components/rich_text_editor.css",
+                "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/works/*/chapters/*/edit*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/forms.css",
                 "src/styles/components/symbol_question_mark.css",
                 "src/styles/components/navigation_actions.css",
                 "src/styles/components/autocomplete.css",
@@ -765,6 +846,33 @@
         },
         {
             "matches": [
+                "*://*.archiveofourown.org/users/*/works/edit_multiple*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/fic_card.css",
+                "src/styles/components/edit_multiple.css",
+                "src/styles/pages/works_show_multiple.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/rich_text_editor.css",
+                "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/tags/*/works*"
             ],
             "exclude_matches": [],
@@ -804,12 +912,37 @@
                 "src/styles/core/main.css",
                 "src/styles/layout/header.css",
                 "src/styles/layout/footer.css",
+                "src/styles/components/full_page_index.css",
                 "src/styles/components/modal.css",
                 "src/styles/components/flash.css",
                 "src/styles/components/pagination.css",
                 "src/styles/components/fic_card.css",
                 "src/styles/components/symbol_question_mark.css",
                 "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/works/*/edit"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/rich_text_editor.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/pages/work_edit.css"
             ],
             "run_at": "document_start"
         },
@@ -824,6 +957,7 @@
                 "*://*.archiveofourown.org/collections/*/works*",
                 "*://*.archiveofourown.org/collections/*/fandoms*",
                 "*://*.archiveofourown.org/collections/*?*",
+                "*://*.archiveofourown.org/collections/new*",
                 "*://*.archiveofourown.org/collections/*/edit*",
                 "*://*.archiveofourown.org/collections/*/gift_exchange*"
             ],
@@ -840,9 +974,32 @@
                 "src/styles/components/pagination.css",
                 "src/styles/pages/fics.css",
                 "src/styles/components/navigation_actions.css",
-                "src/styles/components/fic_card.css",
                 "src/styles/components/autocomplete.css",
                 "src/styles/components/filter.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/collections/new*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/components/collection_new.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/autocomplete.css",
                 "src/styles/components/symbol_question_mark.css",
                 "src/styles/components/checkbox_radio.css"
             ],
@@ -859,7 +1016,8 @@
                 "*://*.archiveofourown.org/collections/*/works*",
                 "*://*.archiveofourown.org/collections/*/fandoms*",
                 "*://*.archiveofourown.org/collections/*/profile*",
-                "*://*.archiveofourown.org/collections/*/people*"
+                "*://*.archiveofourown.org/collections/*/people*",
+                "*://*.archiveofourown.org/collections/new*"
             ],
             "js": [
                 "src/scripts/observer.js"
@@ -872,7 +1030,7 @@
                 "src/styles/components/modal.css",
                 "src/styles/components/flash.css",
                 "src/styles/components/pagination.css",
-                "src/styles/components/dashboard.css",
+        
                 "src/styles/components/bookmark_badges.css",
                 "src/styles/pages/collections_bookmarks.css",
                 "src/styles/components/navigation_actions.css",
@@ -1177,6 +1335,104 @@
         },
         {
             "matches": [
+                "*://*.archiveofourown.org/orphans*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/orphan_new.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/series/*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/series/*/edit*",
+                "*://*.archiveofourown.org/series/*/manage*"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/fic_card.css",
+                "src/styles/components/chapter/bookmark_form.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/pages/series.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/series/*/manage*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/series_manage.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/pages/series.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/series/*/edit*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/forms.css",
+                "src/styles/components/series_edit.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/pages/series.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/*"
             ],
             "exclude_matches": [
@@ -1190,7 +1446,9 @@
                 "*://*.archiveofourown.org/tag_sets*",
                 "*://*.archiveofourown.org/works*",
                 "*://*.archiveofourown.org/collections*",
-                "*://*.archiveofourown.org/external_works*"
+                "*://*.archiveofourown.org/external_works*",
+                "*://*.archiveofourown.org/series/*",
+                "*://*.archiveofourown.org/orphans*"
             ],
             "js": [
                 "src/scripts/observer.js"

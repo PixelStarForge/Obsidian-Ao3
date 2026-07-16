@@ -1,0 +1,121 @@
+/* file: src/styles/components/orphan_new.css */
+/* Scoped Page Container Wrapper */
+.orphans-new {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: var(--pad-md);
+    background-color: var(--bg-surface-1);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+}
+
+.orphans-new h2.heading {
+    font-size: var(--font-size-h2);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-hg-bold);
+    margin-bottom: var(--margin-md);
+}
+
+/* High-Contrast Caution Notice Panel */
+.orphans-new p.caution.notice {
+    background: var(--bg-surface-2) !important;
+    border-left: 4px solid var(--color-warning, #FFA6A6) !important;
+    padding: var(--pad-md) !important;
+    border-radius: var(--radius-sm) !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-h4) !important;
+    line-height: var(--line-height-body) !important;
+    margin-bottom: var(--margin-lg) !important;
+}
+
+/* Radio Buttons Inline Formatting */
+.orphans-new form p:has(input[type="radio"]) {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-sm) !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+}
+
+.orphans-new form label {
+    color: var(--text-secondary) !important;
+    font-size: var(--font-size-h4) !important;
+    cursor: pointer !important;
+}
+
+/* Destructive Confirmation Submit Button */
+.orphans-new p.submit.actions {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin-top: var(--margin-lg) !important;
+    padding: 0 !important;
+}
+
+.orphans-new p.submit.actions input[type="submit"] {
+    background: var(--color-warning, #FFA6A6) !important;
+    color: var(--bg-base, #0A0A0B) !important;
+    border: 1px solid var(--color-warning, #FFA6A6) !important;
+    padding: var(--pad-sm) var(--pad-lg) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+    width: auto !important;
+}
+
+.orphans-new p.submit.actions input[type="submit"]:hover {
+    opacity: 0.9 !important;
+}
+
+/* Bottom Navigation Actions */
+.orphans-new ul.actions {
+    display: flex !important;
+    gap: var(--gap-sm) !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: var(--margin-lg) 0 0 0 !important;
+}
+
+.orphans-new ul.actions li {
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+.orphans-new ul.actions li::before {
+    content: none !important;
+}
+
+.orphans-new ul.actions li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 var(--pad-md) !important;
+    background: var(--bg-surface-2) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    text-decoration: none !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    transition: all var(--transition-hover) !important;
+}
+
+.orphans-new ul.actions li a:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    background-color: var(--bg-surface-1) !important;
+}
+
+/* Scoped Cancel Button Link */
+.orphans-new ul.actions li a[href*="/series/"] {
+    color: var(--color-warning) !important;
+    border-color: var(--color-warning) !important;
+}
+
+.orphans-new ul.actions li a[href*="/series/"]:hover {
+    background: var(--color-warning) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--color-warning) !important;
+}

@@ -22,8 +22,7 @@ ol {
     list-style: none;
 }
 
-.clear,
-br.clear,
+/* Scoped Landmark Hide (Restores native .clear float behavior) */
 .landmark {
     display: none;
 }
@@ -51,6 +50,7 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
+    word-break: break-all;
 }
 
 

@@ -5,8 +5,8 @@
    ========================================================================== */
 
 /* --- 1. Main Fieldset Container --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) fieldset.meta,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) fieldset {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) fieldset.meta,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) fieldset {
     background: var(--bg-surface-1);
     border: 1px solid var(--border-base);
     border-radius: var(--radius-md);
@@ -15,11 +15,11 @@
     box-sizing: border-box;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) fieldset>legend {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) fieldset>legend {
     display: none;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) fieldset>:is(h3, h4).heading {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) fieldset>:is(h3, h4).heading {
     font-size: var(--font-size-h3);
     color: var(--accent-primary);
     padding-bottom: var(--pad-sm);
@@ -27,7 +27,7 @@
     font-weight: var(--font-weight-md-bold);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) p.note {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) p.note {
     font-size: var(--font-size-h5);
     color: var(--text-muted);
     margin: 0 0 var(--margin-lg) 0;
@@ -35,7 +35,7 @@
 }
 
 /* --- 2. The DT/DD Pairs (Grid Layout) --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl {
     display: grid;
     grid-template-columns: minmax(160px, 220px) 1fr;
     /* row-gap spaces out the PAIRS. column-gap spaces the DT from the DD */
@@ -47,20 +47,20 @@
 }
 
 /* Subtle line separating each pair for readability */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd {
     padding-bottom: var(--pad-sm);
     border-bottom: 1px solid var(--border-base);
 }
 
 /* Remove the line from the very last pair so it doesn't double-up with the container */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dt:last-of-type,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd:last-of-type {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dt:last-of-type,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd:last-of-type {
     border-bottom: none;
     padding-bottom: 0;
 }
 
 /* Labels (dt) */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dt {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dt {
     text-align: right;
     font-weight: var(--font-weight-md-bold);
     color: var(--text-primary);
@@ -71,7 +71,7 @@
 }
 
 /* Inputs Wrapper (dd) */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -79,7 +79,7 @@
 }
 
 /* Reset nested fieldsets (like the Warning/Category checkbox wrappers) */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd fieldset {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd fieldset {
     background: transparent;
     border: none;
     padding: 0;
@@ -88,7 +88,7 @@
 }
 
 /* --- 3. Inputs & Select Dropdowns --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd select {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd select {
     background: var(--bg-surface-2);
     color: var(--text-primary);
     border: 1px solid var(--border-base);
@@ -107,12 +107,12 @@
     scrollbar-color: var(--accent-primary) var(--bg-surface-2);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd select:focus {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd select:focus {
     border-color: var(--accent-primary);
 }
 
 /* --- 4. Checkbox Lists (Warnings & Categories) --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd ul {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -121,31 +121,31 @@
     gap: var(--gap-sm);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd ul li {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd ul li {
     display: flex;
     align-items: flex-start;
     gap: var(--gap-sm);
     margin: 0;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd ul li::before {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd ul li::before {
     content: none;
 }
 
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd label {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd label {
     color: var(--text-secondary);
     font-size: var(--font-size-h4);
     line-height: 1.4;
     cursor: pointer;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd li:hover label {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd li:hover label {
     color: var(--text-primary);
 }
 
 /* --- 5. Tooltip/Help Icons (?) --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) a.help.symbol.question {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) a.help.symbol.question {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -164,19 +164,19 @@
     vertical-align: middle;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) a.help.symbol.question:hover {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) a.help.symbol.question:hover {
     background: var(--bg-base);
     border-color: var(--accent-primary);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) a.help.symbol.question span.symbol {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) a.help.symbol.question span.symbol {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* Form-specific footnotes (e.g. "If this is the first work...") */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd p.footnote {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd p.footnote {
     font-size: var(--font-size-h5);
     color: var(--text-muted);
     margin: 0;
@@ -185,12 +185,12 @@
 
 /* --- 6. Mobile Responsiveness --- */
 @media (max-width: 768px) {
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl {
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl {
         grid-template-columns: 1fr;
         row-gap: var(--margin-md);
     }
 
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dt {
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dt {
         text-align: left;
         padding-top: 0;
         padding-bottom: var(--pad-xs);
@@ -198,19 +198,19 @@
         /* Let the DD hold the bottom border on mobile */
     }
 
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dt:last-of-type {
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dt:last-of-type {
         padding-bottom: 0;
     }
 
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd select {
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd select {
         max-width: 100%;
     }
 }
 
 
 /* --- 7. Global Notices & Required Text --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>p.notice,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) fieldset>p.notice {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>p.notice,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) fieldset>p.notice {
     background: var(--bg-surface-2);
     border-left: 3px solid var(--accent-secondary);
     padding: var(--pad-sm) var(--pad-md);
@@ -223,8 +223,8 @@
 
 
 /* --- 8. Text Inputs & Textareas --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd input[type="text"],
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd textarea {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd input[type="text"],
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd textarea {
     background: var(--bg-surface-2);
     color: var(--text-primary);
     border: 1px solid var(--border-base);
@@ -238,52 +238,52 @@
     transition: border-color var(--transition-hover);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd input[type="text"]:focus,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd textarea:focus {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd input[type="text"]:focus,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd textarea:focus {
     border-color: var(--accent-primary);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd textarea {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd textarea {
     min-height: 120px;
     resize: vertical;
 }
 
 /* Fix nested fieldsets in lists (e.g., Chapter/Work Notes) */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd ul li:has(fieldset) {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd ul li:has(fieldset) {
     flex-direction: column;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd ul li fieldset {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd ul li fieldset {
     width: 100%;
     margin-top: var(--margin-sm);
 }
 
 /* Date/Time Select Grouping */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd.datetime {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd.datetime {
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--gap-sm);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd.datetime select {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd.datetime select {
     width: auto;
     flex-grow: 1;
 }
 
 /* --- 9. LiveValidation & Character Counters --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) .LV_validation_message {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) .LV_validation_message {
     font-size: var(--font-size-h5);
     color: var(--color-warning);
     margin-top: var(--margin-xs);
     display: block;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) .LV_validation_message.LV_valid {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) .LV_validation_message.LV_valid {
     display: none;
     /* Hide when valid to save space */
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) p.character_counter {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) p.character_counter {
     font-size: var(--font-size-h5);
     color: var(--text-muted);
     margin: var(--margin-xs) 0 0 0;
@@ -291,13 +291,13 @@
     width: 100%;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) p.character_counter .value {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) p.character_counter .value {
     color: var(--accent-primary);
     font-weight: var(--font-weight-md-bold);
 }
 
 /* --- 10. Large Work Text Area & RTF Switcher --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) ul.rtf-html-switch {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) ul.rtf-html-switch {
     display: flex;
     gap: var(--gap-sm);
     list-style: none;
@@ -305,11 +305,11 @@
     margin: 0 0 var(--margin-md) 0;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) ul.rtf-html-switch li::before {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) ul.rtf-html-switch li::before {
     content: none;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) ul.rtf-html-switch li a {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) ul.rtf-html-switch li a {
     display: inline-flex;
     align-items: center;
     height: 32px;
@@ -324,14 +324,14 @@
     transition: all var(--transition-hover);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) ul.rtf-html-switch li a:hover,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) ul.rtf-html-switch li a.current {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) ul.rtf-html-switch li a:hover,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) ul.rtf-html-switch li a.current {
     background: var(--accent-primary);
     color: var(--bg-base);
     border-color: var(--accent-primary);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) .rtf-html-field textarea {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) .rtf-html-field textarea {
     width: 100%;
     min-height: 500px;
     background: var(--bg-surface-2);
@@ -347,20 +347,20 @@
     outline: none;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) .rtf-html-field textarea:focus {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) .rtf-html-field textarea:focus {
     border-color: var(--accent-primary);
 }
 
 /* --- 11. Footer Submit Actions --- */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type {
     background: transparent;
     border: none;
     padding: 0;
     margin-top: var(--margin-xl);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type ul.actions,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type p.submit.actions {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type ul.actions,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type p.submit.actions {
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap-md);
@@ -372,17 +372,17 @@
     list-style: none;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type ul.actions li {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type ul.actions li {
     margin: 0;
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type ul.actions li::before {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type ul.actions li::before {
     content: none;
 }
 
 /* Standard Buttons */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[type="submit"],
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) button[type="submit"] {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[type="submit"],
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) button[type="submit"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -398,35 +398,35 @@
     transition: all var(--transition-hover);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[type="submit"]:hover,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) button[type="submit"]:hover {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[type="submit"]:hover,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) button[type="submit"]:hover {
     background: var(--bg-surface-1);
     border-color: var(--accent-primary);
     color: var(--accent-primary);
 }
 
 /* Primary Action Buttons (Post, Update, Create) */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Post"],
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Update All Works"],
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Update"],
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Create"] {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Post"],
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Update All Works"],
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Update"],
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Create"] {
     background: var(--accent-primary);
     color: var(--bg-base);
     border-color: var(--accent-primary);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Post"]:hover,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Update All Works"]:hover,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Update"]:hover,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[value="Create"]:hover {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Post"]:hover,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Update All Works"]:hover,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Update"]:hover,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[value="Create"]:hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
     color: var(--bg-base);
 }
 
 /* Cancel Link */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type ul.actions a,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type p.submit.actions a {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type ul.actions a,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type p.submit.actions a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -442,34 +442,34 @@
     transition: all var(--transition-hover);
 }
 
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type ul.actions a:hover,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type p.submit.actions a:hover {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type ul.actions a:hover,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type p.submit.actions a:hover {
     background: var(--color-warning);
     color: var(--bg-base);
 }
 
 /* Hide Javascript Toggled Sections by Default */
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) .hidden,
-:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) fieldset.hidden {
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) .hidden,
+:is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) fieldset.hidden {
     display: none !important;
 }
 
 /* --- Mobile Fixes for Added Content --- */
 @media (max-width: 768px) {
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) dl dd.datetime select {
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) dl dd.datetime select {
         width: 100%;
     }
 
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type ul.actions,
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type p.submit.actions {
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type ul.actions,
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type p.submit.actions {
         flex-direction: column;
         align-items: stretch;
     }
 
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) input[type="submit"],
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup) button[type="submit"],
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type ul.actions a,
-    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup)>fieldset:last-of-type p.submit.actions a {
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) input[type="submit"],
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter) button[type="submit"],
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type ul.actions a,
+    :is(form.post, form.verbose, form.new_chapter, #bookmark-form form, form.edit_challenge_signup, form.edit_chapter)>fieldset:last-of-type p.submit.actions a {
         width: 100%;
         box-sizing: border-box;
     }
@@ -663,3 +663,4 @@ h4.heading select:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
+

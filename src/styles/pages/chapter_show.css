@@ -147,3 +147,7 @@ form.new_collection_item a.collection_item_form_placement_close:hover {
 .chapters-preview .edit_chapter fieldset legend {
     display: none !important;
 }
+
+fieldset {
+    border: none !important;
+}
