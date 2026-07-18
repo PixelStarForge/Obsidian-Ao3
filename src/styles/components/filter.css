@@ -373,13 +373,42 @@ form.filters+p.footnote a:hover {
 @media (min-width: 1096px) {
 
     #main form.filters .filter-close-btn,
-    p.narrow-shown {
-        display: none;
+    .narrow-shown {
+        display: none !important;
     }
 }
 
 /* Mobile styles */
 @media (max-width: 1095px) {
+
+    /* Show the Filters link – higher specificity to override AO3's .hidden */
+    #main .navigation.actions .narrow-shown {
+        display: inline-flex !important;
+        margin: 0;
+    }
+    #main .navigation.actions .narrow-shown a {
+        margin: 0 !important;
+        padding: 0 var(--pad-md) !important; 
+    }
+
+    #main .navigation.actions .narrow-shown a {
+        display: inline-block;
+        background: var(--bg-surface-2);
+        color: var(--text-secondary);
+        border: 1px solid var(--border-base);
+        border-radius: var(--radius-sm);
+        padding: var(--pad-sm) var(--pad-md);
+        font-size: var(--font-size-h4);
+        font-weight: var(--font-weight-md-bold);
+        text-decoration: none;
+        transition: all var(--transition-hover);
+        cursor: pointer;
+    }
+
+    #main .navigation.actions .narrow-shown a:hover {
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+    }
 
     /* Filter form becomes a centered modal */
     #main form.filters {
@@ -393,7 +422,6 @@ form.filters+p.footnote a:hover {
         max-height: 80vh;
         overflow-y: auto;
         z-index: 100001;
-        /* Higher than #modal-wrap (99999) */
         background: var(--bg-surface-1);
         border: 1px solid var(--border-base);
         border-radius: var(--radius-md);
@@ -438,32 +466,6 @@ form.filters+p.footnote a:hover {
     #main form.filters .filter-close-btn:hover {
         color: var(--accent-primary);
         background: var(--bg-surface-2);
-    }
-
-    /* "Top of Work Index" link */
-    p.narrow-shown {
-        display: block;
-        text-align: center;
-        margin: var(--margin-md) auto;
-    }
-
-    p.narrow-shown a {
-        display: inline-block;
-        background: var(--bg-surface-2);
-        color: var(--text-secondary);
-        border: 1px solid var(--border-base);
-        border-radius: var(--radius-sm);
-        padding: var(--pad-sm) var(--pad-md);
-        font-size: var(--font-size-h4);
-        font-weight: var(--font-weight-md-bold);
-        text-decoration: none;
-        transition: all var(--transition-hover);
-        cursor: pointer;
-    }
-
-    p.narrow-shown a:hover {
-        border-color: var(--accent-primary);
-        color: var(--accent-primary);
     }
 
     /* Larger touch targets */
@@ -579,11 +581,6 @@ form.filters+p.footnote a:hover {
     margin-top: var(--margin-md);
 }
 
-/* ----- Hide narrow-shown button on desktop ----- */
-.user.navigation.actions .hidden {
-    display: none;
-}
-
 /* ----- Fallback backdrop (kept for compatibility) ----- */
 #filters-backdrop {
     display: none;
@@ -645,3 +642,98 @@ form.filters+p.footnote a:hover {
     display: none;
 }
 
+/* ============================================================
+   DASHBOARD WORKS PAGE – THREE‑COLUMN LAYOUT (added)
+   Only applies on desktop (≥1096px) and only on the works‑index
+   dashboard page. Uses nested grids – does not affect any other
+   pages (e.g., bookmarks) or mobile behaviour.
+   ============================================================ */
+
+@media (min-width: 1096px) {
+
+    /* Outer grid: sidebar | main content */
+    #inner:has(#main.works-index.dashboard.filtered) {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        column-gap: var(--gap-md);
+        row-gap: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #inner:has(#main.works-index.dashboard.filtered) #dashboard {
+        grid-column: 1;
+        align-self: start;
+    }
+
+    /* Inner grid: works content (left) | filter (right) */
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: 1fr 500px;
+        column-gap: var(--gap-md);
+        row-gap: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* All children of #main except the filter go to column 1 */
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered>*:not(#work-filters) {
+        grid-column: 1;
+    }
+
+    /* Filter goes to column 2 with independent scroll */
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered #work-filters {
+        grid-column: 2;
+        align-self: start;
+        position: sticky;
+        top: var(--gap-md);
+        max-height: calc(100vh - 2 * var(--gap-md));
+        overflow-y: auto;
+        z-index: 10;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Custom scrollbar for the filter (WebKit) */
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered #work-filters::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered #work-filters::-webkit-scrollbar-track {
+        background: var(--bg-surface-2);
+        border-radius: 3px;
+    }
+
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered #work-filters::-webkit-scrollbar-thumb {
+        background: var(--accent-primary);
+        border-radius: 3px;
+    }
+
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered #work-filters::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-hover);
+    }
+
+    /* Ensure the filter’s own background/border styles are not overridden */
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered #work-filters.filters {
+        background: var(--bg-surface-1);
+        border: 1px solid var(--border-base);
+        border-radius: var(--radius-md);
+        padding: var(--pad-md);
+        box-sizing: border-box;
+    }
+
+    /* Explicitly place all known children of #main into column 1 */
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered .flash,
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered .muted.notice,
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered h2.heading,
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered .navigation.actions.module,
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered h3.landmark.heading,
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered .work.index.group,
+    #inner:has(#main.works-index.dashboard.filtered) #main.works-index.dashboard.filtered .clear {
+        grid-column: 1;
+    }
+}
