@@ -1,0 +1,78 @@
+/* ==========================================================================
+   ERROR 404 PAGE – Dark Theme
+   ========================================================================== */
+
+/* ---------- 1. PAGE CONTAINER ---------- */
+#main.system.errors.error-404.region {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 60vh !important;
+    padding: var(--pad-xl) var(--pad-md) !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+/* ---------- 2. ERROR CODE (h2) ---------- */
+#main.system.errors.error-404 h2.heading {
+    font-size: 8rem !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    color: var(--accent-primary) !important;
+    margin: 0 0 var(--margin-xs) 0 !important;
+    line-height: 1 !important;
+    text-shadow: 0 0 60px rgba(226, 166, 255, 0.15) !important;
+    letter-spacing: -4px !important;
+}
+
+/* ---------- 3. SUBHEADING (h3) ---------- */
+#main.system.errors.error-404 h3.heading {
+    font-size: var(--font-size-h3) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    color: var(--text-primary) !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* ---------- 4. DESCRIPTION (p) ---------- */
+#main.system.errors.error-404 p {
+    font-size: var(--font-size-body) !important;
+    color: var(--text-secondary) !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    line-height: var(--line-height-body) !important;
+}
+
+/* ---------- 5. OPTIONAL: CARD WRAPPER (if you want a card around it) ---------- */
+#main.system.errors.error-404.region {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-xxl) var(--pad-xl) !important;
+    max-width: 640px !important;
+    margin: var(--margin-xl) auto !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ---------- 6. RESPONSIVE ---------- */
+@media (max-width: 600px) {
+    #main.system.errors.error-404 h2.heading {
+        font-size: 5rem !important;
+        letter-spacing: -2px !important;
+    }
+
+    #main.system.errors.error-404 h3.heading {
+        font-size: var(--font-size-h4) !important;
+    }
+
+    #main.system.errors.error-404 p {
+        font-size: var(--font-size-h4) !important;
+    }
+
+    #main.system.errors.error-404.region {
+        padding: var(--pad-xl) var(--pad-md) !important;
+        margin: var(--margin-md) !important;
+        min-height: 50vh !important;
+    }
+}

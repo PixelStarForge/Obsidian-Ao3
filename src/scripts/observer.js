@@ -524,3 +524,18 @@ function styleEditorIframe() {
 
 // Watch for editor load dynamically
 setInterval(styleEditorIframe, 1000);
+
+
+// Remove dashboard.css from confirm_mute/confirm_block pages
+if (window.location.pathname.includes('/confirm_mute') ||
+    window.location.pathname.includes('/confirm_unmute') ||
+    window.location.pathname.includes('/confirm_block') ||
+    window.location.pathname.includes('/confirm_unblock')) {
+    document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href.includes('dashboard.css')) {
+            link.remove();
+            console.log('[Obsidian] Removed dashboard.css from confirm page');
+        }
+    });
+}

@@ -1,0 +1,114 @@
+/* ---- Reset grid from dashboard.css (if it sneaks in) ---- */
+:is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) #inner.wrapper {
+    display: block !important;
+    grid-template-columns: unset !important;
+    gap: unset !important;
+}
+
+/* ---- Actions container ---- */
+:is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) p.actions {
+    display: flex !important;
+    gap: var(--gap-md) !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    margin-top: var(--margin-lg) !important;
+    padding: 0 !important;
+}
+
+/* ---- Cancel link (shared) ---- */
+:is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) p.actions a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 var(--pad-md) !important;
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    text-decoration: none !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    transition: all var(--transition-hover) !important;
+}
+
+:is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) p.actions a:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--text-primary) !important;
+    background-color: var(--bg-surface-2) !important;
+}
+
+/* ---- Submit button (shared sizing) ---- */
+:is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) p.actions input[type="submit"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 var(--pad-lg) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-hg-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+    width: auto !important;
+}
+
+/* ---- Block button (destructive) ---- */
+.users-confirm_block p.actions input[type="submit"] {
+    background: var(--color-warning, #FFA6A6) !important;
+    color: var(--bg-base, #0A0A0B) !important;
+    border: 1px solid var(--color-warning) !important;
+}
+
+.users-confirm_block p.actions input[type="submit"]:hover {
+    opacity: 0.9 !important;
+}
+
+/* ---- Unblock button (primary) ---- */
+.users-confirm_unblock p.actions input[type="submit"] {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border: 1px solid var(--accent-primary) !important;
+}
+
+.users-confirm_unblock p.actions input[type="submit"]:hover {
+    background: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}
+
+/* ---- Mute button (destructive, same as block) ---- */
+.users-confirm_mute p.actions input[type="submit"] {
+    background: var(--color-warning, #FFA6A6) !important;
+    color: var(--bg-base) !important;
+    border: 1px solid var(--color-warning) !important;
+}
+
+.users-confirm_mute p.actions input[type="submit"]:hover {
+    opacity: 0.9 !important;
+}
+
+/* ---- Unmute button (primary, same as unblock) ---- */
+.users-confirm_unmute p.actions input[type="submit"] {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border: 1px solid var(--accent-primary) !important;
+}
+
+.users-confirm_unmute p.actions input[type="submit"]:hover {
+    background: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}
+
+/* ---- Mobile responsiveness ---- */
+@media (max-width: 480px) {
+    :is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) p.actions {
+        flex-direction: column-reverse !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    :is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) p.actions a,
+    :is(.users-confirm_block, .users-confirm_unblock, .users-confirm_mute, .users-confirm_unmute) p.actions input[type="submit"] {
+        width: 100% !important;
+    }
+}

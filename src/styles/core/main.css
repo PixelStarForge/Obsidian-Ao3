@@ -11,10 +11,14 @@ body {
     line-height: var(--line-height-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
 }
 
 html {
     overflow-x: clip;
+    display: flex;
+    justify-content: center;
+
 }
 
 ul,
@@ -65,3 +69,8 @@ select {
     scrollbar-width: thin !important;
     scrollbar-color: var(--accent-primary) var(--bg-surface-2) !important;
 }
+
+#main {
+    margin-top: var(--margin-sm);
+}
+

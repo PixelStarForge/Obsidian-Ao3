@@ -5,6 +5,10 @@
     display: none;
 }
 
+div.footer {
+    display: none !important;
+}
+
 /* Main Footer */
 #footer {
     background: var(--bg-surface-1);
