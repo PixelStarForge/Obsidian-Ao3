@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Obsidian Ao3",
-    "version": "1.0",
+    "version": "1.0.2",
     "description": "A custom, modern theme for Archive of Our Own Website",
     "web_accessible_resources": [
         {

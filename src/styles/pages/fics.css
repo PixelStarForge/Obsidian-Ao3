@@ -140,3 +140,13 @@ p.narrow-shown a:hover {
 
 }
 
+
+
+#main.works-index ol.work.index.group li.work.blurb.group ul.actions {
+    margin: 0 !important;
+    padding: var(--pad-sm) !important;
+}
+
+#main.works-index ol.work.index.group li.work.blurb.group ul.actions li a {
+    background: var(--bg-surface-1) !important;
+}
