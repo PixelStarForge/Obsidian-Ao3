@@ -1,156 +1,136 @@
-#  Obsidian Ao3
+# Obsidian AO3
 
-A dark, modern theme for Archive of Our Own.
+A dark theme for Archive of Our Own — free, ad-free, and built for comfortable reading.
 
-
-**Obsidian Ao3** is a browser extension that completely transforms the look and feel of Archive of Our Own. It replaces the default interface with a sleek, high-contrast dark theme optimized for readability, accessibility, and visual comfort during extended reading sessions.
-
-No account settings to tweak, no custom CSS to paste. Just install the extension, and the theme applies automatically across the entire site.
+**Obsidian AO3** is a Chrome extension that gives AO3 a sleek dark interface. Install it, and the theme applies instantly across the entire site. No account setup, no custom CSS required.
 
 ---
 
-## Showcase
+## Why This Exists
 
-| Homepage / Works Index | Chapter View |
-|------------------------|--------------|
-| ![Works Index](screenshots/works-index.png) | ![Chapter View](screenshots/chapter-view.png) |
-
-| Dashboard | Color‑Coded Tags |
-|-----------|------------------|
-| ![Dashboard](screenshots/dashboard.png) | ![Tags](screenshots/tag-colors.png) |
-
-| Search / Filter Page | Inbox / Comments |
-|----------------------|------------------|
-| ![Search](screenshots/search-page.png) | ![Inbox](screenshots/inbox-page.png) |
-
-> *Screenshots are placeholders — replace them with actual captures of your extension in action.*
+AO3's bright white backgrounds get uncomfortable after hours of reading. This extension gives you a dark, consistent look everywhere on the site.
 
 ---
 
-## ✨ Why Obsidian Ao3?
+## Features
 
-AO3's default interface is functional, but its bright white backgrounds and low-contrast layouts become uncomfortable after hours of reading. The built‑in dark modes are either incomplete or hidden behind account‑specific skins.
-
-**Obsidian Ao3** fixes this by providing:
-
-- 🌙 **Deep, consistent dark mode** — every corner of the site, from works to your inbox, is themed.
-- 👁️ **Readability first** — body text is sized at 18px with generous line spacing and a capped max-width to reduce eye strain.
-- 🎨 **Color‑coded tags** — fandoms, characters, relationships, and warnings each get a distinct pastel accent, making blurbs scannable at a glance.
-- ✨ **Smooth interactions** — hover effects, focus indicators, and modal transitions are thoughtfully animated.
-- ♿ **WCAG AAA contrast** — all text and accent colors meet or exceed the highest contrast standards.
+- **Dark theme everywhere** — works, chapters, search, dashboard, inbox, bookmarks, and more
+- **Easy on the eyes** — readable text and high contrast
+- **Works without hassle** — just install and go
+- **Lightweight** — pure css and js, no package bloat
 
 ---
 
-## 🚀 Features
+## Installation
 
-| Feature | Description |
-|---------|-------------|
-| **Full‑site theming** | Works on works, chapters, search/tag pages, dashboard, inbox, bookmarks, profile, stats, and more. |
-| **Color‑coded tags** | Fandoms, relationships, characters, and warnings each have a unique pastel accent. |
-| **Readable typography** | 18px body text, generous line-height, and max‑width containers for comfortable reading. |
-| **Smooth transitions** | Hover states, dropdowns, and modals all animate consistently. |
-| **Accessible contrast** | Built with WCAG AAA in mind — text and accent colors are high‑contrast by design. |
-| **Lightweight & fast** | Pure CSS overrides — no heavy frameworks, no performance hit. |
+### Chrome Web Store
 
----
+*(Coming soon – link will be added once published)*
 
-## 📦 Installation
+### Firefox Add-ons
 
-> **⚠️ Note:** This extension is not yet published to the Chrome Web Store or Firefox Add‑ons. You'll need to load it manually as an unpacked extension.
-
-### Prerequisites
-
-- A Chromium‑based browser: **Chrome**, **Edge**, **Brave**, **Opera**, or **Vivaldi**.
+*(Coming soon – link will be added once published)*
 
 ### Manual Installation (Developer Mode)
 
-1. **Download or clone** this repository to your computer:
-
-   ```bash
-   git clone https://github.com/yourusername/obsidian-ao3.git
-
-(Or download the ZIP and extract it.)
-
-Open your browser and navigate to the extensions page:
-
-Chrome / Edge / Brave: chrome://extensions
-
-Opera: opera://extensions
-
-Enable Developer mode (toggle in the top‑right corner).
-
-Click Load unpacked and select the root folder of this repository.
-
-Visit any page on archiveofourown.org — the theme will apply instantly.
-
-Updating the Theme
-When you pull new changes from the repository:
-
-Go back to chrome://extensions.
-
-Click the refresh / reload icon (🔄) on the extension card.
-
-Reload any open AO3 tabs to see the updates.
-
-🗺️ Roadmap / Status
-Active development — the core pages are styled and working. New pages and refinements are being added incrementally.
-
-Planned improvements:
-
-Firefox compatibility
-
-Light mode toggle (optional)
-
-Custom accent color picker
-
-Chrome Web Store & Firefox Add‑ons publication
-
-🛠️ Tech Stack
-Manifest V3 — modern Chrome extension architecture
-
-CSS Variables — for consistent theming and easy customisation
-
-Vanilla JavaScript — lightweight observer for dynamic content injection
-
-CSS Grid / Flexbox — for responsive, modern layouts
-
-🤝 Contributing
-Contributions are welcome! If you'd like to improve the theme, fix a bug, or add support for a missing page:
-
-Fork the repository.
-
-Create a feature branch.
-
-Make your changes.
-
-Submit a pull request.
-
-Please ensure your changes maintain the existing contrast and readability standards.
-
-📄 License
-All Rights Reserved — © [Your Name / Year]
-
-You are free to view, fork, and modify this code for personal use. Redistribution or publication of this extension (or modified versions) without explicit permission is not permitted.
-
-🙏 Acknowledgements
-Built for the AO3 community.
-
-Inspired by the need for a genuinely comfortable dark reading experience.
-
-Thanks to all contributors and testers who helped refine the theme.
-
-Enjoy the dark side of fanfiction. 📖🌙
-
-text
+1. Download or clone this repository.
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable **Developer mode** (toggle in the top right).
+4. Click **Load unpacked** and select the extension folder.
+5. The extension icon will appear in your toolbar.
 
 ---
 
-### How to get a downloadable file
+##  Showcase
 
-1. Copy the entire content inside the code block above.
-2. Open a text editor (Notepad, VS Code, etc.).
-3. Paste the content.
-4. Save the file as **`README.md`** (make sure the extension is `.md`, not `.txt`).
-5. Place it in the root of your extension project.
+Screenshots taken from [What if...? Re: Zero - One Shot's](https://archiveofourown.org/works/63041911/chapters/161451277) (Go checkout his works)
 
-That's it — you now have a clean, formatted README ready for GitHub. Replace the screenshot URLs with your actual images, and update the `yourusername` placeholders.
+| Homepage | Works/Fic Page |
+|----------|-----------------|
+| ![Homepage](pictures/homepage.png) | ![Fic Page](pictures/fic_page.png) |
+
+| Dashboard | Single Fic Metadata |
+|-----------|-------------------|
+| ![Dashboard](pictures/dashboard.png) | ![Fic Metadata](pictures/single_fic_metadata.png) |
+
+| Comments | Post/Create New |
+|----------|-----------------|
+| ![Comments](pictures/single_fic_comment.png) | ![Post New](pictures/post_new.png) |
+
+---
+
+##  Supported Pages
+
+Works on most AO3 pages including:
+
+- Works index / browse pages
+- Chapter view (reading mode)
+- Search & filter pages
+- Dashboard & profile
+- Inbox & comments
+- Bookmarks & collections
+- Series & challenge pages
+- Statistics & trends
+- Gift exchanges & challenges
+
+**Some pages may not be fully styled** — AO3 dynamically creates many page layouts, and i may have miss some of it. If a page looks broken or unstyled, [open an issue](https://github.com/PixelStarForge/Obsidian-Ao3/issues) with the URL and a screenshot, and i will try to fix it
+
+---
+
+## Troubleshooting
+
+### The theme isn't appearing
+
+- Reload the extension: go to `chrome://extensions`, find Obsidian AO3, click the refresh icon
+- Hard-refresh AO3 tabs: `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
+- Check that Developer Mode is still enabled
+
+### Some pages look broken
+
+- I might have missed a page. Open an issue with:
+  - The AO3 page URL
+  - A screenshot
+  - Your browser and version
+- I will look into it
+
+### Does this work on mobile?
+
+- The Responsiveness was made with mobile layout in mind, but there is no way to use extension on mobile browser except firefox android. When it will be approved on firefox addons you could use it on firefox android
+
+---
+
+##  Contributing
+
+Contributions are welcome. This is a open source project, and improvements benefit everyone.
+
+### How to contribute
+
+1. **Fork** the repository
+2. **Create a feature branch:** `git checkout -b fix/broken-layout`
+3. **Make changes** (CSS, JavaScript, or both)
+4. **Test thoroughly** on the affected AO3 pages
+5. **Submit a pull request** with a clear description of what changed and why
+
+### Guidelines
+
+
+- **Keep it lean.** CSS-first solutions; JS only for dynamic content.
+- **Respect AO3.** Don't modify functionality, redirect traffic, or inject ads.
+- **Test widely.** Check your changes on multiple AO3 pages, not just one.
+
+
+---
+
+##  Feedback
+
+Found a bug? Have a suggestion? Ideas for improvements?
+
+- **Open an issue** on GitHub with details
+- **Be specific:** include the AO3 page, what you expected, what happened instead
+- **Be kind:** we're all volunteers here
+
+---
+
+**Enjoy reading"
+
+

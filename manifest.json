@@ -1568,6 +1568,32 @@
         },
         {
             "matches": [
+                "*://*.archiveofourown.org/tags*",
+                "*://*.archiveofourown.org/fandoms/*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/fandoms_index.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/primary_user_module.css",
+                "src/styles/pages/tags.css",
+                "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "*://*.archiveofourown.org/wrangling_guidelines*"
             ],
             "exclude_matches": [],
@@ -1580,6 +1606,35 @@
                 "src/styles/layout/header.css",
                 "src/styles/layout/footer.css",
                 "src/styles/pages/wrangling.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/bookmarks*"
+            ],
+            "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/bookmark_badges.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/fic_card.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/filter.css",
+                "src/styles/pages/users_bookmarks.css",
+                "src/styles/pages/bookmarks.css",
+                "src/styles/components/primary_user_module.css",
+                "src/styles/components/checkbox_radio.css"
             ],
             "run_at": "document_start"
         },
