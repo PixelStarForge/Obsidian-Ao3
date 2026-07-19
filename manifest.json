@@ -827,7 +827,8 @@
                 "src/styles/components/filter.css",
                 "src/styles/components/symbol_question_mark.css",
                 "src/styles/components/autocomplete.css",
-                "src/styles/components/checkbox_radio.css"
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/components/ao3_filter_extension.css"
             ],
             "run_at": "document_start"
         },
@@ -864,7 +865,8 @@
             ],
             "exclude_matches": [
                 "*://*.archiveofourown.org/works/*/chapters/new*",
-                "*://*.archiveofourown.org/works/search"
+                "*://*.archiveofourown.org/works/search",
+                "*://*.archiveofourown.org/works?*"
             ],
             "js": [
                 "src/scripts/observer.js"
@@ -881,6 +883,36 @@
                 "src/styles/components/fic_card.css",
                 "src/styles/components/symbol_question_mark.css",
                 "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/works?*"
+            ],
+            "exclude_matches": [
+                "*://*.archiveofourown.org/works/*/chapters/new*",
+                "*://*.archiveofourown.org/works/search"
+            ],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/navigation_actions.css",
+                "src/styles/components/fic_card.css",
+                "src/styles/pages/fics.css",
+                "src/styles/components/filter.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/components/ao3_filter_extension.css"
             ],
             "run_at": "document_start"
         },

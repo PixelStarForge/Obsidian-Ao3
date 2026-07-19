@@ -1,0 +1,248 @@
+/* ============================================================
+   AO3 FILTER ACTIONS & CONFIRMATIONS
+   ============================================================ */
+
+.ao3-filter-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--gap-sm) !important;
+    align-items: center !important;
+    margin: var(--margin-sm) !important;
+    padding: var(--pad-sm) !important;
+}
+
+.ao3-filter-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;
+    padding: 0 var(--pad-md) !important;
+    background: var(--bg-surface-2) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-lw-bold) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+}
+
+.ao3-filter-btn:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    background: var(--bg-surface-1) !important;
+}
+
+/* Confirmation Overlay */
+.ao3-filter-confirm-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: var(--bg-base) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10000 !important;
+}
+
+.ao3-filter-confirm-box {
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-md) !important;
+    max-width: 400px !important;
+
+}
+
+.ao3-filter-confirm-box p {
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body) !important;
+    margin: 0 0 var(--margin-md) 0 !important;
+}
+
+.ao3-filter-confirm-actions {
+    display: flex !important;
+    gap: var(--gap-sm) !important;
+    justify-content: flex-end !important;
+}
+
+.confirm-no,
+.confirm-yes {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;
+    padding: 0 var(--pad-md) !important;
+    background: var(--bg-surface-2) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-lw-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+}
+
+.confirm-no:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    background: var(--bg-surface-1) !important;
+}
+
+.confirm-yes {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+.confirm-yes:hover {
+    background: var(--accent-hover) !important;
+}
+
+/* ============================================================
+   AO3 FILTER TAG POPUP
+   ============================================================ */
+
+.ao3-filter-tag-popup {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: var(--bg-surface-1) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--pad-md) !important;
+    max-width: 800px !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+    z-index: 10000 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+    box-sizing: border-box !important;
+    scrollbar-width: thin !important;
+     scrollbar-color: var(--accent-primary) var(--bg-surface-2) !important;
+}
+
+.ao3-filter-tag-popup>div:first-child {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: var(--margin-md) !important;
+    font-weight: var(--font-weight-md-bold) !important;
+    font-size: var(--font-size-h4) !important;
+    color: var(--text-primary) !important;
+    padding-bottom: var(--pad-sm) !important;
+    border-bottom: 1px solid var(--border-base) !important;
+}
+
+.ao3-filter-popup-close {
+    background: none !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-h3) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    transition: color var(--transition-hover) !important;
+}
+
+.ao3-filter-popup-close:hover {
+    color: var(--accent-primary) !important;
+}
+
+/* Section Headers */
+.ao3-filter-tag-popup div>div:nth-child(2)>div>div {
+    font-weight: var(--font-weight-md-bold) !important;
+    font-size: 0.85em !important;
+    color: var(--text-primary) !important;
+    margin: var(--margin-md) 0 var(--margin-sm) 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Labels */
+.ao3-filter-tag-popup label {
+    display: block !important;
+    margin-left: var(--pad-md) !important;
+    margin-bottom: var(--margin-xs) !important;
+    color: var(--text-primary) !important;
+    font-size: var(--font-size-body) !important;
+    cursor: pointer !important;
+    transition: color var(--transition-hover) !important;
+}
+
+.ao3-filter-tag-popup label:hover {
+    color: var(--accent-primary) !important;
+}
+
+/* Checkboxes */
+.ao3-filter-tag-popup input[type="checkbox"] {
+    margin-right: var(--margin-xs) !important;
+    cursor: pointer !important;
+    accent-color: var(--accent-primary) !important;
+}
+
+/* Language block section */
+.ao3-filter-tag-popup>div:nth-child(3) {
+    margin-top: var(--margin-md) !important;
+    padding-top: var(--margin-md) !important;
+    border-top: 1px solid var(--border-base) !important;
+}
+
+.ao3-filter-tag-popup>div:nth-child(3)>div {
+    font-weight: var(--font-weight-md-bold) !important;
+    font-size: 0.85em !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--margin-sm) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Action buttons container */
+.ao3-filter-popup-actions {
+    display: flex !important;
+    gap: var(--gap-sm) !important;
+    justify-content: flex-end !important;
+    margin-top: var(--margin-md) !important;
+    padding-top: var(--margin-md) !important;
+    border-top: 1px solid var(--border-base) !important;
+}
+
+.ao3-filter-popup-actions button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;
+    padding: 0 var(--pad-md) !important;
+    background: var(--bg-surface-2) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-base) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-size-h4) !important;
+    font-weight: var(--font-weight-lw-bold) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-hover) !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+}
+
+.ao3-filter-popup-actions button:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    background: var(--bg-surface-1) !important;
+}
+
+.ao3-filter-block-btn {
+    background: var(--accent-primary) !important;
+    color: var(--bg-base) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+.ao3-filter-block-btn:hover {
+    opacity: 0.9 !important;
+}
