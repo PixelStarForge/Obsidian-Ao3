@@ -3,6 +3,17 @@
     "name": "Obsidian Ao3",
     "version": "1.0.2",
     "description": "A custom, modern theme for Archive of Our Own Website",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "obsidian-ao3@pixelstarforge",
+            "strict_min_version": "142.0",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    },
     "web_accessible_resources": [
         {
             "resources": [
@@ -19,7 +30,6 @@
             "matches": [
                 "*://*.archiveofourown.org/*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -34,9 +44,32 @@
         },
         {
             "matches": [
-                "*://*.archiveofourown.org/skins/*"
+                "*://*.archiveofourown.org/media*"
             ],
             "exclude_matches": [],
+            "js": [
+                "src/scripts/observer.js"
+            ],
+            "css": [
+                "src/styles/core/variables.css",
+                "src/styles/core/main.css",
+                "src/styles/components/symbol_question_mark.css",
+                "src/styles/layout/header.css",
+                "src/styles/layout/footer.css",
+                "src/styles/components/modal.css",
+                "src/styles/components/flash.css",
+                "src/styles/components/pagination.css",
+                "src/styles/components/fandoms_index.css",
+                "src/styles/components/autocomplete.css",
+                "src/styles/components/primary_user_module.css",
+                "src/styles/components/checkbox_radio.css"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "*://*.archiveofourown.org/skins/*"
+            ],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -89,7 +122,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/preferences*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -117,7 +149,6 @@
                 "*://*.archiveofourown.org/users/*/blocked/users/*confirm*",
                 "*://*.archiveofourown.org/users/*/muted/users/*confirm*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -139,7 +170,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/pseuds/*/edit"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -194,7 +224,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/profile/edit*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -308,7 +337,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/bookmarks*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -337,7 +365,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/inbox*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -365,7 +392,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/stats*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -391,7 +417,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/readings*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -418,7 +443,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/subscriptions*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -477,7 +501,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/change*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -541,7 +564,6 @@
             "matches": [
                 "*://*.archiveofourown.org/works/new*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -566,7 +588,6 @@
             "matches": [
                 "*://*.archiveofourown.org/tag_sets*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -682,7 +703,6 @@
             "matches": [
                 "*://*.archiveofourown.org/works/*/chapters/*/preview*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -706,7 +726,6 @@
             "matches": [
                 "*://*.archiveofourown.org/works/*/chapters/*/edit*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -757,7 +776,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/works/show_multiple*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -782,7 +800,6 @@
             "matches": [
                 "*://*.archiveofourown.org/users/*/works/edit_multiple*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -809,7 +826,6 @@
             "matches": [
                 "*://*.archiveofourown.org/tags/*/works*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -836,7 +852,6 @@
             "matches": [
                 "*://*.archiveofourown.org/tags/*/bookmarks*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -920,7 +935,6 @@
             "matches": [
                 "*://*.archiveofourown.org/works/search"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -944,7 +958,6 @@
             "matches": [
                 "*://*.archiveofourown.org/works/*/edit"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1004,7 +1017,6 @@
             "matches": [
                 "*://*.archiveofourown.org/collections/new*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1093,7 +1105,6 @@
             "matches": [
                 "*://*.archiveofourown.org/people/search*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1118,7 +1129,6 @@
             "matches": [
                 "*://*.archiveofourown.org/bookmarks/search*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1144,7 +1154,6 @@
             "matches": [
                 "*://*.archiveofourown.org/tags/search*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1169,7 +1178,6 @@
                 "*://*.archiveofourown.org/collections/*/signups*",
                 "*://*.archiveofourown.org/collections/*/requests*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1197,7 +1205,6 @@
             "matches": [
                 "*://*.archiveofourown.org/collections/*/gift_exchange/*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1223,7 +1230,6 @@
             "matches": [
                 "*://*.archiveofourown.org/collections/*/edit*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1248,7 +1254,6 @@
             "matches": [
                 "*://*.archiveofourown.org/collections/*/fandoms*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1276,7 +1281,6 @@
             "matches": [
                 "*://*.archiveofourown.org/collections/*/works*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1303,7 +1307,6 @@
             "matches": [
                 "*://*.archiveofourown.org/collections/*/bookmarks*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1360,7 +1363,6 @@
             "matches": [
                 "*://*.archiveofourown.org/external_works/new*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1405,7 +1407,6 @@
             "matches": [
                 "*://*.archiveofourown.org/orphans*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1454,7 +1455,6 @@
             "matches": [
                 "*://*.archiveofourown.org/series/*/manage*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1478,7 +1478,6 @@
             "matches": [
                 "*://*.archiveofourown.org/series/*/edit*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1503,7 +1502,6 @@
             "matches": [
                 "*://*.archiveofourown.org/admin_posts"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1520,7 +1518,6 @@
             "matches": [
                 "*://*.archiveofourown.org/admin_posts/*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1545,7 +1542,6 @@
                 "*://*.archiveofourown.org/content",
                 "*://*.archiveofourown.org/tos"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1568,7 +1564,6 @@
             "matches": [
                 "*://*.archiveofourown.org/about"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1585,7 +1580,6 @@
             "matches": [
                 "*://*.archiveofourown.org/donate*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1603,7 +1597,6 @@
                 "*://*.archiveofourown.org/tags*",
                 "*://*.archiveofourown.org/fandoms/*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1628,7 +1621,6 @@
             "matches": [
                 "*://*.archiveofourown.org/wrangling_guidelines*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -1645,7 +1637,6 @@
             "matches": [
                 "*://*.archiveofourown.org/bookmarks*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
