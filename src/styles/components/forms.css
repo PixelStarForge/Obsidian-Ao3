@@ -664,3 +664,44 @@ h4.heading select:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+
+/* ==========================================================================
+   STANDALONE TEXTAREA (Large Skin CSS Editor)
+   ========================================================================== */
+
+textarea.large {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--pad-md);
+    font-size: var(--font-size-h4);
+    font-family: monospace;
+    width: 100%;
+    min-height: 500px;
+    box-sizing: border-box;
+    line-height: var(--line-height-body);
+    resize: vertical;
+    outline: none;
+    transition: border-color var(--transition-hover);
+    scrollbar-width: thin;
+     scrollbar-color: var(--accent-primary) var(--bg-surface-2);
+}
+
+textarea.large:focus {
+    border-color: var(--accent-primary);
+}
+
+textarea.large[aria-invalid="true"],
+textarea.large.LV_invalid_field {
+    border-color: var(--color-warning);
+}
+
+/* Validation message overlay */
+span.LV_validation_message.LV_invalid {
+    display: block;
+    font-size: var(--font-size-h5);
+    color: var(--color-warning);
+    margin-top: var(--margin-xs);
+}

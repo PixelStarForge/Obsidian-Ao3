@@ -83,6 +83,7 @@
                 "src/styles/components/reply_comment.css",
                 "src/styles/components/flash.css",
                 "src/styles/components/skins_card.css",
+                "src/styles/components/forms.css",
                 "src/styles/pages/skins.css",
                 "src/styles/components/symbol_question_mark.css",
                 "src/styles/components/navigation_actions.css",
@@ -111,6 +112,7 @@
                 "src/styles/components/inbox_comment.css",
                 "src/styles/components/reply_comment.css",
                 "src/styles/components/flash.css",
+                "src/styles/pages/skins.css",
                 "src/styles/components/skins_card.css",
                 "src/styles/components/navigation_actions.css",
                 "src/styles/components/autocomplete.css",
@@ -556,7 +558,8 @@
                 "src/styles/components/dashboard.css",
                 "src/styles/components/bookmark_badges.css",
                 "src/styles/components/primary_user_module.css",
-                "src/styles/components/checkbox_radio.css"
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/components/ao3_filter_extension.css"
             ],
             "run_at": "document_start"
         },
