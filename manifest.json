@@ -38,6 +38,7 @@
                 "src/styles/layout/header.css",
                 "src/styles/layout/footer.css",
                 "src/styles/core/main.css",
+                "src/styles/components/ao3_filter_extension.css",
                 "src/styles/components/error.css"
             ],
             "run_at": "document_start"
@@ -46,7 +47,6 @@
             "matches": [
                 "*://*.archiveofourown.org/media*"
             ],
-            "exclude_matches": [],
             "js": [
                 "src/scripts/observer.js"
             ],
@@ -218,7 +218,8 @@
                 "src/styles/components/fic_card.css",
                 "src/styles/components/dashboard.css",
                 "src/styles/components/primary_user_module.css",
-                "src/styles/components/checkbox_radio.css"
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/components/ao3_filter_extension.css"
             ],
             "run_at": "document_start"
         },
@@ -1707,7 +1708,8 @@
                 "src/styles/components/navigation_actions.css",
                 "src/styles/components/autocomplete.css",
                 "src/styles/pages/home.css",
-                "src/styles/components/checkbox_radio.css"
+                "src/styles/components/checkbox_radio.css",
+                "src/styles/components/ao3_filter_extension.css"
             ],
             "run_at": "document_start"
         }
