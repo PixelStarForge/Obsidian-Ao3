@@ -29,7 +29,7 @@ AO3's bright white backgrounds get uncomfortable after hours of reading. This ex
 
 ### Firefox Add-ons
 
-*(Coming soon – link will be added once published)*
+[Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/obsidian-ao3/)
 
 ### Manual Installation (Developer Mode)
 
@@ -131,6 +131,6 @@ Found a bug? Have a suggestion? Ideas for improvements?
 
 ---
 
-**Enjoy reading"
+*"Enjoy reading"*
 
 
