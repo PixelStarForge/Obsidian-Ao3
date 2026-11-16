@@ -1,0 +1,51 @@
+name: Release Extension Bundle
+
+on:
+  release:
+    types: [published]
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bundle-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Build extension zip bundle
+        id: package
+        run: |
+          python3 scripts/version.py --bundle
+          ZIP_FILE=$(ls dist/obsidian-ao3-v*.zip)
+          VERSION=$(python3 scripts/version.py)
+          echo "zip_file=$ZIP_FILE" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Built package: $ZIP_FILE (version $VERSION)"
+
+      - name: Attach bundle to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.package.outputs.zip_file }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifact (workflow run fallback)
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: obsidian-ao3-v${{ steps.package.outputs.version }}
+          path: ${{ steps.package.outputs.zip_file }}

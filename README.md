@@ -113,10 +113,30 @@ Contributions are welcome. This is an open source project, and improvements bene
 
 ### Guidelines
 
-
 - **Keep it lean.** CSS-first solutions; JS only for dynamic content.
 - **Respect AO3.** Don't modify functionality, redirect traffic, or inject ads.
 - **Test widely.** Check your changes on multiple AO3 pages, not just one.
+
+### Packaging & Versioning
+
+The project includes a lightweight, zero-dependency release tool in `scripts/version.py`:
+
+```bash
+# Check current version
+python3 scripts/version.py
+
+# Set version or bump semantic increment (patch / minor / major)
+python3 scripts/version.py 1.4
+python3 scripts/version.py minor
+
+# Build clean extension zip (excludes docs, pictures, README, and dev files)
+python3 scripts/version.py --bundle
+
+# Bump, commit, tag, and bundle in one command
+python3 scripts/version.py 1.5 --release
+```
+
+Pushing a version tag (`git push origin v1.4`) or creating a GitHub Release automatically triggers the GitHub Actions workflow to build and attach the clean release zip.
 
 
 ---
