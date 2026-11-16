@@ -140,7 +140,8 @@ form.new_collection_item a.collection_item_form_placement_close:hover {
     color: var(--bg-base);
 }
 
-.chapters-preview .edit_chapter fieldset {
+.chapters-preview .edit_chapter .chapters-preview fieldset,
+#feedback fieldset {
     border: none !important;
 }
 
@@ -148,6 +149,7 @@ form.new_collection_item a.collection_item_form_placement_close:hover {
     display: none !important;
 }
 
-fieldset {
+.chapters-preview fieldset,
+#feedback fieldset {
     border: none !important;
 }

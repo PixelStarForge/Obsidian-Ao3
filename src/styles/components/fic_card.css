@@ -76,12 +76,10 @@ ul.index:has(.blurb) li::before {
 
 /* ---------- Fandom tags ---------- */
 .blurb h5.fandoms.heading {
-    font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-md-bold);
+    font-size: 0; /* Hides raw comma text nodes natively */
+    font-weight: var(--font-weight-medium);
     color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin: var(--margin-sm) 0 var(--margin-sm) 0;
+    margin: var(--margin-sm) 0;
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap-sm);
@@ -97,13 +95,13 @@ ul.index:has(.blurb) li::before {
     color: var(--text-secondary);
     padding: var(--pad-xs) var(--pad-sm);
     border-radius: var(--radius-sm);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h5);
     text-decoration: none;
     border: 1px solid var(--border-base);
     display: inline-block;
     text-transform: none;
     letter-spacing: normal;
-    transition: all var(--transition-hover);
+    transition: color var(--transition-hover), border-color var(--transition-hover), background-color var(--transition-hover);
 }
 
 .blurb h5.fandoms.heading a.tag:hover {

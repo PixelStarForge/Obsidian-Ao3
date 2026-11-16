@@ -178,6 +178,7 @@
     }
 }
 
-fieldset {
+#update-tags fieldset,
+.tags-update fieldset {
     border: none !important;
 }

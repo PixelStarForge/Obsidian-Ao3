@@ -73,7 +73,7 @@
     align-self: center !important;
 }
 
-fieldset:has(p.submit) {
+.gift_exchange-edit fieldset:has(p.submit) {
     margin: 0 !important;
 }
 

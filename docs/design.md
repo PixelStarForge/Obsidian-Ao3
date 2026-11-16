@@ -12,34 +12,34 @@ The Obsidian theme relies on deep, volcanic blacks and cool charcoal greys to re
 
 | Role | Hex Code & Preview | Usage |
 | :--- | :--- | :--- |
-| **Base Background** | <span style="display:inline-block; width:14px; height:14px; background:#0A0A0B; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#0A0A0B` | `body`, main reading area background. |
-| **Surface Level 1** | <span style="display:inline-block; width:14px; height:14px; background:#161618; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#161618` | Work blurbs (`.work.blurb`), header, footer. |
-| **Surface Level 2** | <span style="display:inline-block; width:14px; height:14px; background:#222225; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#222225` | Comment blocks, blockquotes, inner cards. |
+| **Base Background** | <span style="display:inline-block; width:14px; height:14px; background:#09090B; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#09090B` | `body`, main reading area background. |
+| **Surface Level 1** | <span style="display:inline-block; width:14px; height:14px; background:#141416; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#141416` | Work blurbs (`.work.blurb`), header, footer. |
+| **Surface Level 2** | <span style="display:inline-block; width:14px; height:14px; background:#1E1E22; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#1E1E22` | Comment blocks, blockquotes, inner cards. |
 | **Borders & Dividers** | <span style="display:inline-block; width:14px; height:14px; background:#27272A; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#27272A` | Tag dividers, chapter separation lines (`hr`). |
 
 ### Typography & Contrast
 
 | Role | Hex Code & Preview | Contrast on Base | Usage |
 | :--- | :--- | :--- | :--- |
-| **Primary Text** | <span style="display:inline-block; width:14px; height:14px; background:#E4E4E7; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#E4E4E7` | **15.2:1** (AAA) | Main fanfic text, headings, author names. |
+| **Primary Text** | <span style="display:inline-block; width:14px; height:14px; background:#F4F4F5; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#F4F4F5` | **15.6:1** (AAA) | Main fanfic text, headings, author names. |
 | **Secondary Text** | <span style="display:inline-block; width:14px; height:14px; background:#A1A1AA; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#A1A1AA` | **7.4:1** (AAA) | Summaries, stats, timestamps, meta text. |
-| **Disabled/Muted** | <span style="display:inline-block; width:14px; height:14px; background:#71717A; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#71717A` | 4.3:1 | Unavailable options, placeholder text. |
+| **Disabled/Muted** | <span style="display:inline-block; width:14px; height:14px; background:#71717A; border:1px solid #71717A; border-radius:3px; vertical-align:middle;"></span> `#71717A` | **4.5:1** (AA) | Unavailable options, placeholder text. |
 
 ### Semantic Accent Palette (Balanced Luminance)
 
-This palette maintains a uniform, high-contrast pastel aesthetic optimized for maximum readability (WCAG AAA compliant where possible) against the `#0A0A0B` base background.
+This palette maintains a refined, high-contrast literary aesthetic optimized for maximum readability (WCAG AAA compliant where possible) against the `#09090B` base background.
 
 | Color Name | Hex Code & Text Preview | Contrast Ratio | Intended AO3 Usage |
 | :--- | :--- | :--- | :--- |
-| **Amethyst (Primary)** | <span style="color:#E2A6FF; font-weight:bold;">#E2A6FF</span> | 7.8:1 | Main links, active states, primary buttons. |
-| **Coral (Warnings)** | <span style="color:#FFA6A6; font-weight:bold;">#FFA6A6</span> | 7.3:1 | Archive Warnings, error states, delete actions. |
-| **Sky Blue (Rels)** | <span style="color:#A6D2FF; font-weight:bold;">#A6D2FF</span> | 7.7:1 | Relationship tags, informational alerts. |
-| **Mint (Characters)** | <span style="color:#A6FFD2; font-weight:bold;">#A6FFD2</span> | 9.5:1 | Character tags, success states (Kudos). |
-| **Gold (Additional)** | <span style="color:#FFF0A6; font-weight:bold;">#FFF0A6</span> | 9.3:1 | Additional tags, warning/caution alerts. |
-| **Peach (Orange)** | <span style="color:#FFCCA6; font-weight:bold;">#FFCCA6</span> | 8.1:1 | Pending status, secondary warnings. |
-| **Lime (Yellow-Green)** | <span style="color:#D2FFA6; font-weight:bold;">#D2FFA6</span> | 9.4:1 | Alternative success, new chapter indicators. |
-| **Aqua (Cyan)** | <span style="color:#A6FFFF; font-weight:bold;">#A6FFFF</span> | 9.0:1 | Special categories, external links. |
-| **Rose (Pink)** | <span style="color:#FFA6D2; font-weight:bold;">#FFA6D2</span> | 7.5:1 | Pinned items, bookmarks, user highlights. |
+| **Amethyst (Primary)** | <span style="color:#C084FC; font-weight:bold;">#C084FC</span> | 7.6:1 | Main links, active states, primary buttons. |
+| **Coral (Warnings)** | <span style="color:#F87171; font-weight:bold;">#F87171</span> | 6.8:1 | Archive Warnings, error states, delete actions. |
+| **Sky Blue (Rels)** | <span style="color:#93C5FD; font-weight:bold;">#93C5FD</span> | 9.5:1 | Relationship tags, informational alerts. |
+| **Mint (Characters)** | <span style="color:#86EFAC; font-weight:bold;">#86EFAC</span> | 11.8:1 | Character tags, success states. |
+| **Gold (Additional)** | <span style="color:#FDE047; font-weight:bold;">#FDE047</span> | 14.2:1 | Additional tags, warning/caution alerts. |
+| **Peach (Pending)** | <span style="color:#FDBA74; font-weight:bold;">#FDBA74</span> | 9.8:1 | Pending status, secondary warnings. |
+| **Aqua (Special)** | <span style="color:#67E8F9; font-weight:bold;">#67E8F9</span> | 11.5:1 | Special categories, external links. |
+| **Rose (Highlights)** | <span style="color:#F472B6; font-weight:bold;">#F472B6</span> | 7.4:1 | Pinned items, bookmarks, user highlights. |
+| **Kudos (Heart)** | <span style="color:#FB7185; font-weight:bold;">#FB7185</span> | 6.7:1 | Kudos heart and appreciation actions. |
 
 ---
 

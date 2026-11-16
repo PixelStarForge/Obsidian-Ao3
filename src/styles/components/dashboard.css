@@ -1,36 +1,35 @@
 /* file: src/styles/components/dashboard.css */
 
 
-#inner.wrapper {
-    margin-top: var(--margin-md, 1.5rem);
+#inner.wrapper:has(#dashboard) {
+    margin-top: var(--margin-md);
 }
 
-a,
-p {
+#dashboard a,
+#dashboard p {
     overflow-wrap: break-word;
-    word-wrap: break-word;
     word-break: normal;
 }
 
-ul {
+#dashboard ul {
     list-style: none;
 }
 
-/* Layout grid definition */
+/* Layout grid definition (scoped to when dashboard sidebar exists) */
 @media (min-width: 1096px) {
-    #inner.wrapper {
+    #inner.wrapper:has(#dashboard) {
         display: grid;
         grid-template-columns: 260px 1fr;
-        gap: var(--gap-lg, 2rem);
+        gap: var(--gap-lg);
         align-items: start;
     }
 }
 
 @media (max-width: 1095px) {
-    #inner.wrapper {
+    #inner.wrapper:has(#dashboard) {
         display: flex;
         flex-direction: column;
-        gap: var(--gap-md, 1.5rem);
+        gap: var(--gap-md);
     }
 }
 

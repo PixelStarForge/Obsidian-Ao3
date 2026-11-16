@@ -1,10 +1,5 @@
 /* file: src/styles/layout/header.css */
 
-/* Hide skip-to-main link */
-#outer #skiplinks {
-    display: none !important;
-}
-
 /* Work Search Text left side of search input */
 #header nav[aria-label="Site"] .primary.navigation.actions .search .search fieldset p .landmark {
     display: none !important;

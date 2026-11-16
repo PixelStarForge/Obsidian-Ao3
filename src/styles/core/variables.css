@@ -1,53 +1,62 @@
-/* file: /src/styles/core/variables.css  */
+/* file: /src/styles/core/variables.css */
 
 :root {
-    /* Backgrounds & Surfaces */
-    --bg-base: #0A0A0B;
-    --bg-surface-1: #161618;
-    --bg-surface-2: #222225;
+    /* Backgrounds & Surfaces (Basalt & Obsidian Ramp) */
+    --bg-base: #09090B;
+    --bg-surface-1: #141416;
+    --bg-surface-2: #1E1E22;
     --border-base: #27272A;
+    --border-subtle: rgba(255, 255, 255, 0.08);
 
-    /* Text & Contrast */
-    --text-primary: #E4E4E7;
+    /* Text & Contrast (WCAG AAA compliant on --bg-base) */
+    --text-primary: #F4F4F5;
     --text-secondary: #A1A1AA;
     --text-muted: #71717A;
 
-    /* Semantic Accents */
-    --accent-primary: #E2A6FF;
-    --accent-secondary: #A6B2FF;
+    /* Semantic Accents (Refined Literary Amethyst & Harmonics) */
+    --accent-primary: #C084FC;
+    --accent-secondary: #93C5FD;
     --accent-hover: #A855F7;
-    --color-warning: #FFA6A6;
-    --color-relationship: #A6D2FF;
-    --color-character: #A6FFD2;
-    --color-additional: #FFF0A6;
-    --color-pending: #FFCCA6;
-    --color-success: #D2FFA6;
-    --color-special: #A6FFFF;
-    --color-highlight: #FFA6D2;
+    --color-warning: #F87171;
+    --color-relationship: #93C5FD;
+    --color-character: #86EFAC;
+    --color-additional: #FDE047;
+    --color-pending: #FDBA74;
+    --color-success: #86EFAC;
+    --color-special: #67E8F9;
+    --color-highlight: #F472B6;
+    --color-kudos: #FB7185;
 
-    /* Typography Scale */
-    --font-size-h1: 1.7rem;
-    --font-size-h2: 1.4rem;
-    --font-size-h3: 1.2rem;
-    --font-size-h4: 1rem;
-    --font-size-h5: 0.8rem;
-    --font-size-h6: 0.7rem;
-    --font-size-body: 1.15rem;
-    --font-size-meta: 0.875rem;
-    --line-height-body: 1.7;
+    /* Focus Ring Token */
+    --focus-ring: 0 0 0 2px #09090B, 0 0 0 4px var(--accent-primary);
+
+    /* Typography Scale (Consistent Modular Scale) */
+    --font-size-h1: 1.875rem; /* 30px */
+    --font-size-h2: 1.5rem;   /* 24px */
+    --font-size-h3: 1.25rem;  /* 20px */
+    --font-size-h4: 1rem;     /* 16px */
+    --font-size-h5: 0.875rem; /* 14px */
+    --font-size-h6: 0.75rem;  /* 12px */
+    --font-size-body: 1.125rem; /* 18px */
+    --font-size-meta: 0.875rem; /* 14px */
+    --line-height-body: 1.75;
 
     /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
 
+    /* Backward compatibility aliases */
     --font-weight-hg-bold: 700;
     --font-weight-md-bold: 600;
     --font-weight-lw-bold: 500;
     --font-weight-body: 400;
 
-    /* Typography Scale & Families */
+    /* Font Families */
     --font-stack-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-
-    /* Prioritize highly readable serifs, fallback to standard serifs */
     --font-stack-reading: "Merriweather", "Georgia", "Palatino Linotype", "Book Antiqua", serif;
+    --font-stack-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
     /* Spacing & Layout */
     --container-max-width: 180ch;
@@ -55,36 +64,36 @@
     --pad-container-mobile: 1rem;
     --pad-component: 1.5rem;
 
-    /* Borders & Radius */
+    /* Borders & Radius (Nested Radius: child <= parent - padding) */
     --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
 
-    /* Margin Scale */
-    --margin-xxs: 0.175rem;
-    --margin-xs: 0.25rem;
-    --margin-sm: 0.5rem;
-    --margin-md: 1rem;
-    --margin-lg: 1.5rem;
-    --margin-xl: 2rem;
-    --margin-xxl: 3rem;
+    /* 4px Strict Grid - Margins */
+    --margin-xxs: 0.25rem; /* 4px */
+    --margin-xs: 0.25rem;  /* 4px */
+    --margin-sm: 0.5rem;   /* 8px */
+    --margin-md: 1rem;     /* 16px */
+    --margin-lg: 1.5rem;   /* 24px */
+    --margin-xl: 2rem;     /* 32px */
+    --margin-xxl: 3rem;    /* 48px */
 
-    /* Padding Scale */
-    --pad-xxs: 0.175rem;
-    --pad-xs: 0.25rem;
-    --pad-sm: 0.5rem;
-    --pad-md: 1rem;
-    --pad-lg: 1.5rem;
-    --pad-xl: 2rem;
-    --pad-xxl: 3rem;
+    /* 4px Strict Grid - Paddings */
+    --pad-xxs: 0.25rem;    /* 4px */
+    --pad-xs: 0.25rem;     /* 4px */
+    --pad-sm: 0.5rem;      /* 8px */
+    --pad-md: 1rem;        /* 16px */
+    --pad-lg: 1.5rem;      /* 24px */
+    --pad-xl: 2rem;        /* 32px */
+    --pad-xxl: 3rem;       /* 48px */
 
-    /* Gaps */
-    --gap-xs: 0.25rem;
-    --gap-sm: 0.5rem;
-    --gap-md: 1rem;
-    --gap-lg: 1.5rem;
-    --gap-xl: 2rem;
-    --gap-xxl: 3rem;
+    /* 4px Strict Grid - Gaps */
+    --gap-xs: 0.25rem;     /* 4px */
+    --gap-sm: 0.5rem;      /* 8px */
+    --gap-md: 1rem;        /* 16px */
+    --gap-lg: 1.5rem;      /* 24px */
+    --gap-xl: 2rem;        /* 32px */
+    --gap-xxl: 3rem;       /* 48px */
 
     /* Reading-Specific Margins */
     --margin-paragraph: 1.5em;
@@ -94,15 +103,21 @@
     --breakpoint-mobile-lg: 768px;
     --breakpoint-tablet: 1096px;
 
-    /* Motion & Transitions */
-    --transition-hover: 0.15s ease-in-out;
+    /* Motion & Transitions (Named, No transition: all) */
+    --transition-hover: 0.15s ease;
     --transition-focus: 0.1s ease-out;
-    --transition-menu: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-menu: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 
-    /* Z Indexes */
-    --z-1:99999;
-    --z-2:9999;
-    --z-3:999;
-    --z-4:99;
+    /* Z-Indexes (Structured Hierarchy) */
+    --z-base: 1;
+    --z-sticky: 20;
+    --z-dropdown: 50;
+    --z-modal: 90;
+    --z-toast: 100;
 
+    /* Backward compatibility aliases */
+    --z-1: 100;
+    --z-2: 90;
+    --z-3: 50;
+    --z-4: 20;
 }

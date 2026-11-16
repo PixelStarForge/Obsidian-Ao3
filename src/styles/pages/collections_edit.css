@@ -5,7 +5,7 @@
    ========================================================================== */
 
 /* --- 1. Base Fieldset Containers --- */
-form fieldset {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) fieldset {
     background: var(--bg-surface-1) !important;
     border: 1px solid var(--border-base) !important;
     border-radius: var(--radius-md) !important;
@@ -14,11 +14,11 @@ form fieldset {
     box-sizing: border-box !important;
 }
 
-form fieldset>legend {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) fieldset>legend {
     display: none !important;
 }
 
-form fieldset>h3.heading {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) fieldset>h3.heading {
     font-size: var(--font-size-h3) !important;
     color: var(--accent-primary) !important;
     border-bottom: 1px solid var(--border-base) !important;
@@ -62,13 +62,13 @@ form dl dt {
 }
 
 form dl dt:last-of-type,
-form dl dd:last-of-type {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) dl dd:last-of-type {
     border-bottom: none !important;
     padding-bottom: 0 !important;
 }
 
 /* --- 3. Inputs, Selects, & Textareas --- */
-form dl dd :is(input[type="text"], input[type="file"], select, textarea) {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) dl dd :is(input[type="text"], input[type="file"], select, textarea) {
     background: var(--bg-surface-2) !important;
     color: var(--text-primary) !important;
     border: 1px solid var(--border-base) !important;
@@ -82,16 +82,16 @@ form dl dd :is(input[type="text"], input[type="file"], select, textarea) {
     transition: border-color var(--transition-hover) !important;
 }
 
-form dl dd :is(input[type="text"], select, textarea):focus {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) dl dd :is(input[type="text"], select, textarea):focus {
     border-color: var(--accent-primary) !important;
 }
 
-form dl dd textarea {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) dl dd textarea {
     min-height: 120px !important;
     resize: vertical !important;
 }
 
-form dl dd input[type="file"] {
+:is(#main.collections-edit, .collection.module, form.collection, form#new_collection, form.edit_collection) dl dd input[type="file"] {
     cursor: pointer !important;
 }
 

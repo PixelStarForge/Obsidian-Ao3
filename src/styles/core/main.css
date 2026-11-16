@@ -1,6 +1,10 @@
 /* file: /src/styles/core/main.css */
 
-/* Global CSS for body */
+/* Base Document Setup */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html,
 body {
     margin: 0;
@@ -14,38 +18,58 @@ body {
     width: 100%;
 }
 
-html {
-    overflow-x: clip;
-    display: flex;
-    justify-content: center;
-
-}
-
+/* Reset Lists */
 ul,
 ol {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Scoped Landmark Hide (Restores native .clear float behavior) */
+/* Accessible Landmark / Screen-reader Utility */
 .landmark {
     display: none;
 }
 
+/* Accessible Skip Links (Visible on Focus) */
+#outer #skiplinks {
+    position: absolute;
+    top: -9999px;
+    left: var(--pad-md);
+    z-index: var(--z-toast);
+}
 
-/* Web link CSS*/
+#outer #skiplinks:focus-within,
+#outer #skiplinks a:focus {
+    top: var(--pad-sm);
+    background: var(--bg-surface-2);
+    color: var(--accent-primary);
+    padding: var(--pad-sm) var(--pad-md);
+    border: 1px solid var(--accent-primary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--focus-ring);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+}
+
+/* Links */
 a {
     color: var(--text-primary);
     text-decoration: none;
-    transition: var(--transition-hover);
+    transition: color var(--transition-hover);
 }
 
-a:hover,
-a:focus {
-    color: var(--accent-hover);
+a:hover {
+    color: var(--accent-primary);
 }
 
+/* Focus Visibility Standard */
+:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
 
-/* Reset Headings */
+/* Headings: Clean Typographic Reset */
 h1,
 h2,
 h3,
@@ -54,23 +78,38 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    word-break: break-all;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semibold);
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
+/* Tabular Numerals for Consistent Stat Alignment */
+.stats,
+.stats dt,
+.stats dd,
+time,
+.datetime,
+.stats-pair dd {
+    font-variant-numeric: tabular-nums;
+}
 
-/* Text selection styling */
+/* Text Selection */
 ::selection {
     background-color: var(--accent-primary);
     color: var(--bg-base);
 }
 
-
-select {
-    scrollbar-width: thin !important;
-    scrollbar-color: var(--accent-primary) var(--bg-surface-2) !important;
+/* Scrollbar Customization */
+select,
+textarea,
+pre {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-base) var(--bg-surface-2);
 }
 
+/* Main Container Spacing */
 #main {
-    margin-top: var(--margin-sm);
+    margin-top: var(--margin-md);
+    max-width: 100%;
 }
-

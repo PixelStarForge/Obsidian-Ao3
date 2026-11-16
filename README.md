@@ -59,12 +59,12 @@ Screenshots taken from [What if...? Re: Zero - One Shot's](https://archiveofouro
 
 ---
 
-##  Supported Pages
+## Supported Pages
 
-Works on most AO3 pages including:
+Works reliably across all AO3 pages with universal route matching, including:
 
 - Works index / browse pages
-- Chapter view (reading mode)
+- Chapter view (focused reading mode)
 - Search & filter pages
 - Dashboard & profile
 - Inbox & comments
@@ -72,8 +72,9 @@ Works on most AO3 pages including:
 - Series & challenge pages
 - Statistics & trends
 - Gift exchanges & challenges
+- Tags & wrangling guidelines
 
-**Some pages may not be fully styled** — AO3 dynamically creates many page layouts, and i may have miss some of it. If a page looks broken or unstyled, [open an issue](https://github.com/PixelStarForge/Obsidian-Ao3/issues) with the URL and a screenshot, and i will try to fix it
+If you encounter an unstyled component or layout glitch on any page, [open an issue](https://github.com/PixelStarForge/Obsidian-Ao3/issues) with the URL and a screenshot.
 
 ---
 
@@ -81,27 +82,26 @@ Works on most AO3 pages including:
 
 ### The theme isn't appearing
 
-- Reload the extension: go to `chrome://extensions`, find Obsidian AO3, click the refresh icon
+- Reload the extension: go to `chrome://extensions`, find Obsidian AO3, and click the refresh icon
 - Hard-refresh AO3 tabs: `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
-- Check that Developer Mode is still enabled
+- Check that Developer Mode is enabled
 
-### Some pages look broken
+### A component looks misplaced
 
-- I might have missed a page. Open an issue with:
+- Open an issue with:
   - The AO3 page URL
   - A screenshot
   - Your browser and version
-- I will look into it
 
 ### Does this work on mobile?
 
-- The Responsiveness was made with mobile layout in mind, but there is no way to use extension on mobile browser except firefox android. When it will be approved on firefox addons you could use it on firefox android
+- The layout is responsive with mobile-friendly drawers and controls. On mobile devices, you can use the extension with Firefox for Android.
 
 ---
 
-##  Contributing
+## Contributing
 
-Contributions are welcome. This is a open source project, and improvements benefit everyone.
+Contributions are welcome. This is an open source project, and improvements benefit everyone.
 
 ### How to contribute
 

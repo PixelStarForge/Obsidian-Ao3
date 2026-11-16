@@ -89,7 +89,7 @@
 #main form.filters select:focus {
     border-color: var(--accent-primary);
     outline: none;
-    box-shadow: 0 0 0 2px rgba(226, 166, 255, 0.2);
+    box-shadow: var(--focus-ring);
 }
 
 #main form.filters select option:checked {
